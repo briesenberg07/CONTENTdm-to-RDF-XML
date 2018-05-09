@@ -28,7 +28,7 @@
     </xsl:template>
     
     <xsl:template match="record" mode="wr">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.1#{cdmid}wr">
+        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{cdmid}wr">
             <dcterms:title>
                 <xsl:apply-templates select="title" mode="wr"/>
             </dcterms:title>
