@@ -15,39 +15,39 @@
     </xsl:template>
     
     <xsl:template match="record" mode="sr">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.1#{cdmid}sr">
+        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}sr">
             <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
             <rdf:type rdf:resource="http://dp.la/about/map/SourceResource"/>
             <dcterms:title>
-                <xsl:apply-templates select="title" mode="sr"/>
+                <xsl:apply-templates select="Title" mode="sr"/>
             </dcterms:title>
             <dcterms:creator>
-                <xsl:apply-templates select="creator" mode="sr"/>
+                <xsl:apply-templates select="Author" mode="sr"/>
             </dcterms:creator>
         </rdf:Description>
     </xsl:template>
     
     <xsl:template match="record" mode="wr">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{cdmid}wr">
+        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}wr">
             <dcterms:title>
-                <xsl:apply-templates select="title" mode="wr"/>
+                <xsl:apply-templates select="Title" mode="wr"/>
             </dcterms:title>
         </rdf:Description>
     </xsl:template>
     
     <!-- SOURCE RESOURCE TEMPLATES -->
     
-    <xsl:template match="title" mode="sr">
+    <xsl:template match="Title" mode="sr">
         <xsl:value-of select="."/>
     </xsl:template>
     
-    <xsl:template match="creator" mode="sr">
+    <xsl:template match="Author" mode="sr">
         <xsl:value-of select="."/>
     </xsl:template>
     
     <!-- WEB RESOURCE TEMPLATES -->
     
-    <xsl:template match="title" mode="wr">
+    <xsl:template match="Title" mode="wr">
             <xsl:value-of select="."/>
     </xsl:template>
     
