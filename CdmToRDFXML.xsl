@@ -43,27 +43,27 @@
     <!-- SOURCE RESOURCE TEMPLATES -->
 
     <xsl:template match="Title">
-        <dcterms:title> "<xsl:value-of select="."/>"@en </dcterms:title>
+        <dcterms:title>"<xsl:value-of select="."/>"@en</dcterms:title>
     </xsl:template>
     <xsl:template match="UniformTitle">
         <xsl:if test="text()">
-            <dcterms:alternate> "<xsl:value-of select="."/>"@en </dcterms:alternate>
+            <dcterms:alternate>"<xsl:value-of select="."/>"@en</dcterms:alternate>
         </xsl:if>
     </xsl:template>
     <xsl:template match="AlternateTitle">
-        <xsl:if test="AlternateTitle/text()">
-            <dcterms:alternative> "<xsl:value-of select="."/>"@en </dcterms:alternative>
+        <xsl:if test="text()">
+            <dcterms:alternative>"<xsl:value-of select="."/>"@en</dcterms:alternative>
         </xsl:if>
     </xsl:template>
     <xsl:template match="Author">
-        <xsl:if test="Author/text()">
+        <xsl:if test="text()">
             <dcterms:creator>
                 <xsl:value-of select="."/>
             </dcterms:creator>
         </xsl:if>
     </xsl:template>
     <xsl:template match="Illustrator">
-        <xsl:if test="Illustrator/text()">
+        <xsl:if test="text()">
             <dcterms:contributor>
                 <xsl:value-of select="."/>
             </dcterms:contributor>
@@ -76,7 +76,7 @@
         </dcterms:publisher>
     </xsl:template>
     <xsl:template match="PublicationDate">
-        <xsl:if test="PublicationDate/text()">
+        <xsl:if test="text()">
             <dc:date>
                 <xsl:value-of select="."/>
             </dc:date>
