@@ -21,15 +21,12 @@
         <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}sr">
             <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
             <rdf:type rdf:resource="http://dp.la/about/map/SourceResource"/>
-            <dcterms:title>
-                <xsl:apply-templates select="Title" mode="sr"/>
-            </dcterms:title>
-            <xsl:if test="UniformTitle/()">
-                <dcterms:title>
-                    <xsl:apply-templates select="UniformTitle"/>
-                </dcterms:title>
-            </xsl:if>
-            <xsl:if test="AlternateTitle/()">
+                <xsl:apply-templates select="Title"/>
+            <!-- Bring the elements down into the templates as for title, change elements below -->
+                <xsl:apply-templates select="UniformTitle"/>
+                
+            <xsl:if test="AlternateTitle/text()">
+                <!-- Bring everything down into element templates -->
                 <dcterms:alternative>
                     <xsl:apply-templates select="AlternateTitle"/>
                 </dcterms:alternative>
@@ -47,7 +44,7 @@
             <dcterms:publisher>
                 <xsl:apply-templates select="Publisher"/>
             </dcterms:publisher>
-            <xsl:if test="PublicationDate/()">
+            <xsl:if test="PublicationDate/text()">
                 <dc:date>
                     <xsl:apply-templates select="PublicationDate"/>
                 </dc:date>
@@ -66,12 +63,20 @@
 
     <!-- SOURCE RESOURCE TEMPLATES -->
 
-    <xsl:template match="Title" mode="sr"> 
-        "<xsl:value-of select="."/>"@en
+    <xsl:template match="Title"> 
+        <dcterms:title>
+            "<xsl:value-of select="."/>"@en
+        </dcterms:title>
     </xsl:template>
+    
     <xsl:template match="UniformTitle">
-        "<xsl:value-of select="."/>"@en
+        <xsl:if test="text()">
+        <dcterms:alternate>
+                        "<xsl:value-of select="."/>"@en
+        </dcterms:alternate>
+        </xsl:if>
     </xsl:template>
+    
     <xsl:template match="AlternateTitle">
         "<xsl:value-of select="."/>"@en
     </xsl:template>
