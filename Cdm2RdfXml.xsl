@@ -31,6 +31,7 @@
             <xsl:apply-templates select="Publisher"/>
             <xsl:apply-templates select="PublicationDate"/>
             <xsl:apply-templates select="Printer"/>
+            <xsl:apply-templates select="ImageProductionProcess"/>
         </rdf:Description>
     </xsl:template>
 
@@ -51,7 +52,6 @@
             <rdfs:label>"<xsl:value-of select="."/>"@en</rdfs:label>
         </dct:title>
     </xsl:template>
-
     <xsl:template match="UniformTitle">
         <xsl:if test="text()">
             <dct:alternative>
@@ -59,7 +59,6 @@
             </dct:alternative>
         </xsl:if>
     </xsl:template>
-
     <xsl:template match="AlternateTitle">
         <xsl:if test="text()">
             <dct:alternative>
@@ -67,7 +66,6 @@
             </dct:alternative>
         </xsl:if>
     </xsl:template>
-
     <xsl:template match="Author">
         <xsl:if test="text()">
             <dct:creator>
@@ -79,7 +77,6 @@
             </dct:creator>
         </xsl:if>
     </xsl:template>
-
     <xsl:template match="Illustrator">
         <xsl:if test="text()">
             <dct:contributor>
@@ -92,7 +89,6 @@
             <!-- Could there be confusion here between illustrators and other kinds of contributors? -->
         </xsl:if>
     </xsl:template>
-
     <xsl:template match="Publisher">
         <dct:publisher>
             <edm:Agent>
@@ -109,7 +105,6 @@
             </edm:Agent>
         </dct:publisher>
     </xsl:template>
-
     <xsl:template match="PublicationDate">
         <xsl:if test="text()">
             <dc:date>
@@ -127,14 +122,22 @@
             </dc:date>
         </xsl:if>
     </xsl:template>
-
     <xsl:template match="Printer">
         <xsl:if test="text()">
             <dct:contributor>
                 <edm:Agent>
-                    <rdfs:label><xsl:value-of select="."/></rdfs:label>
+                    <rdfs:label>
+                        <xsl:value-of select="."/>
+                    </rdfs:label>
                 </edm:Agent>
             </dct:contributor>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="ImageProductionProcess">
+        <xsl:if test="text()">
+            <edm:hasType>
+                <rdfs:label><xsl:value-of select="."/></rdfs:label>
+            </edm:hasType>
         </xsl:if>
     </xsl:template>
 
