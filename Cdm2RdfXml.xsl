@@ -86,7 +86,7 @@
             <rdfs:label><xsl:value-of select="."/></rdfs:label>
                 <foaf:basedNear>
                     <dpla:Place>
-                        <rdfs:label><xsl:value-of select="PublisherLocation"/></rdfs:label>
+                        <rdfs:label><xsl:value-of select="../PublisherLocation"/></rdfs:label>
                     </dpla:Place>
                 </foaf:basedNear>
             </edm:Agent>
