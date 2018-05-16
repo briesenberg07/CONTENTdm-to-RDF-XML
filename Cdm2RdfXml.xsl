@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:hclsr="https://doi.org/10.70027/uwlib.55.A.2.1#"
-    xmlns:dct="http://purl.org/dc/terms/" version="2.0"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:hclsr="https://doi.org/10.70027/uwlib.55.A.2.1#" xmlns:dct="http://purl.org/dc/terms/"
+    version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:dpla="http://dp.la/about/map">
 
     <xsl:output indent="yes"/>
@@ -32,6 +30,7 @@
             <xsl:apply-templates select="Illustrator"/>
             <xsl:apply-templates select="Publisher"/>
             <xsl:apply-templates select="PublicationDate"/>
+            <xsl:apply-templates select="Printer"/>
         </rdf:Description>
     </xsl:template>
 
@@ -48,56 +47,76 @@
     <!-- SOURCE RESOURCE TEMPLATES -->
 
     <xsl:template match="Title">
-        <dct:title>"<xsl:value-of select="."/>"@en</dct:title>
+        <dct:title>
+            <rdfs:label>"<xsl:value-of select="."/>"@en</rdfs:label>
+        </dct:title>
     </xsl:template>
-    
+
     <xsl:template match="UniformTitle">
         <xsl:if test="text()">
-            <dct:alternate>"<xsl:value-of select="."/>"@en</dct:alternate>
+            <dct:alternative>
+                <rdfs:label>"<xsl:value-of select="."/>"@en</rdfs:label>
+            </dct:alternative>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="AlternateTitle">
         <xsl:if test="text()">
-            <dct:alternative>"<xsl:value-of select="."/>"@en</dct:alternative>
+            <dct:alternative>
+                <rdfs:label>"<xsl:value-of select="."/>"@en</rdfs:label>
+            </dct:alternative>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="Author">
         <xsl:if test="text()">
             <dct:creator>
-                <xsl:value-of select="."/>
+                <edm:Agent>
+                    <rdfs:label>
+                        <xsl:value-of select="."/>
+                    </rdfs:label>
+                </edm:Agent>
             </dct:creator>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="Illustrator">
         <xsl:if test="text()">
             <dct:contributor>
-                <xsl:value-of select="."/>
+                <edm:Agent>
+                    <rdfs:label>
+                        <xsl:value-of select="."/>
+                    </rdfs:label>
+                </edm:Agent>
             </dct:contributor>
             <!-- Could there be confusion here between illustrators and other kinds of contributors? -->
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="Publisher">
         <dct:publisher>
             <edm:Agent>
-            <rdfs:label><xsl:value-of select="."/></rdfs:label>
+                <rdfs:label>
+                    <xsl:value-of select="."/>
+                </rdfs:label>
                 <foaf:basedNear>
                     <dpla:Place>
-                        <rdfs:label><xsl:value-of select="../PublisherLocation"/></rdfs:label>
+                        <rdfs:label>
+                            <xsl:value-of select="../PublisherLocation"/>
+                        </rdfs:label>
                     </dpla:Place>
                 </foaf:basedNear>
             </edm:Agent>
         </dct:publisher>
     </xsl:template>
-    
+
     <xsl:template match="PublicationDate">
         <xsl:if test="text()">
             <dc:date>
                 <edm:TimeSpan>
-                <dpla:providedLabel><xsl:value-of select="."/></dpla:providedLabel>
+                    <dpla:providedLabel>
+                        <xsl:value-of select="."/>
+                    </dpla:providedLabel>
                     <edm:begin rdf:datatype="http://id.loc.gov/datatypes/edtf/EDTF-level0">
                         <xsl:value-of select="../EarliestDate"/>
                     </edm:begin>
@@ -106,6 +125,16 @@
                     </edm:end>
                 </edm:TimeSpan>
             </dc:date>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="Printer">
+        <xsl:if test="text()">
+            <dct:contributor>
+                <edm:Agent>
+                    <rdfs:label><xsl:value-of select="."/></rdfs:label>
+                </edm:Agent>
+            </dct:contributor>
         </xsl:if>
     </xsl:template>
 
