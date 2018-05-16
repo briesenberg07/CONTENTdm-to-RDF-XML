@@ -96,7 +96,15 @@
     <xsl:template match="PublicationDate">
         <xsl:if test="text()">
             <dc:date>
-                <xsl:value-of select="."/>
+                <edm:TimeSpan>
+                <dpla:providedLabel><xsl:value-of select="."/></dpla:providedLabel>
+                    <edm:begin rdf:datatype="http://id.loc.gov/datatypes/edtf/EDTF-level0">
+                        <xsl:value-of select="../EarliestDate"/>
+                    </edm:begin>
+                    <edm:end rdf:datatype="http://id.loc.gov/datatypes/edtf/EDTF-level0">
+                        <xsl:value-of select="../LatestDate"/>
+                    </edm:end>
+                </edm:TimeSpan>
             </dc:date>
         </xsl:if>
     </xsl:template>
