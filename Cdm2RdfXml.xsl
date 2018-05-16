@@ -32,6 +32,9 @@
             <xsl:apply-templates select="PublicationDate"/>
             <xsl:apply-templates select="Printer"/>
             <xsl:apply-templates select="ImageProductionProcess"/>
+            <xsl:apply-templates select="Notes"/>
+            <xsl:apply-templates select="ContextualNotes"/>
+            <xsl:apply-templates select="Language"/>
         </rdf:Description>
     </xsl:template>
 
@@ -139,6 +142,25 @@
                 <rdfs:label><xsl:value-of select="."/></rdfs:label>
             </edm:hasType>
         </xsl:if>
+    </xsl:template>
+    <xsl:template match="Notes">
+        <xsl:if test="text()">
+            <dct:description>
+                <rdfs:label><xsl:value-of select="."/></rdfs:label>
+            </dct:description>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="ContextualNotes">
+        <xsl:if test="text()">
+            <dct:description>
+                <rdfs:label><xsl:value-of select="."/></rdfs:label>
+            </dct:description>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="Language">
+        <dct:language>
+            <rdfs:label><xsl:value-of select="."/></rdfs:label>
+        </dct:language>
     </xsl:template>
 
     <!-- WEB RESOURCE TEMPLATES -->
