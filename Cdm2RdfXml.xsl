@@ -35,11 +35,14 @@
             <xsl:apply-templates select="Publisher"/>
             <xsl:apply-templates select="PublicationDate"/>
             <xsl:apply-templates select="Printer"/>
+            <!-- 
             <xsl:apply-templates select="ImageProductionProcess"/>
+            Need appropriate property -->
             <xsl:apply-templates select="Notes"/>
             <xsl:apply-templates select="ContextualNotes"/>
             <xsl:apply-templates select="Language"/>
             <xsl:apply-templates select="SubjectsLCSH"/>
+            <xsl:apply-templates select="Category"/>
         </rdf:Description>
     </xsl:template>
 
@@ -144,14 +147,15 @@
             </dct:contributor>
         </xsl:if>
     </xsl:template>
+    <!-- NOT USING edm:hasType for this(?); need to find appropriate property
     <xsl:template match="ImageProductionProcess">
         <xsl:if test="text()">
             <edm:hasType>
-                <!-- Unclear whether we will continue to use this property here -->
                 <xsl:value-of select="."/>
             </edm:hasType>
         </xsl:if>
     </xsl:template>
+    -->
     <xsl:template match="Notes">
         <xsl:if test="text()">
             <dct:description>
@@ -176,10 +180,20 @@
             <skos:Concept>
                 <dpla:providedLabel>
                     <xsl:value-of select="."/>
+                    <!-- Values here need to be broken into child elements using ; as delimiter; see GitHub issue -->
+                    <!-- Will need conversion to URI? -->
                 </dpla:providedLabel>
                 <skos:inScheme>http://id.loc.gov/authorities/subjects</skos:inScheme>
             </skos:Concept>
         </dct:subject>
+    </xsl:template>
+    <xsl:template match="Category">
+        <xsl:if test="text()">
+            <edm:hasType>
+                <xsl:value-of select="."/>
+                <!-- Will need conversion to URI -->
+            </edm:hasType>
+        </xsl:if>
     </xsl:template>
 
     <!-- WEB RESOURCE TEMPLATES -->
