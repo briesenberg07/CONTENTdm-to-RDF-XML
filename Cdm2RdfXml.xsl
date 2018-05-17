@@ -5,7 +5,8 @@
     version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    xmlns:dpla="http://dp.la/about/map">
+    xmlns:dpla="http://dp.la/about/map"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
 
     <xsl:output indent="yes"/>
 
@@ -52,20 +53,20 @@
 
     <xsl:template match="Title">
         <dct:title>
-            <rdfs:label>"<xsl:value-of select="."/>"@en</rdfs:label>
+            <xsl:value-of select="."/>
         </dct:title>
     </xsl:template>
     <xsl:template match="UniformTitle">
         <xsl:if test="text()">
             <dct:alternative>
-                <rdfs:label>"<xsl:value-of select="."/>"@en</rdfs:label>
+                <xsl:value-of select="."/>
             </dct:alternative>
         </xsl:if>
     </xsl:template>
     <xsl:template match="AlternateTitle">
         <xsl:if test="text()">
             <dct:alternative>
-                <rdfs:label>"<xsl:value-of select="."/>"@en</rdfs:label>
+                <xsl:value-of select="."/>
             </dct:alternative>
         </xsl:if>
     </xsl:template>
@@ -73,9 +74,10 @@
         <xsl:if test="text()">
             <dct:creator>
                 <edm:Agent>
-                    <rdfs:label>
+                    <dpla:providedLabel>
                         <xsl:value-of select="."/>
-                    </rdfs:label>
+                    </dpla:providedLabel>
+                    <skos:note>Author</skos:note>
                 </edm:Agent>
             </dct:creator>
         </xsl:if>
@@ -84,20 +86,20 @@
         <xsl:if test="text()">
             <dct:contributor>
                 <edm:Agent>
-                    <rdfs:label>
+                    <dpla:providedLabel>
                         <xsl:value-of select="."/>
-                    </rdfs:label>
+                    </dpla:providedLabel>
+                    <skos:note>Illustrator</skos:note>
                 </edm:Agent>
             </dct:contributor>
-            <!-- Could there be confusion here between illustrators and other kinds of contributors? -->
         </xsl:if>
     </xsl:template>
     <xsl:template match="Publisher">
         <dct:publisher>
             <edm:Agent>
-                <rdfs:label>
+                <dpla:providedLabel>
                     <xsl:value-of select="."/>
-                </rdfs:label>
+                </dpla:providedLabel>
                 <foaf:basedNear>
                     <dpla:Place>
                         <rdfs:label>
@@ -129,9 +131,9 @@
         <xsl:if test="text()">
             <dct:contributor>
                 <edm:Agent>
-                    <rdfs:label>
+                    <dpla:providedLabel>
                         <xsl:value-of select="."/>
-                    </rdfs:label>
+                    </dpla:providedLabel>
                 </edm:Agent>
             </dct:contributor>
         </xsl:if>
@@ -139,27 +141,28 @@
     <xsl:template match="ImageProductionProcess">
         <xsl:if test="text()">
             <edm:hasType>
-                <rdfs:label><xsl:value-of select="."/></rdfs:label>
+                <!-- Unclear whether we will continue to use this property here -->
+                <xsl:value-of select="."/>
             </edm:hasType>
         </xsl:if>
     </xsl:template>
     <xsl:template match="Notes">
         <xsl:if test="text()">
             <dct:description>
-                <rdfs:label><xsl:value-of select="."/></rdfs:label>
+                <xsl:value-of select="."/>
             </dct:description>
         </xsl:if>
     </xsl:template>
     <xsl:template match="ContextualNotes">
         <xsl:if test="text()">
             <dct:description>
-                <rdfs:label><xsl:value-of select="."/></rdfs:label>
+                <xsl:value-of select="."/>
             </dct:description>
         </xsl:if>
     </xsl:template>
     <xsl:template match="Language">
         <dct:language>
-            <rdfs:label><xsl:value-of select="."/></rdfs:label>
+            <xsl:value-of select="."/>
         </dct:language>
     </xsl:template>
 
