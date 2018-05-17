@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:hclsr="https://doi.org/10.70027/uwlib.55.A.2.1#" xmlns:dct="http://purl.org/dc/terms/"
-    version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:hclsr="https://doi.org/10.70027/uwlib.55.A.2.1#" 
+    xmlns:dct="http://purl.org/dc/terms/" version="2.0" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:dpla="http://dp.la/about/map"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
 
@@ -36,6 +39,7 @@
             <xsl:apply-templates select="Notes"/>
             <xsl:apply-templates select="ContextualNotes"/>
             <xsl:apply-templates select="Language"/>
+            <xsl:apply-templates select="SubjectsLCSH"/>
         </rdf:Description>
     </xsl:template>
 
@@ -101,11 +105,12 @@
                     <xsl:value-of select="."/>
                 </dpla:providedLabel>
                 <foaf:basedNear>
-                    <dpla:Place>
-                        <rdfs:label>
+                    <edm:Place>
+                        <dpla:providedLabel>
                             <xsl:value-of select="../PublisherLocation"/>
-                        </rdfs:label>
-                    </dpla:Place>
+                        </dpla:providedLabel>
+                    </edm:Place>
+                    <!-- TENTATIVELY CHANGING TO edm:place/dpla:providedLabel FROM dpla:place/rdfs:label -->
                 </foaf:basedNear>
             </edm:Agent>
         </dct:publisher>
@@ -134,6 +139,7 @@
                     <dpla:providedLabel>
                         <xsl:value-of select="."/>
                     </dpla:providedLabel>
+                    <skos:note>Printer</skos:note>
                 </edm:Agent>
             </dct:contributor>
         </xsl:if>
@@ -164,6 +170,16 @@
         <dct:language>
             <xsl:value-of select="."/>
         </dct:language>
+    </xsl:template>
+    <xsl:template match="SubjectsLCSH">
+        <dct:subject>
+            <skos:Concept>
+                <dpla:providedLabel>
+                    <xsl:value-of select="."/>
+                </dpla:providedLabel>
+                <skos:inScheme>http://id.loc.gov/authorities/subjects</skos:inScheme>
+            </skos:Concept>
+        </dct:subject>
     </xsl:template>
 
     <!-- WEB RESOURCE TEMPLATES -->
