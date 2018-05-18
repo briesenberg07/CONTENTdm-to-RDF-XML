@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet 
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:hclsr="https://doi.org/10.70027/uwlib.55.A.2.1#" 
-    xmlns:dct="http://purl.org/dc/terms/" version="2.0" 
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:hclsr="https://doi.org/10.70027/uwlib.55.A.2.1#" xmlns:dct="http://purl.org/dc/terms/"
+    version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-    xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    xmlns:dpla="http://dp.la/about/map"
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dpla="http://dp.la/about/map" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/">
 
     <xsl:output indent="yes"/>
 
@@ -20,6 +17,7 @@
         <rdf:RDF>
             <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="sr"/>
             <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="wr"/>
+            <!-- We may eventually need values from page-level metadata -->
         </rdf:RDF>
     </xsl:template>
 
@@ -35,9 +33,7 @@
             <xsl:apply-templates select="Publisher"/>
             <xsl:apply-templates select="PublicationDate"/>
             <xsl:apply-templates select="Printer"/>
-            <!-- 
             <xsl:apply-templates select="ImageProductionProcess"/>
-            Need appropriate property -->
             <xsl:apply-templates select="Notes"/>
             <xsl:apply-templates select="ContextualNotes"/>
             <xsl:apply-templates select="Language"/>
@@ -50,9 +46,9 @@
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="wr">
         <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}wr">
             <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
-                <xsl:apply-templates select="Title"/>
-                <xsl:apply-templates select="UniformTitle"/>
-                <xsl:apply-templates select="AlternateTitle"/>
+            <xsl:apply-templates select="Title"/>
+            <xsl:apply-templates select="UniformTitle"/>
+            <xsl:apply-templates select="AlternateTitle"/>
         </rdf:Description>
     </xsl:template>
 
@@ -147,15 +143,18 @@
             </dct:contributor>
         </xsl:if>
     </xsl:template>
-    <!-- NOT USING edm:hasType for this(?); need to find appropriate property
     <xsl:template match="ImageProductionProcess">
         <xsl:if test="text()">
-            <edm:hasType>
-                <xsl:value-of select="."/>
-            </edm:hasType>
+            <bf:note>
+                <bf:Note>
+                    <rdfs:Label>
+                        <xsl:value-of select="."/>
+                    </rdfs:Label>
+                    <bf:noteType>Image production process</bf:noteType>
+                </bf:Note>
+            </bf:note>
         </xsl:if>
     </xsl:template>
-    -->
     <xsl:template match="Notes">
         <xsl:if test="text()">
             <dct:description>
@@ -196,10 +195,10 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="RepositoryCollection">
-            <dct:isPartOf>
-                <!-- Class needed here? -->
-                <xsl:value-of select="."/>
-            </dct:isPartOf>
+        <dct:isPartOf>
+            <!-- Class needed here? -->
+            <xsl:value-of select="."/>
+        </dct:isPartOf>
     </xsl:template>
 
 </xsl:stylesheet>
