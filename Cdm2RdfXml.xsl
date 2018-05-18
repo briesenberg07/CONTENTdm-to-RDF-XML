@@ -175,16 +175,30 @@
         </dct:language>
     </xsl:template>
     <xsl:template match="SubjectsLCSH">
-        <dct:subject>
-            <skos:Concept>
-                <dpla:providedLabel>
-                    <xsl:value-of select="."/>
-                    <!-- Values here need to be broken into child elements using ; as delimiter; see GitHub issue -->
-                    <!-- Will need conversion to URI? -->
-                </dpla:providedLabel>
-                <skos:inScheme>http://id.loc.gov/authorities/subjects</skos:inScheme>
-            </skos:Concept>
-        </dct:subject>
+        <xsl:choose>
+            <xsl:when test="contains(., ';')">
+                <xsl:for-each select="tokenize(., '; ')">
+                    <dct:subject>
+                        <skos:Concept>
+                            <dpla:providedLabel>
+                                <xsl:value-of select="."/>
+                            </dpla:providedLabel>
+                            <skos:inScheme>http://id.loc.gov/authorities/subjects</skos:inScheme>
+                        </skos:Concept>
+                    </dct:subject>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+                <dct:subject>
+                    <skos:Concept>
+                        <dpla:providedLabel>
+                            <xsl:value-of select="."/>
+                        </dpla:providedLabel>
+                        <skos:inScheme>http://id.loc.gov/authorities/subjects</skos:inScheme>
+                    </skos:Concept>
+                </dct:subject>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="Category">
         <xsl:if test="text()">
