@@ -43,11 +43,13 @@
             <xsl:apply-templates select="Language"/>
             <xsl:apply-templates select="SubjectsLCSH"/>
             <xsl:apply-templates select="Category"/>
+            <xsl:apply-templates select="RepositoryCollection"/>
         </rdf:Description>
     </xsl:template>
 
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="wr">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}wr">
+        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}wr" 
+            rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource">
             <!-- Add RDF types here -->
             <dct:title>
                 <xsl:apply-templates select="Title" mode="wr"/>
@@ -194,6 +196,12 @@
                 <!-- Will need conversion to URI -->
             </edm:hasType>
         </xsl:if>
+    </xsl:template>
+    <xsl:template match="RepositoryCollection">
+            <dct:isPartOf>
+                <!-- Class needed here? -->
+                <xsl:value-of select="."/>
+            </dct:isPartOf>
     </xsl:template>
 
     <!-- WEB RESOURCE TEMPLATES -->
