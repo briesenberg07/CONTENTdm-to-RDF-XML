@@ -19,7 +19,7 @@
     <xsl:template match="metadata">
         <rdf:RDF>
             <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="sr"/>
-            <xsl:apply-templates select="record" mode="wr"/>
+            <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="wr"/>
         </rdf:RDF>
     </xsl:template>
 
@@ -48,13 +48,11 @@
     </xsl:template>
 
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="wr">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}wr" 
-            rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource">
-            <!-- Add RDF types here -->
-            <dct:title>
-                <xsl:apply-templates select="Title" mode="wr"/>
-            </dct:title>
-            <!-- Do WebResources call for a title? -->
+        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}wr">
+            <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
+                <xsl:apply-templates select="Title"/>
+                <xsl:apply-templates select="UniformTitle"/>
+                <xsl:apply-templates select="AlternateTitle"/>
         </rdf:Description>
     </xsl:template>
 
@@ -202,12 +200,6 @@
                 <!-- Class needed here? -->
                 <xsl:value-of select="."/>
             </dct:isPartOf>
-    </xsl:template>
-
-    <!-- WEB RESOURCE TEMPLATES -->
-
-    <xsl:template match="Title" mode="wr">
-        <xsl:value-of select="."/>
     </xsl:template>
 
 </xsl:stylesheet>
