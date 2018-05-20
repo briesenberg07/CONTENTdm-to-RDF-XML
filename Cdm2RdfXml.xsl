@@ -4,7 +4,8 @@
     version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:edm="http://www.europeana.eu/schemas/edm/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:dpla="http://dp.la/about/map" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:ore="http://www.openarchives.org/ore/terms/">
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:ore="http://www.openarchives.org/ore/terms/"
+    xmlns:dcmitype="http://purl.org/dc/dcmitype/">
 
     <xsl:output indent="yes"/>
 
@@ -38,7 +39,9 @@
             <xsl:apply-templates select="SubjectsLCSH"/>
             <xsl:apply-templates select="Category"/>
             <xsl:apply-templates select="Language"/>
+            <xsl:apply-templates select="Repository"/>
             <xsl:apply-templates select="RepositoryCollection"/>
+            <xsl:apply-templates select="PhysicalDescription"/>
         </rdf:Description>
     </xsl:template>
 
@@ -233,11 +236,29 @@
             <xsl:value-of select="."/>
         </dct:language>
     </xsl:template>
+    <xsl:template match="Repository">
+        <dct:rightsHolder>
+            <edm:Agent>
+                <dpla:providedLabel>
+                    <xsl:value-of select="."/>
+                </dpla:providedLabel>
+            </edm:Agent>
+        </dct:rightsHolder>
+    </xsl:template>
     <xsl:template match="RepositoryCollection">
         <dct:isPartOf>
-            <!-- Class needed here? -->
-            <xsl:value-of select="."/>
+            <dcmitype:Collection>
+                <dct:title>
+                    <xsl:value-of select="."/>
+                </dct:title>
+            </dcmitype:Collection>
         </dct:isPartOf>
     </xsl:template>
-
+    <xsl:template match="PhysicalDescription">
+        <dct:extent>
+            <xsl:value-of select="."/>
+        </dct:extent>
+        <dcmitype>StillImage</dcmitype>
+        <dcmitype>Text</dcmitype>
+    </xsl:template>
 </xsl:stylesheet>
