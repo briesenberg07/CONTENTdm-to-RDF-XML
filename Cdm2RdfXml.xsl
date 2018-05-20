@@ -35,9 +35,9 @@
             <xsl:apply-templates select="ImageProductionProcess"/>
             <xsl:apply-templates select="Notes"/>
             <xsl:apply-templates select="ContextualNotes"/>
-            <xsl:apply-templates select="Language"/>
             <xsl:apply-templates select="SubjectsLCSH"/>
             <xsl:apply-templates select="Category"/>
+            <xsl:apply-templates select="Language"/>
             <xsl:apply-templates select="RepositoryCollection"/>
         </rdf:Description>
     </xsl:template>
@@ -171,22 +171,27 @@
     </xsl:template>
     <xsl:template match="Notes">
         <xsl:if test="text()">
-            <dct:description>
-                <xsl:value-of select="."/>
-            </dct:description>
+            <bf:note>
+                <bf:Note>
+                    <rdfs:Label>
+                        <xsl:value-of select="."/>
+                    </rdfs:Label>
+                    <bf:noteType>Notes</bf:noteType>
+                </bf:Note>
+            </bf:note>
         </xsl:if>
     </xsl:template>
     <xsl:template match="ContextualNotes">
         <xsl:if test="text()">
-            <dct:description>
-                <xsl:value-of select="."/>
-            </dct:description>
+            <bf:note>
+                <bf:Note>
+                    <rdfs:Label>
+                        <xsl:value-of select="."/>
+                    </rdfs:Label>
+                    <bf:noteType>Contextual notes</bf:noteType>
+                </bf:Note>
+            </bf:note>
         </xsl:if>
-    </xsl:template>
-    <xsl:template match="Language">
-        <dct:language>
-            <xsl:value-of select="."/>
-        </dct:language>
     </xsl:template>
     <xsl:template match="SubjectsLCSH">
         <xsl:choose>
@@ -214,13 +219,19 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template match="Category">
+    <!-- <xsl:template match="Category">
         <xsl:if test="text()">
-            <edm:hasType>
-                <xsl:value-of select="."/>
-                <!-- Will need conversion to URI -->
-            </edm:hasType>
         </xsl:if>
+    </xsl:template> -->
+    <xsl:template match="Language">
+        <dct:language>
+            <dct:LinguisticSystem>
+                <dpla:providedLabel>
+                    <xsl:value-of select="."/>
+                </dpla:providedLabel>
+            </dct:LinguisticSystem>
+            <xsl:value-of select="."/>
+        </dct:language>
     </xsl:template>
     <xsl:template match="RepositoryCollection">
         <dct:isPartOf>
