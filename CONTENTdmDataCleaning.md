@@ -5,7 +5,7 @@ The data cleaning process needs improvement. Currently using [Notepad++](https:/
   
 `Exported character string` --> `Replacement value`
 ---------------------------------------------------
-1. ` &amp; ` --> ` and `  
+1. ` &amp; ` --> ` and ` (searched and replaced values are surrounded by one space on each side) 
 2. `&quot;` --> `"`
 3. `&lt;br&gt;` --> one space
 4. `&amp;lt;br&amp;gt;`  --> one space
