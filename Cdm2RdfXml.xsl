@@ -59,6 +59,9 @@
                     <!-- <skos:exactMatch>NEED URI HERE</skos:exactMatch> -->
                 </edm:Agent>
             </edm:dataProvider>
+            <edm:rights>https://doi.org/10.70027/uwlib.55.A.2.4</edm:rights>
+            <edm:isShownAt>https://doi.org/10.70027/uwlib.55.A.2.3#<xsl:value-of select="../CdmNumber"/></edm:isShownAt>
+            <edm:aggregatedCHO>https://doi.org/10.70027/uwlib.55.A.2.1#<xsl:value-of select="../CdmNumber"/></edm:aggregatedCHO>
         </rdf:Description>
     </xsl:template>
 
@@ -72,6 +75,10 @@
             <!-- <dc:format></dc:format>
             <dct:format></dct:format>
             Need MIME types, etc. for format properties here -->
+            <xsl:apply-templates select="DigitalCollection"/>
+            <xsl:apply-templates select="DigitalReproductionInformation"/>
+            <edm:rights>https://doi.org/10.70027/uwlib.55.A.2.4</edm:rights>
+            <dct:source>https://doi.org/10.70027/uwlib.55.A.2.1#<xsl:value-of select="../CdmNumber"/></dct:source>
         </rdf:Description>
     </xsl:template>
 
@@ -229,7 +236,8 @@
     <!-- <xsl:template match="Category">
         <xsl:if test="text()">
         </xsl:if>
-    </xsl:template> -->
+    </xsl:template> 
+    Needs rdf property -->
     <xsl:template match="Language">
         <dct:language>
             <dct:LinguisticSystem>
@@ -264,8 +272,7 @@
         </dct:extent>
         <dcmitype>StillImage</dcmitype>
         <dcmitype>Text</dcmitype>
-        <dct:hasFormat>https://doi.org/10.70027/uwlib.55.A.2.3#<xsl:value-of select="../CdmNumber"
-            /></dct:hasFormat>
+        <dct:hasFormat>https://doi.org/10.70027/uwlib.55.A.2.3#<xsl:value-of select="../CdmNumber"/></dct:hasFormat>
     </xsl:template>
     <xsl:template match="Acquisition">
         <xsl:if test="text()">
@@ -283,5 +290,25 @@
         <dct:identifier>
             <xsl:value-of select="."/>
         </dct:identifier>
+    </xsl:template>
+    <xsl:template match="DigitalCollection">
+        <dct:isPartOf>
+            <dcmitype:Collection>
+                <dct:title>
+                    <xsl:value-of select="."/>
+                </dct:title>
+                <edm:isShownAt>http://content.lib.washington.edu/childrensweb/index.html</edm:isShownAt>
+            </dcmitype:Collection>
+        </dct:isPartOf>
+    </xsl:template>
+    <xsl:template match="DigitalReproductionInformation">
+        <bf:note>
+            <bf:Note>
+                <rdfs:Label>
+                    <xsl:value-of select="."/>
+                </rdfs:Label>
+                <bf:noteType>Digital reproduction information</bf:noteType>
+            </bf:Note>
+        </bf:note>
     </xsl:template>
 </xsl:stylesheet>
