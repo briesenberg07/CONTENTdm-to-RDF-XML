@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:hclsr="https://doi.org/10.70027/uwlib.55.A.2.1#" xmlns:dct="http://purl.org/dc/terms/"
-    version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:edm="http://www.europeana.eu/schemas/edm/"
+    version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:edm="http://www.europeana.eu/schemas/edm/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:dpla="http://dp.la/about/map" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
-    xmlns:ore="http://www.openarchives.org/ore/terms/">
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:ore="http://www.openarchives.org/ore/terms/">
 
     <xsl:output indent="yes"/>
 
@@ -17,8 +14,8 @@
     <xsl:template match="metadata">
         <rdf:RDF>
             <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="sr"/>
-            <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="wr"/>
             <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="ag"/>
+            <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="wr"/>
         </rdf:RDF>
     </xsl:template>
 
@@ -46,10 +43,17 @@
     </xsl:template>
 
 <!-- AGGREGATION TEMPLATE -->
-    <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="wr">
+    <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="ag">
         <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}ag">
             <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
+            <edm:dataProvider>
+                <edm:Agent>
+                    <dpla:providedLabel>University of Washington Libraries</dpla:providedLabel>
+                    <!-- <skos:exactMatch>NEED URI HERE</skos:exactMatch> -->
+                </edm:Agent>
+            </edm:dataProvider>
         </rdf:Description>
+    </xsl:template>
 
 <!-- WEB RESOURCE TEMPLATE -->
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="wr">
@@ -58,11 +62,13 @@
             <xsl:apply-templates select="Title"/>
             <xsl:apply-templates select="UniformTitle"/>
             <xsl:apply-templates select="AlternateTitle"/>
+            <!-- <dc:format></dc:format>
+            <dct:format></dct:format>
+            Need MIME types, etc. for format properties here -->
         </rdf:Description>
     </xsl:template>
     
-    <!-- ELEMENT TEMPLATES -->
-
+<!-- ELEMENT TEMPLATES -->
     <xsl:template match="Title">
         <dct:title>
             <xsl:value-of select="."/>
@@ -118,7 +124,6 @@
                             <xsl:value-of select="../PublisherLocation"/>
                         </dpla:providedLabel>
                     </edm:Place>
-                    <!-- TENTATIVELY CHANGING TO edm:place/dpla:providedLabel FROM dpla:place/rdfs:label -->
                 </foaf:basedNear>
             </edm:Agent>
         </dct:publisher>
