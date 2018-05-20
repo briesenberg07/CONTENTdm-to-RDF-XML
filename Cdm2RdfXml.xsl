@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:hclsr="https://doi.org/10.70027/uwlib.55.A.2.1#" xmlns:dct="http://purl.org/dc/terms/"
-    version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:edm="http://www.europeana.eu/schemas/edm/"
+    version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:edm="http://www.europeana.eu/schemas/edm/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:dpla="http://dp.la/about/map" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:ore="http://www.openarchives.org/ore/terms/"
-    xmlns:dcmitype="http://purl.org/dc/dcmitype/">
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+    xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/">
 
     <xsl:output indent="yes"/>
 
@@ -20,7 +22,7 @@
         </rdf:RDF>
     </xsl:template>
 
-<!-- SOURCE RESOURCE TEMPLATE -->
+    <!-- SOURCE RESOURCE TEMPLATE -->
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="sr">
         <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}sr">
             <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
@@ -42,10 +44,12 @@
             <xsl:apply-templates select="Repository"/>
             <xsl:apply-templates select="RepositoryCollection"/>
             <xsl:apply-templates select="PhysicalDescription"/>
+            <xsl:apply-templates select="Acquisition"/>
+            <xsl:apply-templates select="OclcNumber"/>
         </rdf:Description>
     </xsl:template>
 
-<!-- AGGREGATION TEMPLATE -->
+    <!-- AGGREGATION TEMPLATE -->
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="ag">
         <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}ag">
             <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
@@ -58,7 +62,7 @@
         </rdf:Description>
     </xsl:template>
 
-<!-- WEB RESOURCE TEMPLATE -->
+    <!-- WEB RESOURCE TEMPLATE -->
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="wr">
         <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.3#{CdmNumber}wr">
             <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
@@ -70,8 +74,8 @@
             Need MIME types, etc. for format properties here -->
         </rdf:Description>
     </xsl:template>
-    
-<!-- ELEMENT TEMPLATES -->
+
+    <!-- ELEMENT TEMPLATES -->
     <xsl:template match="Title">
         <dct:title>
             <xsl:value-of select="."/>
@@ -260,5 +264,24 @@
         </dct:extent>
         <dcmitype>StillImage</dcmitype>
         <dcmitype>Text</dcmitype>
+        <dct:hasFormat>https://doi.org/10.70027/uwlib.55.A.2.3#<xsl:value-of select="../CdmNumber"
+            /></dct:hasFormat>
+    </xsl:template>
+    <xsl:template match="Acquisition">
+        <xsl:if test="text()">
+            <bf:note>
+                <bf:Note>
+                    <rdfs:Label>
+                        <xsl:value-of select="."/>
+                    </rdfs:Label>
+                    <bf:noteType>Acquisition</bf:noteType>
+                </bf:Note>
+            </bf:note>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="OclcNumber">
+        <dct:identifier>
+            <xsl:value-of select="."/>
+        </dct:identifier>
     </xsl:template>
 </xsl:stylesheet>
