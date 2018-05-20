@@ -6,7 +6,8 @@
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:dpla="http://dp.la/about/map" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:bf="http://id.loc.gov/ontologies/bibframe/">
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+    xmlns:ore="http://www.openarchives.org/ore/terms/">
 
     <xsl:output indent="yes"/>
 
@@ -17,10 +18,11 @@
         <rdf:RDF>
             <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="sr"/>
             <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="wr"/>
-            <!-- We may eventually need values from page-level metadata -->
+            <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="ag"/>
         </rdf:RDF>
     </xsl:template>
 
+<!-- SOURCE RESOURCE TEMPLATE -->
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="sr">
         <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}sr">
             <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
@@ -43,16 +45,23 @@
         </rdf:Description>
     </xsl:template>
 
+<!-- AGGREGATION TEMPLATE -->
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="wr">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}wr">
+        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}ag">
+            <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
+        </rdf:Description>
+
+<!-- WEB RESOURCE TEMPLATE -->
+    <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="wr">
+        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.3#{CdmNumber}wr">
             <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
             <xsl:apply-templates select="Title"/>
             <xsl:apply-templates select="UniformTitle"/>
             <xsl:apply-templates select="AlternateTitle"/>
         </rdf:Description>
     </xsl:template>
-
-    <!-- SOURCE RESOURCE TEMPLATES -->
+    
+    <!-- ELEMENT TEMPLATES -->
 
     <xsl:template match="Title">
         <dct:title>
