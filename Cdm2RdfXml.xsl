@@ -39,7 +39,7 @@
             <xsl:apply-templates select="Notes"/>
             <xsl:apply-templates select="ContextualNotes"/>
             <xsl:apply-templates select="SubjectsLCSH"/>
-            <xsl:apply-templates select="Category"/>
+            <!-- <xsl:apply-templates select="Category"/> -->
             <xsl:apply-templates select="Language"/>
             <xsl:apply-templates select="Repository"/>
             <xsl:apply-templates select="RepositoryCollection"/>
@@ -60,8 +60,12 @@
                 </edm:Agent>
             </edm:dataProvider>
             <edm:rights>https://doi.org/10.70027/uwlib.55.A.2.4</edm:rights>
-            <edm:isShownAt>https://doi.org/10.70027/uwlib.55.A.2.3#<xsl:value-of select="../CdmNumber"/></edm:isShownAt>
-            <edm:aggregatedCHO>https://doi.org/10.70027/uwlib.55.A.2.1#<xsl:value-of select="../CdmNumber"/></edm:aggregatedCHO>
+            <edm:isShownAt>https://doi.org/10.70027/uwlib.55.A.2.3#<xsl:value-of
+                    select="../CdmNumber"/></edm:isShownAt>
+            <!-- Not pushing Cdm number through here for some reason. -->
+            <edm:aggregatedCHO>https://doi.org/10.70027/uwlib.55.A.2.1#<xsl:value-of
+                    select="../CdmNumber"/></edm:aggregatedCHO>
+            <!-- Not pushing Cdm number through here for some reason. -->
         </rdf:Description>
     </xsl:template>
 
@@ -78,7 +82,8 @@
             <xsl:apply-templates select="DigitalCollection"/>
             <xsl:apply-templates select="DigitalReproductionInformation"/>
             <edm:rights>https://doi.org/10.70027/uwlib.55.A.2.4</edm:rights>
-            <dct:source>https://doi.org/10.70027/uwlib.55.A.2.1#<xsl:value-of select="../CdmNumber"/></dct:source>
+            <dct:source>https://doi.org/10.70027/uwlib.55.A.2.1#<xsl:value-of select="../CdmNumber"
+                /></dct:source>
         </rdf:Description>
     </xsl:template>
 
@@ -245,7 +250,6 @@
                     <xsl:value-of select="."/>
                 </dpla:providedLabel>
             </dct:LinguisticSystem>
-            <xsl:value-of select="."/>
         </dct:language>
     </xsl:template>
     <xsl:template match="Repository">
@@ -272,7 +276,8 @@
         </dct:extent>
         <dcmitype>StillImage</dcmitype>
         <dcmitype>Text</dcmitype>
-        <dct:hasFormat>https://doi.org/10.70027/uwlib.55.A.2.3#<xsl:value-of select="../CdmNumber"/></dct:hasFormat>
+        <dct:hasFormat>https://doi.org/10.70027/uwlib.55.A.2.3#<xsl:value-of select="../CdmNumber"
+            /></dct:hasFormat>
     </xsl:template>
     <xsl:template match="Acquisition">
         <xsl:if test="text()">
@@ -287,9 +292,11 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="OclcNumber">
-        <dct:identifier>
-            <xsl:value-of select="."/>
-        </dct:identifier>
+        <xsl:if test="text()">
+            <dct:identifier>
+                <xsl:value-of select="."/>
+            </dct:identifier>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="DigitalCollection">
         <dct:isPartOf>
