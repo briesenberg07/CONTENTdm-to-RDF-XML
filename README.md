@@ -1,4 +1,4 @@
-# XML2RDFXML  
+# CONTENTdm metadata to RDF/XML  
 I am creating* and using an [XSL transform](CdmToRDFXML.xsl) to convert metadata exported from CONTENTdm to RDF/XMLAs as part of a capstone project for the University of Washington iSchool MLIS program.  
 While the XSL file and associated documentation are being shared openly, the [XML metadata files used to be used for the transform](https://drive.google.com/drive/folders/1rjP59ZSyDvuHaCIoyGJ1AYGPtrsKYHtC?usp=sharing) are accessible only to collaborators at the University of Washington.  
 Much of the information provided here is highly site-specific to transform work with metadata exported from digital collections at the University of Washington.  
