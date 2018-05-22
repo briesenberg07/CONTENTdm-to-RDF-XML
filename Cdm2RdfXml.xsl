@@ -309,13 +309,15 @@
         </dct:isPartOf>
     </xsl:template>
     <xsl:template match="DigitalReproductionInformation">
-        <bf:note>
-            <bf:Note>
-                <rdfs:Label>
-                    <xsl:value-of select="."/>
-                </rdfs:Label>
-                <bf:noteType>Digital reproduction information</bf:noteType>
-            </bf:Note>
-        </bf:note>
+        <xsl:if test="text()">
+            <bf:note>
+                <bf:Note>
+                    <rdfs:Label>
+                        <xsl:value-of select="."/>
+                    </rdfs:Label>
+                    <bf:noteType>Digital reproduction information</bf:noteType>
+                </bf:Note>
+            </bf:note>
+        </xsl:if>
     </xsl:template>
 </xsl:stylesheet>
