@@ -1,5 +1,5 @@
-# Cleaning exported HCL metadata
---------
+# Cleaning exported HCL metadata  
+
 ### Notes:
 - I am using find/replace all functions in [Notepad++](https://notepad-plus-plus.org/) for data cleaning--this process needs improvement.
 - Enter one space before and after search/replace strings for #1
