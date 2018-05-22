@@ -4,11 +4,7 @@
 - I am using find/replace all functions in [Notepad++](https://notepad-plus-plus.org/) for data cleaning--this process needs improvement.
 - Enter one space before and after search/replace strings for #1
 - Search and replace strings are given in the order of operations
-
-Note: 
-Instead of deleting <br> equivalents, replace with one space?
---------
-
+---
 1. ` &amp; ` --> ` and ` (See notes)
 2. `&quot;` --> `"`
 3. `&lt;br&gt;` --> ` ` (one space)
