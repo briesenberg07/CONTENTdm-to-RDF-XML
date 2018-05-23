@@ -90,9 +90,8 @@
             Need MIME types, etc. for format properties here -->
             <xsl:apply-templates select="DigitalCollection"/>
             <xsl:apply-templates select="DigitalReproductionInformation"/>
-            <edm:rights>https://doi.org/10.70027/uwlib.55.A.2.4</edm:rights>
-            <dct:source>https://doi.org/10.70027/uwlib.55.A.2.1#<xsl:value-of select="../CdmNumber"
-                /></dct:source>
+            <edm:rights rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.4"/>
+            <dct:source rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}"/>
         </rdf:Description>
     </xsl:template>
 
@@ -141,20 +140,22 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="Publisher">
-        <dct:publisher>
-            <edm:Agent>
-                <dpla:providedLabel>
-                    <xsl:value-of select="."/>
-                </dpla:providedLabel>
-                <foaf:basedNear>
-                    <edm:Place>
-                        <dpla:providedLabel>
-                            <xsl:value-of select="../PublisherLocation"/>
-                        </dpla:providedLabel>
-                    </edm:Place>
-                </foaf:basedNear>
-            </edm:Agent>
-        </dct:publisher>
+        <xsl:if test="text()">
+            <dct:publisher>
+                <edm:Agent>
+                    <dpla:providedLabel>
+                        <xsl:value-of select="."/>
+                    </dpla:providedLabel>
+                    <foaf:basedNear>
+                        <edm:Place>
+                            <dpla:providedLabel>
+                                <xsl:value-of select="../PublisherLocation"/>
+                            </dpla:providedLabel>
+                        </edm:Place>
+                    </foaf:basedNear>
+                </edm:Agent>
+            </dct:publisher>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="PublicationDate">
         <xsl:if test="text()">
@@ -230,28 +231,31 @@
                             <dpla:providedLabel>
                                 <xsl:value-of select="."/>
                             </dpla:providedLabel>
-                            <skos:inScheme>http://id.loc.gov/authorities/subjects</skos:inScheme>
+                            <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
                         </skos:Concept>
                     </dct:subject>
                 </xsl:for-each>
             </xsl:when>
             <xsl:otherwise>
-                <dct:subject>
-                    <skos:Concept>
-                        <dpla:providedLabel>
-                            <xsl:value-of select="."/>
-                        </dpla:providedLabel>
-                        <skos:inScheme>http://id.loc.gov/authorities/subjects</skos:inScheme>
-                    </skos:Concept>
-                </dct:subject>
+                <xsl:if test="text()">
+                    <dct:subject>
+                        <skos:Concept>
+                            <dpla:providedLabel>
+                                <xsl:value-of select="."/>
+                            </dpla:providedLabel>
+                            <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+                        </skos:Concept>
+                    </dct:subject>
+                </xsl:if>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <!-- <xsl:template match="Category">
+    <xsl:template match="Category">
         <xsl:if test="text()">
+            <edm:hasType rdf:resource="https://doi.org/10.70027/uwlib.55.B.1.3B#{lower-case(translate(.,' ',''))}"/>
+            <!-- See my question for Theo re: coding, see GitHub issue #9 -->
         </xsl:if>
     </xsl:template> 
-    Needs rdf property -->
     <xsl:template match="Language">
         <dct:language>
             <dct:LinguisticSystem>
