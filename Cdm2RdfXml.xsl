@@ -54,6 +54,9 @@
             <xsl:apply-templates select="Repository"/>
             <xsl:apply-templates select="RepositoryCollection"/>
             <xsl:apply-templates select="PhysicalDescription"/>
+            <dct:type>StillImage</dct:type>
+            <dct:type>Text</dct:type>
+            <dct:hasFormat rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.3#{CdmNumber}"/>
             <xsl:apply-templates select="Acquisition"/>
             <xsl:apply-templates select="OclcNumber"/>
         </rdf:Description>
@@ -66,16 +69,12 @@
             <edm:dataProvider>
                 <edm:Agent>
                     <dpla:providedLabel>University of Washington Libraries</dpla:providedLabel>
-                    <!-- <skos:exactMatch>NEED URI HERE</skos:exactMatch> -->
+                    <skos:exactMatch rdf:resource="http://id.loc.gov/authorities/names/n79056337"/>
                 </edm:Agent>
             </edm:dataProvider>
-            <edm:rights>https://doi.org/10.70027/uwlib.55.A.2.4</edm:rights>
-            <edm:isShownAt>https://doi.org/10.70027/uwlib.55.A.2.3#<xsl:value-of
-                    select="../CdmNumber"/></edm:isShownAt>
-            <!-- Not pushing Cdm number through here for some reason. -->
-            <edm:aggregatedCHO>https://doi.org/10.70027/uwlib.55.A.2.1#<xsl:value-of
-                    select="../CdmNumber"/></edm:aggregatedCHO>
-            <!-- Not pushing Cdm number through here for some reason. -->
+            <edm:rights rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.4"/>
+            <edm:isShownAt rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.3#{CdmNumber}"/>
+            <edm:aggregatedCHO rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}"/>
         </rdf:Description>
     </xsl:template>
 
@@ -281,13 +280,11 @@
         </dct:isPartOf>
     </xsl:template>
     <xsl:template match="PhysicalDescription">
-        <dct:extent>
-            <xsl:value-of select="."/>
-        </dct:extent>
-        <dcmitype>StillImage</dcmitype>
-        <dcmitype>Text</dcmitype>
-        <dct:hasFormat>https://doi.org/10.70027/uwlib.55.A.2.3#<xsl:value-of select="../CdmNumber"
-            /></dct:hasFormat>
+        <xsl:if test="text()">
+            <dct:extent>
+                <xsl:value-of select="."/>
+            </dct:extent>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="Acquisition">
         <xsl:if test="text()">
