@@ -5,7 +5,7 @@
     version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    xmlns:dpla="http://dp.la/about/map" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dpla="http://dp.la/about/map/" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
     xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/">
 
@@ -15,11 +15,21 @@
         <xsl:apply-templates select="metadata"/>
     </xsl:template>
     <xsl:template match="metadata">
-        <rdf:RDF>
-            <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="sr"/>
-            <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="ag"/>
-            <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="wr"/>
-        </rdf:RDF>
+        <xsl:result-document href="hcl_SourceResource.rdf">
+            <rdf:RDF>
+                <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="sr"/>
+            </rdf:RDF>
+        </xsl:result-document>
+        <xsl:result-document href="hcl_Aggregation.rdf">
+            <rdf:RDF>
+                <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="ag"/>
+            </rdf:RDF>
+        </xsl:result-document>
+        <xsl:result-document href="hcl_WebResource.rdf">
+            <rdf:RDF>
+                <xsl:apply-templates select="record[contains(CdmFileName, '.cpd')]" mode="wr"/>
+            </rdf:RDF>
+        </xsl:result-document>
     </xsl:template>
 
     <!-- SOURCE RESOURCE TEMPLATE -->
