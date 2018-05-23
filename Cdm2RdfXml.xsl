@@ -34,7 +34,7 @@
 
     <!-- SOURCE RESOURCE TEMPLATE -->
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="sr">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}sr">
+        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}">
             <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
             <rdf:type rdf:resource="http://dp.la/about/map/SourceResource"/>
             <xsl:apply-templates select="Title"/>
@@ -49,7 +49,7 @@
             <xsl:apply-templates select="Notes"/>
             <xsl:apply-templates select="ContextualNotes"/>
             <xsl:apply-templates select="SubjectsLCSH"/>
-            <!-- <xsl:apply-templates select="Category"/> -->
+            <xsl:apply-templates select="Category"/>
             <xsl:apply-templates select="Language"/>
             <xsl:apply-templates select="Repository"/>
             <xsl:apply-templates select="RepositoryCollection"/>
@@ -61,7 +61,7 @@
 
     <!-- AGGREGATION TEMPLATE -->
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="ag">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}ag">
+        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}">
             <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
             <edm:dataProvider>
                 <edm:Agent>
@@ -81,7 +81,7 @@
 
     <!-- WEB RESOURCE TEMPLATE -->
     <xsl:template match="record[contains(CdmFileName, '.cpd')]" mode="wr">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.3#{CdmNumber}wr">
+        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.3#{CdmNumber}">
             <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
             <xsl:apply-templates select="Title"/>
             <xsl:apply-templates select="UniformTitle"/>
@@ -190,9 +190,9 @@
         <xsl:if test="text()">
             <bf:note>
                 <bf:Note>
-                    <rdfs:Label>
+                    <rdfs:label>
                         <xsl:value-of select="."/>
-                    </rdfs:Label>
+                    </rdfs:label>
                     <bf:noteType>Image production process</bf:noteType>
                 </bf:Note>
             </bf:note>
@@ -202,9 +202,9 @@
         <xsl:if test="text()">
             <bf:note>
                 <bf:Note>
-                    <rdfs:Label>
+                    <rdfs:label>
                         <xsl:value-of select="."/>
-                    </rdfs:Label>
+                    </rdfs:label>
                     <bf:noteType>Notes</bf:noteType>
                 </bf:Note>
             </bf:note>
@@ -214,9 +214,9 @@
         <xsl:if test="text()">
             <bf:note>
                 <bf:Note>
-                    <rdfs:Label>
+                    <rdfs:label>
                         <xsl:value-of select="."/>
-                    </rdfs:Label>
+                    </rdfs:label>
                     <bf:noteType>Contextual notes</bf:noteType>
                 </bf:Note>
             </bf:note>
@@ -293,9 +293,9 @@
         <xsl:if test="text()">
             <bf:note>
                 <bf:Note>
-                    <rdfs:Label>
+                    <rdfs:label>
                         <xsl:value-of select="."/>
-                    </rdfs:Label>
+                    </rdfs:label>
                     <bf:noteType>Acquisition</bf:noteType>
                 </bf:Note>
             </bf:note>
@@ -322,9 +322,9 @@
         <xsl:if test="text()">
             <bf:note>
                 <bf:Note>
-                    <rdfs:Label>
+                    <rdfs:label>
                         <xsl:value-of select="."/>
-                    </rdfs:Label>
+                    </rdfs:label>
                     <bf:noteType>Digital reproduction information</bf:noteType>
                 </bf:Note>
             </bf:note>
