@@ -252,36 +252,44 @@
     </xsl:template>
     <xsl:template match="Category">
         <xsl:if test="text()">
-            <edm:hasType rdf:resource="https://doi.org/10.70027/uwlib.55.B.1.3B#{lower-case(translate(.,' ',''))}"/>
+            <edm:hasType
+                rdf:resource="https://doi.org/10.70027/uwlib.55.B.1.3B#{lower-case(translate(.,' ',''))}"/>
             <!-- See my question for Theo re: coding, see GitHub issue #9 -->
         </xsl:if>
-    </xsl:template> 
+    </xsl:template>
     <xsl:template match="Language">
-        <dct:language>
-            <dct:LinguisticSystem>
-                <dpla:providedLabel>
-                    <xsl:value-of select="."/>
-                </dpla:providedLabel>
-            </dct:LinguisticSystem>
-        </dct:language>
+        <xsl:if test="text()">
+            <dct:language>
+                <dct:LinguisticSystem>
+                    <dpla:providedLabel>
+                        <xsl:value-of select="."/>
+                    </dpla:providedLabel>
+                </dct:LinguisticSystem>
+            </dct:language>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="Repository">
-        <dct:rightsHolder>
-            <edm:Agent>
-                <dpla:providedLabel>
-                    <xsl:value-of select="."/>
-                </dpla:providedLabel>
-            </edm:Agent>
-        </dct:rightsHolder>
+        <xsl:if test="text()">
+            <dct:rightsHolder>
+                <edm:Agent>
+                    <dpla:providedLabel>
+                        <xsl:value-of select="."/>
+                    </dpla:providedLabel>
+                </edm:Agent>
+            </dct:rightsHolder>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="RepositoryCollection">
-        <dct:isPartOf>
-            <dcmitype:Collection>
-                <dct:title>
-                    <xsl:value-of select="."/>
-                </dct:title>
-            </dcmitype:Collection>
-        </dct:isPartOf>
+        <xsl:if test="text()">
+            <dct:isPartOf>
+                <dcmitype:Collection>
+                    <dct:title>
+                        <xsl:value-of select="."/>
+                    </dct:title>
+                    <!-- Maybe add isPrimaryTopicOf here? -->
+                </dcmitype:Collection>
+            </dct:isPartOf>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="PhysicalDescription">
         <xsl:if test="text()">
@@ -310,14 +318,16 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="DigitalCollection">
-        <dct:isPartOf>
-            <dcmitype:Collection>
-                <dct:title>
-                    <xsl:value-of select="."/>
-                </dct:title>
-                <edm:isShownAt>http://content.lib.washington.edu/childrensweb/index.html</edm:isShownAt>
-            </dcmitype:Collection>
-        </dct:isPartOf>
+        <xsl:if test="text()">
+            <dct:isPartOf>
+                <dcmitype:Collection>
+                    <dct:title>
+                        <xsl:value-of select="."/>
+                    </dct:title>
+                    <edm:isShownAt rdf:resource="http://content.lib.washington.edu/childrensweb/index.html"/>
+                </dcmitype:Collection>
+            </dct:isPartOf>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="DigitalReproductionInformation">
         <xsl:if test="text()">
