@@ -54,8 +54,9 @@
             <xsl:apply-templates select="Repository"/>
             <xsl:apply-templates select="RepositoryCollection"/>
             <xsl:apply-templates select="PhysicalDescription"/>
-            <dct:type>StillImage</dct:type>
-            <dct:type>Text</dct:type>
+            <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+            <!-- Does this DCMI type actually belong in WebResource? -->
+            <dct:type rdf:resource="http://purl.org/dc/dcmitype/Text"/>
             <dct:hasFormat rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.3#{CdmNumber}"/>
             <xsl:apply-templates select="Acquisition"/>
             <xsl:apply-templates select="OclcNumber"/>
@@ -85,9 +86,7 @@
             <xsl:apply-templates select="Title"/>
             <xsl:apply-templates select="UniformTitle"/>
             <xsl:apply-templates select="AlternateTitle"/>
-            <!-- <dc:format></dc:format>
-            <dct:format></dct:format>
-            Need MIME types, etc. for format properties here -->
+            <dc:format>Presentation of digitized physical item in University of Washington Libraries Digital Collections; CONTENTdm compound document (CPD)</dc:format>
             <xsl:apply-templates select="DigitalCollection"/>
             <xsl:apply-templates select="DigitalReproductionInformation"/>
             <edm:rights rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.4"/>
@@ -205,7 +204,7 @@
                     <rdfs:label>
                         <xsl:value-of select="."/>
                     </rdfs:label>
-                    <bf:noteType>Notes</bf:noteType>
+                    <bf:noteType>General</bf:noteType>
                 </bf:Note>
             </bf:note>
         </xsl:if>
@@ -217,7 +216,7 @@
                     <rdfs:label>
                         <xsl:value-of select="."/>
                     </rdfs:label>
-                    <bf:noteType>Contextual notes</bf:noteType>
+                    <bf:noteType>Contextual</bf:noteType>
                 </bf:Note>
             </bf:note>
         </xsl:if>
@@ -264,6 +263,7 @@
                     <dpla:providedLabel>
                         <xsl:value-of select="."/>
                     </dpla:providedLabel>
+                    <!-- add skos:exactMatch, etc. with URI here -->
                 </dct:LinguisticSystem>
             </dct:language>
         </xsl:if>
