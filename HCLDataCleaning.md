@@ -3,7 +3,7 @@
  
 ### Notes:
 
-- I am using find/replace all functions in [Notepad++](https://notepad-plus-plus.org/) for data cleaning--this process needs improvement.
+- I am using find/replace all functions in [Notepad++](https://notepad-plus-plus.org/) for data cleaning--this process could most likely be improved significantly with other tools and techniques.
 - Enter one space before and after search/replace strings for #1
 - Search and replace strings are given in the order of operations
 ---
