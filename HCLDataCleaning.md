@@ -15,5 +15,4 @@
 6. `&amp</Category>` --> `</Category>`
 7. `<Category>lt</Category>` --> DELETE
 8. `<Category>gt</Category>` --> DELETE
-9. `&amp;lt;br&amp;gt;` --> ` ` (one space)
-10. `&` --> DELETE
+9. `&` --> DELETE
