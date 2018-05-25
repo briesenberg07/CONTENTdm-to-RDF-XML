@@ -11,6 +11,6 @@ Much of the information provided here is highly site-specific to transform work 
 
 ---
 ### Notes
-- Many thanks to my project sponsor, Metadata and Cataloging Librarian Theo Gerontakos at the University of Washington Libraries (@gerontakos). He provided essential guidance on mapping of CONTENTdm metadata to RDF properties, XSL work, and the project as a whole.
+- Many thanks to my project sponsor, Metadata/Cataloging Librarian Theo Gerontakos at the University of Washington Libraries. He provided essential guidance on mapping of CONTENTdm metadata to RDF properties, XSL work, and the project as a whole.
 - This capstone project builds on the work of an iSchool capstone group from 2017 who digitized 40 volumes from the Historical Children's Literature collection. Their excellent work can be seen [here](http://viclit.omeka.net/).
 - For more information please contact [Ben Riesenberg](mailto:ries07@uw.edu).
