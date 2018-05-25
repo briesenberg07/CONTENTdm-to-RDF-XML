@@ -55,7 +55,6 @@
             <xsl:apply-templates select="RepositoryCollection"/>
             <xsl:apply-templates select="PhysicalDescription"/>
             <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-            <!-- Does this DCMI type actually belong in WebResource? -->
             <dct:type rdf:resource="http://purl.org/dc/dcmitype/Text"/>
             <dct:hasFormat rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.3#{CdmNumber}"/>
             <xsl:apply-templates select="Acquisition"/>
@@ -86,7 +85,7 @@
             <xsl:apply-templates select="Title"/>
             <xsl:apply-templates select="UniformTitle"/>
             <xsl:apply-templates select="AlternateTitle"/>
-            <dc:format>Presentation of digitized physical item in University of Washington Libraries Digital Collections; CONTENTdm compound document (CPD)</dc:format>
+            <dc:format>application/cpd (CONTENTdm compound document)</dc:format>
             <xsl:apply-templates select="DigitalCollection"/>
             <xsl:apply-templates select="DigitalReproductionInformation"/>
             <edm:rights rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.4"/>
@@ -263,7 +262,7 @@
                     <dpla:providedLabel>
                         <xsl:value-of select="."/>
                     </dpla:providedLabel>
-                    <!-- add skos:exactMatch, etc. with URI here -->
+                    <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
                 </dct:LinguisticSystem>
             </dct:language>
         </xsl:if>
