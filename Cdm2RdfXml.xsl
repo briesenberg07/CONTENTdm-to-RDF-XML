@@ -84,7 +84,7 @@
             <xsl:apply-templates select="Category"/>
             <xsl:apply-templates select="Language"/>
             <xsl:apply-templates select="Repository"/>
-            <xsl:apply-templates select="RepositoryCollection"/>
+            <dct:isPartOf rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.6#physical"/>
             <xsl:apply-templates select="PhysicalDescription"/>
             <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
             <dct:type rdf:resource="http://purl.org/dc/dcmitype/Text"/>
@@ -134,7 +134,7 @@
             <xsl:apply-templates select="UniformTitle"/>
             <xsl:apply-templates select="AlternateTitle"/>
             <dc:format>application/cpd (CONTENTdm compound document)</dc:format>
-            <xsl:apply-templates select="DigitalCollection"/>
+            <dct:isPartOf rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.6#digital"/>
             <xsl:apply-templates select="DigitalReproductionInformation"/>
             <edm:rights rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.4"/>
             <dct:source rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}"/>
@@ -326,17 +326,6 @@
             </dct:rightsHolder>
         </xsl:if>
     </xsl:template>
-    <xsl:template match="RepositoryCollection">
-        <xsl:if test="text()">
-            <dct:isPartOf rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.6#physical">
-                <dcmitype:Collection>
-                    <dct:title>
-                        <xsl:value-of select="."/>
-                    </dct:title>
-                </dcmitype:Collection>
-            </dct:isPartOf>
-        </xsl:if>
-    </xsl:template>
     <xsl:template match="PhysicalDescription">
         <xsl:if test="text()">
             <dct:extent>
@@ -361,17 +350,6 @@
             <dct:identifier>
                 <xsl:value-of select="."/>
             </dct:identifier>
-        </xsl:if>
-    </xsl:template>
-    <xsl:template match="DigitalCollection">
-        <xsl:if test="text()">
-            <dct:isPartOf rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.6#digital">
-                <dcmitype:Collection>
-                    <dct:title>
-                        <xsl:value-of select="."/>
-                    </dct:title>
-                </dcmitype:Collection>
-            </dct:isPartOf>
         </xsl:if>
     </xsl:template>
     <xsl:template match="DigitalReproductionInformation">
