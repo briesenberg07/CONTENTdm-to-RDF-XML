@@ -252,7 +252,6 @@
         <xsl:if test="text()">
             <edm:hasType
                 rdf:resource="https://doi.org/10.70027/uwlib.55.B.1.3B#{lower-case(translate(.,' ',''))}"/>
-            <!-- See my question for Theo re: coding, see GitHub issue #9 -->
         </xsl:if>
     </xsl:template>
     <xsl:template match="Language">
@@ -280,12 +279,11 @@
     </xsl:template>
     <xsl:template match="RepositoryCollection">
         <xsl:if test="text()">
-            <dct:isPartOf>
+            <dct:isPartOf rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.6#physical">
                 <dcmitype:Collection>
                     <dct:title>
                         <xsl:value-of select="."/>
                     </dct:title>
-                    <!-- Maybe add isPrimaryTopicOf here? -->
                 </dcmitype:Collection>
             </dct:isPartOf>
         </xsl:if>
@@ -318,12 +316,11 @@
     </xsl:template>
     <xsl:template match="DigitalCollection">
         <xsl:if test="text()">
-            <dct:isPartOf>
+            <dct:isPartOf rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.6#digital">
                 <dcmitype:Collection>
                     <dct:title>
                         <xsl:value-of select="."/>
                     </dct:title>
-                    <edm:isShownAt rdf:resource="http://content.lib.washington.edu/childrensweb/index.html"/>
                 </dcmitype:Collection>
             </dct:isPartOf>
         </xsl:if>
