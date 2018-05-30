@@ -113,7 +113,7 @@
                 </edm:Agent>
             </edm:dataProvider>
             <edm:rights rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.4"/>
-            <edm:isShownAt rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.3#{CdmNumber}"/>
+            <edm:isShownAt rdf:resource="http://digitalcollections.lib.washington.edu/cdm/ref/collection/childrens/id/{CdmNumber}"/>
             <edm:aggregatedCHO rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}"/>
         </rdf:Description>
     </xsl:template>
