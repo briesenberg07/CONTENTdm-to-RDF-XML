@@ -1,5 +1,5 @@
 # CONTENTdm metadata to RDF/XML  
-I am using the [XSL transform](CdmToRDFXML.xsl) here to convert metadata exported from CONTENTdm to RDF/XML as part of a capstone project for the University of Washington iSchool's MLIS program.  
+The [XSL transform](CdmToRDFXML.xsl) here was used to convert metadata exported from CONTENTdm to RDF/XML as part of a capstone project for the University of Washington iSchool's MLIS program.  
 The [Digital Public Library of America's](https://dp.la/) Metadata Application Profile was invaluable in this project, and served as a template for the creation of a dataset, including files describing source resources, web resources, and aggregations.
 
 ## Additional reference
