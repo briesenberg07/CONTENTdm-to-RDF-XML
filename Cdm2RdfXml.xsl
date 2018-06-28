@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:hclsr="https://doi.org/10.70027/uwlib.55.A.2.1#" xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:hclsr="https://doi.org/10.6069/uwlib.55.A.2.1#" xmlns:dct="http://purl.org/dc/terms/"
     version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:edm="http://www.europeana.eu/schemas/edm/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -15,7 +15,7 @@
         <xsl:apply-templates select="metadata"/>
     </xsl:template>
     <xsl:template match="metadata">
-        <xsl:result-document href="../../../MLIS/Capstone_data/RDFXML/hcl_SourceResource.rdf">
+        <xsl:result-document href="../../../Work/CaMS/Capstone_XSLstuff/Output/hcl_SourceResource.rdf">
             <rdf:RDF>
                 <xsl:apply-templates
                     select="
@@ -28,7 +28,7 @@
                     mode="sr"/>
             </rdf:RDF>
         </xsl:result-document>
-        <xsl:result-document href="../../../MLIS/Capstone_data/RDFXML/hcl_Aggregation.rdf">
+        <xsl:result-document href="../../../Work/CaMS/Capstone_XSLstuff/Output/hcl_Aggregation.rdf">
             <rdf:RDF>
                 <xsl:apply-templates
                     select="
@@ -41,7 +41,7 @@
                     mode="ag"/>
             </rdf:RDF>
         </xsl:result-document>
-        <xsl:result-document href="../../../MLIS/Capstone_data/RDFXML/hcl_WebResource.rdf">
+        <xsl:result-document href="../../../Work/CaMS/Capstone_XSLstuff/Output/hcl_WebResource.rdf">
             <rdf:RDF>
                 <xsl:apply-templates
                     select="
@@ -66,7 +66,7 @@
             or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
             or contains(CdmFileName, '2865.cpd')]"
         mode="sr">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.1#{CdmNumber}">
             <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
             <rdf:type rdf:resource="http://dp.la/about/map/SourceResource"/>
             <xsl:apply-templates select="Title"/>
@@ -84,11 +84,11 @@
             <xsl:apply-templates select="Category"/>
             <xsl:apply-templates select="Language"/>
             <xsl:apply-templates select="Repository"/>
-            <dct:isPartOf rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.6#physical"/>
+            <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.6#physical"/>
             <xsl:apply-templates select="PhysicalDescription"/>
             <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
             <dct:type rdf:resource="http://purl.org/dc/dcmitype/Text"/>
-            <dct:hasFormat rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.3#{CdmNumber}"/>
+            <dct:hasFormat rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.3#{CdmNumber}"/>
             <xsl:apply-templates select="Acquisition"/>
             <xsl:apply-templates select="OclcNumber"/>
         </rdf:Description>
@@ -104,7 +104,7 @@
             or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
             or contains(CdmFileName, '2865.cpd')]"
         mode="ag">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.2#{CdmNumber}">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.2#{CdmNumber}">
             <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
             <edm:dataProvider>
                 <edm:Agent>
@@ -112,9 +112,9 @@
                     <skos:exactMatch rdf:resource="http://id.loc.gov/authorities/names/n79056337"/>
                 </edm:Agent>
             </edm:dataProvider>
-            <edm:rights rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.4"/>
+            <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.4"/>
             <edm:isShownAt rdf:resource="http://digitalcollections.lib.washington.edu/cdm/ref/collection/childrens/id/{CdmNumber}"/>
-            <edm:aggregatedCHO rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}"/>
+            <edm:aggregatedCHO rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.1#{CdmNumber}"/>
         </rdf:Description>
     </xsl:template>
 
@@ -128,16 +128,16 @@
             or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
             or contains(CdmFileName, '2865.cpd')]"
         mode="wr">
-        <rdf:Description rdf:about="https://doi.org/10.70027/uwlib.55.A.2.3#{CdmNumber}">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.3#{CdmNumber}">
             <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
             <xsl:apply-templates select="Title"/>
             <xsl:apply-templates select="UniformTitle"/>
             <xsl:apply-templates select="AlternateTitle"/>
             <dc:format>application/cpd (CONTENTdm compound document)</dc:format>
-            <dct:isPartOf rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.6#digital"/>
+            <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.6#digital"/>
             <xsl:apply-templates select="DigitalReproductionInformation"/>
-            <edm:rights rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.4"/>
-            <dct:source rdf:resource="https://doi.org/10.70027/uwlib.55.A.2.1#{CdmNumber}"/>
+            <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.4"/>
+            <dct:source rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.1#{CdmNumber}"/>
         </rdf:Description>
     </xsl:template>
 
@@ -299,7 +299,7 @@
     <xsl:template match="Category">
         <xsl:if test="text()">
             <edm:hasType
-                rdf:resource="https://doi.org/10.70027/uwlib.55.B.1.3B#{lower-case(translate(.,' ',''))}"
+                rdf:resource="https://doi.org/10.6069/uwlib.55.B.1.3B#{lower-case(translate(.,' ',''))}"
             />
         </xsl:if>
     </xsl:template>
