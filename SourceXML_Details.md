@@ -1,3 +1,5 @@
+- The XML metadata files used for transformation are currently accessible only to collaborators at the University of Washington. 
+
 # Cleaning exported Historical Children's Literature metadata  
 - We used metadata exported from the [University of Washington's Historical online Children's Historical Literature Collection](http://content.lib.washington.edu/childrensweb/index.html) as raw material to create an RDF dataset describing selected physical items and digital surrogates from the collection. A first step in using this exported metadata was data cleaning.  
  
