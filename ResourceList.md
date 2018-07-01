@@ -4,3 +4,9 @@
 - [About the University of Washington Libraries' Historical Children's Literature Collection](http://guides.lib.uw.edu/c.php?g=341698&p=2299537)
 - [Historical Children's Literature Collection: Digital collection portal](http://content.lib.washington.edu/childrensweb/index.html)
 - [Children Will Listen: The Value of Children's Literature](http://viclit.omeka.net/) (2017 UW iSchool MLIS capstone group project web site)
+- Historical Children's Literature datasets published by the University of Washington Libraries:
+  - Source resources: [https://doi.org/10.6069/uwlib.55.A.2.1](https://doi.org/10.6069/uwlib.55.A.2.1)
+  - Aggregations: [https://doi.org/10.6069/uwlib.55.A.2.2](https://doi.org/10.6069/uwlib.55.A.2.2)
+  - Web resources: [https://doi.org/10.6069/uwlib.55.A.2.3](https://doi.org/10.6069/uwlib.55.A.2.3)
+  - Rights statement: [https://doi.org/10.6069/uwlib.55.A.2.4](https://doi.org/10.6069/uwlib.55.A.2.4)
+  - Collection: [https://doi.org/10.6069/uwlib.55.A.2.6](https://doi.org/10.6069/uwlib.55.A.2.6)
