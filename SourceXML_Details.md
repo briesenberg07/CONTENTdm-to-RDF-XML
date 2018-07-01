@@ -6,15 +6,15 @@
 - Source XML is currently available only to project contributors at the University of Washington Libraries. Please contact [Ben Riesenberg](mailto:ries07@uw.edu) for more information.
 
 ## Cleaning exported metadata  
-- I used find/replace all functions in [Notepad++](https://notepad-plus-plus.org/) for data cleaning, but this process could most likely be improved significantly with other tools and techniques for future transformations.  
+- I used find/replace functions in [Notepad++](https://notepad-plus-plus.org/) for data cleaning, but this process could most likely be improved significantly with other tools and techniques for future transformations.  
 
 ### Search and replace strings are given here in the order of operations
 ---
 1. ` &amp; ` --> ` and ` (Ensure that the search and replace strings begin and end with one space)
 2. `&quot;` --> `"`
-3. `&lt;br&gt;` --> ` ` (Replace with one space)
-4. `&amp;lt;br&amp;gt;` --> ` ` (Replace with one space)
-5. `<Category>br&amp</Category>` --> ` ` (Replace with one space)
+3. `&lt;br&gt;` --> (Replace with one space)
+4. `&amp;lt;br&amp;gt;` --> (Replace with one space)
+5. `<Category>br&amp</Category>` --> (Replace with one space)
 6. `&amp</Category>` --> `</Category>`
 7. `<Category>lt</Category>` --> DELETE
 8. `<Category>gt</Category>` --> DELETE
