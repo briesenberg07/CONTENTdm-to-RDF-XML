@@ -1,0 +1,6 @@
+# List of Related Resources
+- [Mapping of CONTENTdm metadata fields to RDF properties and classes used in the dataset](https://docs.google.com/spreadsheets/d/1Pax7Z1V5FjiuATyD0Cv1RY24w4TKs3s7oQmEwMSy8aA/edit?usp=sharing)
+- [DPLA Metadata Application Profile--at version 5at the time of writing](https://pro.dp.la/hubs/metadata-application-profile)
+- [About the University of Washington Libraries' Historical Children's Literature Collection](http://guides.lib.uw.edu/c.php?g=341698&p=2299537)
+- [Historical Children's Literature Collection: Digital collection portal](http://content.lib.washington.edu/childrensweb/index.html)
+- [Children Will Listen: The Value of Children's Literature](http://viclit.omeka.net/) (2017 UW iSchool MLIS capstone group project web site)
