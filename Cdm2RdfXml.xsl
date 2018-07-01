@@ -15,7 +15,7 @@
         <xsl:apply-templates select="metadata"/>
     </xsl:template>
     <xsl:template match="metadata">
-        <xsl:result-document href="../../../Work/CaMS/Capstone_XSLstuff/Output/hcl_SourceResource.rdf">
+        <xsl:result-document href="../../../Work/BMR_CaMS/Capstone_XSLstuff/Output/hcl_SourceResource.rdf">
             <rdf:RDF>
                 <xsl:apply-templates
                     select="
@@ -28,7 +28,7 @@
                     mode="sr"/>
             </rdf:RDF>
         </xsl:result-document>
-        <xsl:result-document href="../../../Work/CaMS/Capstone_XSLstuff/Output/hcl_Aggregation.rdf">
+        <xsl:result-document href="../../../Work/BMR_CaMS/Capstone_XSLstuff/Output/hcl_Aggregation.rdf">
             <rdf:RDF>
                 <xsl:apply-templates
                     select="
@@ -41,7 +41,7 @@
                     mode="ag"/>
             </rdf:RDF>
         </xsl:result-document>
-        <xsl:result-document href="../../../Work/CaMS/Capstone_XSLstuff/Output/hcl_WebResource.rdf">
+        <xsl:result-document href="../../../Work/BMR_CaMS/Capstone_XSLstuff/Output/hcl_WebResource.rdf">
             <rdf:RDF>
                 <xsl:apply-templates
                     select="
@@ -66,7 +66,7 @@
             or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
             or contains(CdmFileName, '2865.cpd')]"
         mode="sr">
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.1#{CdmNumber}">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.1#cdm{CdmNumber}">
             <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
             <rdf:type rdf:resource="http://dp.la/about/map/SourceResource"/>
             <xsl:apply-templates select="Title"/>
@@ -88,7 +88,7 @@
             <xsl:apply-templates select="PhysicalDescription"/>
             <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
             <dct:type rdf:resource="http://purl.org/dc/dcmitype/Text"/>
-            <dct:hasFormat rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.3#{CdmNumber}"/>
+            <dct:hasFormat rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.3#cdm{CdmNumber}"/>
             <xsl:apply-templates select="Acquisition"/>
             <xsl:apply-templates select="OclcNumber"/>
         </rdf:Description>
@@ -104,7 +104,7 @@
             or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
             or contains(CdmFileName, '2865.cpd')]"
         mode="ag">
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.2#{CdmNumber}">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.2#cdm{CdmNumber}">
             <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
             <edm:dataProvider>
                 <edm:Agent>
@@ -114,7 +114,7 @@
             </edm:dataProvider>
             <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.4"/>
             <edm:isShownAt rdf:resource="http://digitalcollections.lib.washington.edu/cdm/ref/collection/childrens/id/{CdmNumber}"/>
-            <edm:aggregatedCHO rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.1#{CdmNumber}"/>
+            <edm:aggregatedCHO rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.1#cdm{CdmNumber}"/>
         </rdf:Description>
     </xsl:template>
 
@@ -128,7 +128,7 @@
             or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
             or contains(CdmFileName, '2865.cpd')]"
         mode="wr">
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.3#{CdmNumber}">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.3#cdm{CdmNumber}">
             <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
             <xsl:apply-templates select="Title"/>
             <xsl:apply-templates select="UniformTitle"/>
@@ -137,7 +137,7 @@
             <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.6#digital"/>
             <xsl:apply-templates select="DigitalReproductionInformation"/>
             <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.4"/>
-            <dct:source rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.1#{CdmNumber}"/>
+            <dct:source rdf:resource="https://doi.org/10.6069/uwlib.55.A.2.1#cdm{CdmNumber}"/>
         </rdf:Description>
     </xsl:template>
 
