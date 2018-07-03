@@ -299,7 +299,7 @@
     <xsl:template match="Category">
         <xsl:if test="text()">
             <edm:hasType
-                rdf:resource="https://doi.org/10.6069/uwlib.55.B.1.3B#{lower-case(translate(.,' ',''))}"
+                rdf:resource="https://doi.org/10.6069/uwlib.55.B.3#{lower-case(translate(.,' ',''))}"
             />
         </xsl:if>
     </xsl:template>
