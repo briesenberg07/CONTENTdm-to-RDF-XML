@@ -4,7 +4,7 @@
 - The XSL transform here outputs values to three RDF files: source resource, aggregation, and web resource. In addition, the current version of the published dataset also includes collection and rights-statement files. 
 - A document detailing the mapping of CONTENTdm metadata fields to RDF properties and classes selected for use is available **[here](https://docs.google.com/spreadsheets/d/1Pax7Z1V5FjiuATyD0Cv1RY24w4TKs3s7oQmEwMSy8aA/edit?usp=sharing)**.
 - This capstone project built on the work of an iSchool capstone group from 2017 who digitized 40 volumes from the University of Washington Libraries Special Collections Historical Children's Literature collection. Their excellent work can be seen **[here](http://viclit.omeka.net/)**.
-- Many thanks to my project sponsor, Metadata/Cataloging Librarian Theo Gerontakos at the University of Washington Libraries. He provided essential guidance on mapping of CONTENTdm metadata to RDF properties, XSL work, and the project as a whole.
+- Many thanks to the project sponsor, Metadata/Cataloging Librarian Theo Gerontakos at the University of Washington Libraries. He provided essential guidance on mapping of CONTENTdm metadata to RDF properties, XSL work, and the project as a whole.
 - For more information please contact [Ben Riesenberg](mailto:ries07@uw.edu).
 
 ### _Next:_
