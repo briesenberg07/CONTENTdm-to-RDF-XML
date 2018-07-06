@@ -14,58 +14,26 @@
     <xsl:template match="/">
         <xsl:apply-templates select="metadata"/>
     </xsl:template>
-    <xsl:template match="metadata">
-        <xsl:result-document href="../../../Work/BMR_CaMS/Capstone_XSLstuff/Output/hcl_SourceResource.rdf">
+    <xsl:template match="record">
+        <xsl:result-document href="../../../Work/BMR_CaMS/AYP_XSLOutput/Ayp_SourceResource.rdf">
             <rdf:RDF>
-                <xsl:apply-templates
-                    select="
-                        record[contains(CdmFileName, '2720.cpd')
-                        or contains(CdmFileName, '2719.cpd') or contains(CdmFileName, '2718.cpd')
-                        or contains(CdmFileName, '2829.cpd') or contains(CdmFileName, '2860.cpd')
-                        or contains(CdmFileName, '2861.cpd') or contains(CdmFileName, '2862.cpd')
-                        or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
-                        or contains(CdmFileName, '2865.cpd')]"
-                    mode="sr"/>
+                <xsl:apply-templates mode="sr"/>
             </rdf:RDF>
         </xsl:result-document>
-        <xsl:result-document href="../../../Work/BMR_CaMS/Capstone_XSLstuff/Output/hcl_Aggregation.rdf">
+        <xsl:result-document href="../../../Work/BMR_CaMS/AYP_XSLOutput/Ayp_Aggregation.rdf">
             <rdf:RDF>
-                <xsl:apply-templates
-                    select="
-                        record[contains(CdmFileName, '2720.cpd')
-                        or contains(CdmFileName, '2719.cpd') or contains(CdmFileName, '2718.cpd')
-                        or contains(CdmFileName, '2829.cpd') or contains(CdmFileName, '2860.cpd')
-                        or contains(CdmFileName, '2861.cpd') or contains(CdmFileName, '2862.cpd')
-                        or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
-                        or contains(CdmFileName, '2865.cpd')]"
-                    mode="ag"/>
+                <xsl:apply-templates mode="ag"/>
             </rdf:RDF>
         </xsl:result-document>
-        <xsl:result-document href="../../../Work/BMR_CaMS/Capstone_XSLstuff/Output/hcl_WebResource.rdf">
+        <xsl:result-document href="../../../Work/BMR_CaMS/AYP_XSLOutput/Ayp_WebResource.rdf">
             <rdf:RDF>
-                <xsl:apply-templates
-                    select="
-                        record[contains(CdmFileName, '2720.cpd')
-                        or contains(CdmFileName, '2719.cpd') or contains(CdmFileName, '2718.cpd')
-                        or contains(CdmFileName, '2829.cpd') or contains(CdmFileName, '2860.cpd')
-                        or contains(CdmFileName, '2861.cpd') or contains(CdmFileName, '2862.cpd')
-                        or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
-                        or contains(CdmFileName, '2865.cpd')]"
-                    mode="wr"/>
+                <xsl:apply-templates mode="wr"/>
             </rdf:RDF>
         </xsl:result-document>
     </xsl:template>
 
     <!-- SOURCE RESOURCE TEMPLATE -->
-    <xsl:template
-        match="
-            record[contains(CdmFileName, '2720.cpd')
-            or contains(CdmFileName, '2719.cpd') or contains(CdmFileName, '2718.cpd')
-            or contains(CdmFileName, '2829.cpd') or contains(CdmFileName, '2860.cpd')
-            or contains(CdmFileName, '2861.cpd') or contains(CdmFileName, '2862.cpd')
-            or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
-            or contains(CdmFileName, '2865.cpd')]"
-        mode="sr">
+    <xsl:template match="record" mode="sr">
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.1#cdm{CdmNumber}">
             <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
             <rdf:type rdf:resource="http://dp.la/about/map/SourceResource"/>
@@ -95,15 +63,7 @@
     </xsl:template>
 
     <!-- AGGREGATION TEMPLATE -->
-    <xsl:template
-        match="
-            record[contains(CdmFileName, '2720.cpd')
-            or contains(CdmFileName, '2719.cpd') or contains(CdmFileName, '2718.cpd')
-            or contains(CdmFileName, '2829.cpd') or contains(CdmFileName, '2860.cpd')
-            or contains(CdmFileName, '2861.cpd') or contains(CdmFileName, '2862.cpd')
-            or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
-            or contains(CdmFileName, '2865.cpd')]"
-        mode="ag">
+    <xsl:template match="record" mode="ag">
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.2#cdm{CdmNumber}">
             <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
             <edm:dataProvider>
@@ -119,15 +79,7 @@
     </xsl:template>
 
     <!-- WEB RESOURCE TEMPLATE -->
-    <xsl:template
-        match="
-            record[contains(CdmFileName, '2720.cpd')
-            or contains(CdmFileName, '2719.cpd') or contains(CdmFileName, '2718.cpd')
-            or contains(CdmFileName, '2829.cpd') or contains(CdmFileName, '2860.cpd')
-            or contains(CdmFileName, '2861.cpd') or contains(CdmFileName, '2862.cpd')
-            or contains(CdmFileName, '2863.cpd') or contains(CdmFileName, '2864.cpd')
-            or contains(CdmFileName, '2865.cpd')]"
-        mode="wr">
+    <xsl:template match="record" mode="wr">
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.2.3#cdm{CdmNumber}">
             <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
             <xsl:apply-templates select="Title"/>
