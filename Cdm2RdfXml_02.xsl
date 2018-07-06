@@ -14,7 +14,8 @@
     <xsl:template match="/">
         <xsl:apply-templates select="metadata"/>
     </xsl:template>
-    <xsl:template match="record">
+    
+    <xsl:template match="metadata">
         <xsl:result-document href="../../../Work/BMR_CaMS/AYP_XSLOutput/Ayp_SourceResource.rdf">
             <rdf:RDF>
                 <xsl:apply-templates mode="sr"/>
