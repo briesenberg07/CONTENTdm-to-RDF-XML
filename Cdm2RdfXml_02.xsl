@@ -104,14 +104,14 @@
 
     <!-- ELEMENT TEMPLATES -->
     <xsl:template match="Title" mode="sr">
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{cdmnumber}">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
             <dct:title>
                 <xsl:value-of select="."/>
             </dct:title>
         </rdf:Description>
     </xsl:template>
     <xsl:template match="Title" mode="wr">
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_WR#cdm{cdmnumber}">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_WR#cdm{../cdmnumber}">
             <dct:title>
                 <xsl:value-of select="."/>
             </dct:title>
@@ -119,8 +119,8 @@
     </xsl:template>
     <xsl:template match="Photographer">
         <xsl:if test="text()">
-            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{cdmnumber}">
-                <dct:creator rdf:nodeID=""/>
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+                <dct:creator rdf:nodeID="_:{position()}"/>
             </rdf:Description>
                     <edm:Agent>
                         <dpla:providedLabel>
