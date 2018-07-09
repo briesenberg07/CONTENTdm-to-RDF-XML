@@ -27,7 +27,7 @@
             <rdf:RDF>
                 <xsl:apply-templates select="record" mode="wr"/>
             </rdf:RDF>
-        </xsl:result-document>        
+        </xsl:result-document>
         <xsl:result-document href="../../../Work/BMR_CaMS/AYP_XSLOutput/Ayp_Aggregation.rdf">
             <rdf:RDF>
                 <xsl:apply-templates select="record" mode="ag"/>
@@ -37,7 +37,7 @@
             <rdf:RDF>
                 <xsl:apply-templates select="record" mode="agt"/>
             </rdf:RDF>
-        </xsl:result-document>        
+        </xsl:result-document>
     </xsl:template>
 
     <!-- SOURCE RESOURCE TEMPLATE -->
@@ -126,19 +126,28 @@
         </rdf:Description>
     </xsl:template>
     <xsl:template match="Photographer" mode="sr">
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
-            <dct:creator resource="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Photographer, ' ,.', '')}"/>
-        </rdf:Description>
+        <xsl:if test="text()">
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+                <dct:creator
+                    resource="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Photographer, ' ,.', '')}"
+                />
+            </rdf:Description>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="Photographer" mode="agt">
         <xsl:if test="text()">
-            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., ' ,.', '')}">
+            <rdf:Description
+                rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., ' ,.', '')}">
                 <rdf:type resource="http://www.europeana.eu/schemas/edm/Agent"/>
             </rdf:Description>
-            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., ' ,.', '')}">
-                <dpla:providedLabel><xsl:value-of select="."/></dpla:providedLabel>
+            <rdf:Description
+                rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., ' ,.', '')}">
+                <dpla:providedLabel>
+                    <xsl:value-of select="."/>
+                </dpla:providedLabel>
             </rdf:Description>
-            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., ' ,.', '')}">
+            <rdf:Description
+                rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., ' ,.', '')}">
                 <skos:note>
                     <xsl:value-of select="name()"/>
                 </skos:note>
