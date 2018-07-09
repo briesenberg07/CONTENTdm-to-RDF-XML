@@ -52,8 +52,6 @@
         <xsl:apply-templates select="Title" mode="sr"/>
         <xsl:apply-templates select="Photographer" mode="sr"/>
         <xsl:apply-templates select="DateEdtf"/>
-        <xsl:apply-templates select="Printer"/>
-        <xsl:apply-templates select="ImageProductionProcess"/>
         <xsl:apply-templates select="Notes"/>
         <xsl:apply-templates select="ContextualNotes"/>
         <xsl:apply-templates select="SubjectsLCSH"/>
@@ -163,40 +161,29 @@
             </rdf:Description>
         </xsl:if>
     </xsl:template>
-    <xsl:template match="Printer">
-        <xsl:if test="text()">
-            <dct:contributor>
-                <edm:Agent>
-                    <dpla:providedLabel>
-                        <xsl:value-of select="."/>
-                    </dpla:providedLabel>
-                    <skos:note>Printer</skos:note>
-                </edm:Agent>
-            </dct:contributor>
-        </xsl:if>
-    </xsl:template>
-    <xsl:template match="ImageProductionProcess">
-        <xsl:if test="text()">
-            <bf:note>
-                <bf:Note>
-                    <rdfs:label>
-                        <xsl:value-of select="."/>
-                    </rdfs:label>
-                    <bf:noteType>Image production process</bf:noteType>
-                </bf:Note>
-            </bf:note>
-        </xsl:if>
-    </xsl:template>
     <xsl:template match="Notes">
         <xsl:if test="text()">
-            <bf:note>
-                <bf:Note>
-                    <rdfs:label>
-                        <xsl:value-of select="."/>
-                    </rdfs:label>
-                    <bf:noteType>General</bf:noteType>
-                </bf:Note>
-            </bf:note>
+            <xsl:choose>
+                <xsl:when test="contains(., '&lt;br&gt;')">
+                    <rdf:Description
+                        rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+                        <xsl:for-each select="tokenize(., '&lt;br&gt;')">
+                            <skos:note>
+                                <xsl:value-of select="."/>
+                            </skos:note>
+                        </xsl:for-each>
+                    </rdf:Description>
+                </xsl:when>
+                <!-- This still needs work. The <br> is often repeated twice in a row in the notes field, and this currently generates an empty skos:note element -->
+                <xsl:otherwise>
+                    <rdf:Description
+                        rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+                        <skos:note>
+                            <xsl:value-of select="."/>
+                        </skos:note>
+                    </rdf:Description>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:if>
     </xsl:template>
     <xsl:template match="ContextualNotes">
