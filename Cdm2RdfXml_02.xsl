@@ -50,7 +50,7 @@
             <rdf:type rdf:resource="http://dp.la/about/map/SourceResource"/>
         </rdf:Description>
         <xsl:apply-templates select="Title" mode="sr"/>
-        <xsl:apply-templates select="Photographer"/>
+        <xsl:apply-templates select="Photographer" mode="sr"/>
         <xsl:apply-templates select="Illustrator"/>
         <xsl:apply-templates select="Publisher"/>
         <xsl:apply-templates select="PublicationDate"/>
@@ -108,7 +108,9 @@
     </xsl:template>
 
     <!-- AGENT TEMPLATE -->
-    
+    <xsl:template match="record" mode="agt">
+        <xsl:apply-templates select="Photographer" mode="agt"/>
+    </xsl:template>
 
     <!-- ELEMENT TEMPLATES -->
     <xsl:template match="Title" mode="sr">
@@ -125,17 +127,24 @@
             </dct:title>
         </rdf:Description>
     </xsl:template>
-    <xsl:template match="Photographer">
+    <xsl:template match="Photographer" mode="sr">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+            <dct:creator resource="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Photographer, ' ,.', '')}"/>
+        </rdf:Description>
+    </xsl:template>
+    <xsl:template match="Photographer" mode="agt">
         <xsl:if test="text()">
-            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
-                <dct:creator rdf:nodeID="_:{position()}"/>
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., ' ,.', '')}">
+                <rdf:type resource="http://www.europeana.eu/schemas/edm/Agent"/>
             </rdf:Description>
-                    <edm:Agent>
-                        <dpla:providedLabel>
-                            <xsl:value-of select="."/>
-                        </dpla:providedLabel>
-                        <skos:note>Author</skos:note>
-                    </edm:Agent>
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., ' ,.', '')}">
+                <dpla:providedLabel><xsl:value-of select="."/></dpla:providedLabel>
+            </rdf:Description>
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., ' ,.', '')}">
+                <skos:note>
+                    <xsl:value-of select="name()"/>
+                </skos:note>
+            </rdf:Description>
         </xsl:if>
     </xsl:template>
     <xsl:template match="Illustrator">
