@@ -20,19 +20,24 @@
     <xsl:template match="metadata">
         <xsl:result-document href="../../../Work/BMR_CaMS/AYP_XSLOutput/Ayp_SourceResource.rdf">
             <rdf:RDF>
-                <xsl:apply-templates mode="sr"/>
-            </rdf:RDF>
-        </xsl:result-document>
-        <xsl:result-document href="../../../Work/BMR_CaMS/AYP_XSLOutput/Ayp_Aggregation.rdf">
-            <rdf:RDF>
-                <xsl:apply-templates mode="ag"/>
+                <xsl:apply-templates select="record" mode="sr"/>
             </rdf:RDF>
         </xsl:result-document>
         <xsl:result-document href="../../../Work/BMR_CaMS/AYP_XSLOutput/Ayp_WebResource.rdf">
             <rdf:RDF>
-                <xsl:apply-templates mode="wr"/>
+                <xsl:apply-templates select="record" mode="wr"/>
+            </rdf:RDF>
+        </xsl:result-document>        
+        <xsl:result-document href="../../../Work/BMR_CaMS/AYP_XSLOutput/Ayp_Aggregation.rdf">
+            <rdf:RDF>
+                <xsl:apply-templates select="record" mode="ag"/>
             </rdf:RDF>
         </xsl:result-document>
+        <xsl:result-document href="../../../Work/BMR_CaMS/AYP_XSLOutput/Ayp_Agent.rdf">
+            <rdf:RDF>
+                <xsl:apply-templates select="record" mode="agt"/>
+            </rdf:RDF>
+        </xsl:result-document>        
     </xsl:template>
 
     <!-- SOURCE RESOURCE TEMPLATE -->
@@ -70,6 +75,21 @@
         <xsl:apply-templates select="Acquisition"/>
     </xsl:template>
 
+    <!-- WEB RESOURCE TEMPLATE -->
+    <xsl:template match="record" mode="wr">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_WR#cdm{cdmnumber}">
+            <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
+            <xsl:apply-templates select="Title" mode="wr"/>
+            <xsl:apply-templates select="UniformTitle"/>
+            <xsl:apply-templates select="AlternateTitle"/>
+            <dc:format>application/cpd (CONTENTdm compound document)</dc:format>
+            <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.TBD_Coll#digital"/>
+            <xsl:apply-templates select="DigitalReproductionInformation"/>
+            <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.TBD_Rights"/>
+            <dct:source rdf:resource="https://doi.org/10.6069/uwlib.TBD_SR#cdm{cdmnumber}"/>
+        </rdf:Description>
+    </xsl:template>
+
     <!-- AGGREGATION TEMPLATE -->
     <xsl:template match="record" mode="ag">
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_Ag#cdm{cdmnumber}">
@@ -87,20 +107,8 @@
         </rdf:Description>
     </xsl:template>
 
-    <!-- WEB RESOURCE TEMPLATE -->
-    <xsl:template match="record" mode="wr">
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_WR#cdm{cdmnumber}">
-            <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
-            <xsl:apply-templates select="Title" mode="wr"/>
-            <xsl:apply-templates select="UniformTitle"/>
-            <xsl:apply-templates select="AlternateTitle"/>
-            <dc:format>application/cpd (CONTENTdm compound document)</dc:format>
-            <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.TBD_Coll#digital"/>
-            <xsl:apply-templates select="DigitalReproductionInformation"/>
-            <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.TBD_Rights"/>
-            <dct:source rdf:resource="https://doi.org/10.6069/uwlib.TBD_SR#cdm{cdmnumber}"/>
-        </rdf:Description>
-    </xsl:template>
+    <!-- AGENT TEMPLATE -->
+    
 
     <!-- ELEMENT TEMPLATES -->
     <xsl:template match="Title" mode="sr">
