@@ -51,9 +51,7 @@
         </rdf:Description>
         <xsl:apply-templates select="Title" mode="sr"/>
         <xsl:apply-templates select="Photographer" mode="sr"/>
-        <xsl:apply-templates select="Illustrator"/>
-        <xsl:apply-templates select="Publisher"/>
-        <xsl:apply-templates select="PublicationDate"/>
+        <xsl:apply-templates select="DateEdtf"/>
         <xsl:apply-templates select="Printer"/>
         <xsl:apply-templates select="ImageProductionProcess"/>
         <xsl:apply-templates select="Notes"/>
@@ -147,51 +145,13 @@
             </rdf:Description>
         </xsl:if>
     </xsl:template>
-    <xsl:template match="Illustrator">
+    <xsl:template match="DateEdtf">
         <xsl:if test="text()">
-            <dct:contributor>
-                <edm:Agent>
-                    <dpla:providedLabel>
-                        <xsl:value-of select="."/>
-                    </dpla:providedLabel>
-                    <skos:note>Illustrator</skos:note>
-                </edm:Agent>
-            </dct:contributor>
-        </xsl:if>
-    </xsl:template>
-    <xsl:template match="Publisher">
-        <xsl:if test="text()">
-            <dct:publisher>
-                <edm:Agent>
-                    <dpla:providedLabel>
-                        <xsl:value-of select="."/>
-                    </dpla:providedLabel>
-                    <foaf:basedNear>
-                        <edm:Place>
-                            <dpla:providedLabel>
-                                <xsl:value-of select="../PublisherLocation"/>
-                            </dpla:providedLabel>
-                        </edm:Place>
-                    </foaf:basedNear>
-                </edm:Agent>
-            </dct:publisher>
-        </xsl:if>
-    </xsl:template>
-    <xsl:template match="PublicationDate">
-        <xsl:if test="text()">
-            <dc:date>
-                <edm:TimeSpan>
-                    <dpla:providedLabel>
-                        <xsl:value-of select="."/>
-                    </dpla:providedLabel>
-                    <edm:begin rdf:datatype="http://id.loc.gov/datatypes/edtf/EDTF-level0">
-                        <xsl:value-of select="../EarliestDate"/>
-                    </edm:begin>
-                    <edm:end rdf:datatype="http://id.loc.gov/datatypes/edtf/EDTF-level0">
-                        <xsl:value-of select="../LatestDate"/>
-                    </edm:end>
-                </edm:TimeSpan>
-            </dc:date>
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+                <dc:date rdf:datatype="http://id.loc.gov/datatypes/edtf/EDTF-level0">
+                    <xsl:value-of select="."/>
+                </dc:date>
+            </rdf:Description>
         </xsl:if>
     </xsl:template>
     <xsl:template match="Printer">
