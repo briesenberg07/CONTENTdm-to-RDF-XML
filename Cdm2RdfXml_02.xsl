@@ -52,7 +52,7 @@
         <xsl:apply-templates select="Title" mode="sr"/>
         <xsl:apply-templates select="Photographer" mode="sr"/>
         <xsl:apply-templates select="DateEdtf"/>
-        <!-- <xsl:apply-templates select="Notes"/> -->
+        <xsl:apply-templates select="Notes"/>
         <xsl:apply-templates select="SubjectsLcsh"/>
         <xsl:apply-templates select="Category"/>
         <xsl:apply-templates select="Language"/>
@@ -160,13 +160,13 @@
             </rdf:Description>
         </xsl:if>
     </xsl:template>
-    
-    <!-- NOT WORKING 
+
     <xsl:template match="Notes">
         <xsl:if test="text()">
             <xsl:choose>
                 <xsl:when test="contains(., '&lt;br&gt;&lt;br&gt;')">
-                    <xsl:call-template name="NotesTokens">
+                    <xsl:call-template name="NotesField">
+                        <xsl:with-param name="CdmNumber" select="../cdmnumber"/>
                         <xsl:with-param name="Tokens" select="tokenize(., '&lt;br&gt;&lt;br&gt;')"/>
                     </xsl:call-template>
                 </xsl:when>
@@ -180,9 +180,11 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:if>
-    </xsl:template> -->
-    
-    <!-- SubjectsLcsh needs more work. PROBABLY need to create blank nodes to express skos:inScheme, etc. -->
+    </xsl:template>
+
+    <!-- SubjectsLcsh needs more work. PROBABLY need to create blank nodes to express skos:inScheme, etc. 
+    ALSO this will depend on which export we use and data cleaning
+    (Subjects may be in repeating fields or may be in same separated by semicolons -->
     <xsl:template match="SubjectsLcsh">
         <xsl:if test="text()">
             <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
@@ -254,14 +256,16 @@
         </xsl:if>
     </xsl:template>
 
-    <!-- NOT WORKING
-    <xsl:template name="NotesTokens">
+    <xsl:template name="NotesField">
         <xsl:param name="Tokens"/>
+        <xsl:param name="CdmNumber"/>
         <xsl:for-each select="$Tokens">
-            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
-                <skos:note resource="{.}"/>
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{$CdmNumber}">
+                <skos:note>
+                    <xsl:value-of select="."/>
+                </skos:note>
             </rdf:Description>
         </xsl:for-each>
-    </xsl:template> -->
+    </xsl:template>
 
 </xsl:stylesheet>
