@@ -161,20 +161,16 @@
             </rdf:Description>
         </xsl:if>
     </xsl:template>
+    
+    <!-- NOT WORKING 
     <xsl:template match="Notes">
         <xsl:if test="text()">
             <xsl:choose>
-                <xsl:when test="contains(., '&lt;br&gt;')">
-                    <rdf:Description
-                        rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
-                        <xsl:for-each select="tokenize(., '&lt;br&gt;')">
-                            <skos:note>
-                                <xsl:value-of select="."/>
-                            </skos:note>
-                        </xsl:for-each>
-                    </rdf:Description>
+                <xsl:when test="contains(., '&lt;br&gt;&lt;br&gt;')">
+                    <xsl:call-template name="NotesTokens">
+                        <xsl:with-param name="Tokens" select="tokenize(., '&lt;br&gt;&lt;br&gt;')"/>
+                    </xsl:call-template>
                 </xsl:when>
-                <!-- This still needs work. The <br> is often repeated twice in a row in the notes field, and this currently generates an empty skos:note element -->
                 <xsl:otherwise>
                     <rdf:Description
                         rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
@@ -185,7 +181,8 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:if>
-    </xsl:template>
+    </xsl:template> -->
+    
     <xsl:template match="ContextualNotes">
         <xsl:if test="text()">
             <bf:note>
@@ -287,4 +284,15 @@
             </bf:note>
         </xsl:if>
     </xsl:template>
+
+    <!-- NOT WORKING
+    <xsl:template name="NotesTokens">
+        <xsl:param name="Tokens"/>
+        <xsl:for-each select="$Tokens">
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+                <skos:note resource="{.}"/>
+            </rdf:Description>
+        </xsl:for-each>
+    </xsl:template> -->
+
 </xsl:stylesheet>
