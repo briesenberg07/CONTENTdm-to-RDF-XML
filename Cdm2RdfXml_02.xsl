@@ -58,7 +58,6 @@
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{cdmnumber}">
             <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.TBD_Coll#physical"/>
         </rdf:Description>
-        <xsl:apply-templates select="PhysicalDescription"/>
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{cdmnumber}">
             <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
         </rdf:Description>
@@ -73,9 +72,7 @@
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_WR#cdm{cdmnumber}">
             <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
             <xsl:apply-templates select="Title" mode="wr"/>
-            <xsl:apply-templates select="UniformTitle"/>
-            <xsl:apply-templates select="AlternateTitle"/>
-            <dc:format>application/cpd (CONTENTdm compound document)</dc:format>
+            <!-- <dc:format></dc:format> -->
             <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.TBD_Coll#digital"/>
             <xsl:apply-templates select="DigitalReproductionInformation"/>
             <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.TBD_Rights"/>
@@ -87,23 +84,21 @@
     <xsl:template match="record" mode="ag">
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_Ag#cdm{cdmnumber}">
             <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
-            <edm:dataProvider>
-                <edm:Agent>
-                    <dpla:providedLabel>University of Washington Libraries</dpla:providedLabel>
-                    <skos:exactMatch rdf:resource="http://id.loc.gov/authorities/names/n79056337"/>
-                </edm:Agent>
-            </edm:dataProvider>
-            <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.TBD_Rights"/>
+        </rdf:Description>
+        <xsl:apply-templates select="Contributor" mode="ag"/>
+        <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.TBD_Rights"/>
+        <!-- TO DO
             <edm:isShownAt
                 rdf:resource="http://digitalcollections.lib.washington.edu/cdm/ref/collection/childrens/id/{cdmnumber}"/>
             <edm:aggregatedCHO rdf:resource="https://doi.org/10.6069/uwlib.TBD_SR#cdm{cdmnumber}"/>
-        </rdf:Description>
+            -->
     </xsl:template>
 
     <!-- AGENT TEMPLATE -->
     <xsl:template match="record" mode="agt">
         <xsl:apply-templates select="Photographer" mode="agt"/>
         <xsl:apply-templates select="Repository" mode="agt"/>
+        <xsl:apply-templates select="Contributor" mode="agt"/>
     </xsl:template>
 
     <!-- ELEMENT TEMPLATES -->
@@ -226,42 +221,47 @@
                 </skos:note>
             </rdf:Description>
         </xsl:if>
-        <!-- <edm:Agent>
-                    <dpla:providedLabel>
-                        <xsl:value-of select="."/>
-                    </dpla:providedLabel>
-                </edm:Agent> -->
-    </xsl:template>
-    <xsl:template match="PhysicalDescription">
-        <xsl:if test="text()">
-            <dct:extent>
-                <xsl:value-of select="."/>
-            </dct:extent>
-        </xsl:if>
     </xsl:template>
     <xsl:template match="Acquisition">
         <xsl:if test="text()">
-            <bf:note>
-                <bf:Note>
-                    <rdfs:label>
-                        <xsl:value-of select="."/>
-                    </rdfs:label>
-                    <bf:noteType>Acquisition</bf:noteType>
-                </bf:Note>
-            </bf:note>
+            <rdf:Description about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+                <bf:note>
+                    <xsl:text>Acquisition note: "</xsl:text>
+                    <xsl:value-of select="."/>
+                    <xsl:text>"</xsl:text>
+                </bf:note>
+            </rdf:Description>
         </xsl:if>
     </xsl:template>
     <xsl:template match="DigitalReproductionInformation">
         <xsl:if test="text()">
-            <bf:note>
-                <bf:Note>
-                    <rdfs:label>
-                        <xsl:value-of select="."/>
-                    </rdfs:label>
-                    <bf:noteType>Digital reproduction information</bf:noteType>
-                </bf:Note>
-            </bf:note>
+            <rdf:Description about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+                <bf:note>
+                    <xsl:text>Digital reproduction information: "</xsl:text>
+                    <xsl:value-of select="."/>
+                    <xsl:text>"</xsl:text>
+                </bf:note>
+            </rdf:Description>
         </xsl:if>
+    </xsl:template>
+    <xsl:template match="Contributor" mode="ag">
+        <xsl:if test="text()">
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_Ag#cdm{../cdmnumber}">
+                <edm:dataProvider rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., '., ', '')}"/>
+            </rdf:Description>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="Contributor" mode="agt">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., '., ', '')}">
+            <rdf:type resource="http://www.europeana.eu/schemas/edm/Agent"/>
+        </rdf:Description>
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., '., ', '')}">
+            <dpla:providedLabel><xsl:value-of select="."/></dpla:providedLabel>
+        </rdf:Description>
+        <!-- If we hard-code skos:exactMatch here it follows that we would go ahead and hard-code a shorter DOI suffix for this Agent as well.
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., '., ', '')}">
+            <skos:exactMatch rdf:resource="http://id.loc.gov/authorities/names/n79056337"/>
+        </rdf:Description> -->
     </xsl:template>
 
     <!-- NAMED TEMPLATES -->
