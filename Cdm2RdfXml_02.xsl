@@ -52,9 +52,8 @@
         <xsl:apply-templates select="Title" mode="sr"/>
         <xsl:apply-templates select="Photographer" mode="sr"/>
         <xsl:apply-templates select="DateEdtf"/>
-        <xsl:apply-templates select="Notes"/>
-        <xsl:apply-templates select="ContextualNotes"/>
-        <xsl:apply-templates select="SubjectsLCSH"/>
+        <!-- <xsl:apply-templates select="Notes"/> -->
+        <xsl:apply-templates select="SubjectsLcsh"/>
         <xsl:apply-templates select="Category"/>
         <xsl:apply-templates select="Language"/>
         <xsl:apply-templates select="Repository"/>
@@ -183,45 +182,15 @@
         </xsl:if>
     </xsl:template> -->
     
-    <xsl:template match="ContextualNotes">
+    <!-- SubjectsLcsh needs more work. PROBABLY need to create blank nodes to express skos:inScheme, etc. -->
+    <xsl:template match="SubjectsLcsh">
         <xsl:if test="text()">
-            <bf:note>
-                <bf:Note>
-                    <rdfs:label>
-                        <xsl:value-of select="."/>
-                    </rdfs:label>
-                    <bf:noteType>Contextual</bf:noteType>
-                </bf:Note>
-            </bf:note>
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+                <dct:subject>
+                    <xsl:value-of select="."/>
+                </dct:subject>
+            </rdf:Description>
         </xsl:if>
-    </xsl:template>
-    <xsl:template match="SubjectsLCSH">
-        <xsl:choose>
-            <xsl:when test="contains(., ';')">
-                <xsl:for-each select="tokenize(., '; ')">
-                    <dct:subject>
-                        <skos:Concept>
-                            <dpla:providedLabel>
-                                <xsl:value-of select="."/>
-                            </dpla:providedLabel>
-                            <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
-                        </skos:Concept>
-                    </dct:subject>
-                </xsl:for-each>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:if test="text()">
-                    <dct:subject>
-                        <skos:Concept>
-                            <dpla:providedLabel>
-                                <xsl:value-of select="."/>
-                            </dpla:providedLabel>
-                            <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
-                        </skos:Concept>
-                    </dct:subject>
-                </xsl:if>
-            </xsl:otherwise>
-        </xsl:choose>
     </xsl:template>
     <xsl:template match="Category">
         <xsl:if test="text()">
