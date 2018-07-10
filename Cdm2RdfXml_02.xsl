@@ -54,9 +54,7 @@
         <xsl:apply-templates select="DateEdtf"/>
         <xsl:apply-templates select="Notes"/>
         <xsl:apply-templates select="SubjectsLcsh"/>
-        <xsl:apply-templates select="Category"/>
-        <xsl:apply-templates select="Language"/>
-        <xsl:apply-templates select="Repository"/>
+        <xsl:apply-templates select="Repository" mode="sr"/>
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{cdmnumber}">
             <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.TBD_Coll#physical"/>
         </rdf:Description>
@@ -105,6 +103,7 @@
     <!-- AGENT TEMPLATE -->
     <xsl:template match="record" mode="agt">
         <xsl:apply-templates select="Photographer" mode="agt"/>
+        <xsl:apply-templates select="Repository" mode="agt"/>
     </xsl:template>
 
     <!-- ELEMENT TEMPLATES -->
@@ -192,7 +191,8 @@
                     </xsl:call-template>
                 </xsl:when>
                 <xsl:otherwise>
-                    <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+                    <rdf:Description
+                        rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
                         <dct:subject>
                             <xsl:value-of select="."/>
                         </dct:subject>
@@ -201,35 +201,36 @@
             </xsl:choose>
         </xsl:if>
     </xsl:template>
-    <xsl:template match="Category">
+    <xsl:template match="Repository" mode="sr">
         <xsl:if test="text()">
-            <edm:hasType
-                rdf:resource="https://doi.org/10.6069/uwlib.TBD_UWVocabs#{lower-case(translate(.,' ',''))}"/>
-            <!-- Not sure if Category element is used for AYP collection. If so, are UW vocabs published? -->
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.TBD_SR#cdm{../cdmnumber}">
+                <dct:rightsHolder
+                    resource="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Repository, ', ', '')}"
+                />
+            </rdf:Description>
         </xsl:if>
     </xsl:template>
-    <xsl:template match="Language">
+    <xsl:template match="Repository" mode="agt">
         <xsl:if test="text()">
-            <dct:language>
-                <dct:LinguisticSystem>
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Repository, ', ', '')}">
+                <rdf:type resource="http://www.europeana.eu/schemas/edm/Agent"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Repository, ', ', '')}">
+                <dpla:providedLabel>
+                    <xsl:value-of select="."/>
+                </dpla:providedLabel>
+            </rdf:Description>
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Repository, ', ', '')}">
+                <skos:note>
+                    <xsl:value-of select="name()"/>
+                </skos:note>
+            </rdf:Description>
+        </xsl:if>
+        <!-- <edm:Agent>
                     <dpla:providedLabel>
                         <xsl:value-of select="."/>
                     </dpla:providedLabel>
-                    <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
-                </dct:LinguisticSystem>
-            </dct:language>
-        </xsl:if>
-    </xsl:template>
-    <xsl:template match="Repository">
-        <xsl:if test="text()">
-            <dct:rightsHolder>
-                <edm:Agent>
-                    <dpla:providedLabel>
-                        <xsl:value-of select="."/>
-                    </dpla:providedLabel>
-                </edm:Agent>
-            </dct:rightsHolder>
-        </xsl:if>
+                </edm:Agent> -->
     </xsl:template>
     <xsl:template match="PhysicalDescription">
         <xsl:if test="text()">
