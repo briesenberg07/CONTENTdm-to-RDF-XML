@@ -27,8 +27,9 @@
         <xsl:if test="text()">
             <xsl:call-template name="CollectionName">
                 <xsl:with-param name="ColName" select="."/>
-                <!-- BELOW, HOW TO USE AN XSL FUNCTION + REGEX TO PULL ONLY "PH COLL ####" FROM THE VALUE OF ELEMENT RepositoryCollection? -->
-                <xsl:with-param name="Regex" select="translate(., '. ', '')"/>
+                <!-- BELOW, HOW TO USE AN XSL FUNCTION + REGEX TO PULL ONLY "PH COLL ####" FROM THE VALUE OF ELEMENT RepositoryCollection?
+                DOES NOT CURRENTLY WORK, RETURNS 'true' -->
+                <xsl:with-param name="Regex" select="matches(., 'PH Coll*')"/>
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
@@ -36,7 +37,7 @@
     <xsl:template name="CollectionName">
         <xsl:param name="Regex"/>
         <xsl:param name="ColName"/>
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.4{$Regex}">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.4#{$Regex}">
             <dct:title><xsl:value-of select="$ColName"/></dct:title>
         </rdf:Description>
     </xsl:template>
