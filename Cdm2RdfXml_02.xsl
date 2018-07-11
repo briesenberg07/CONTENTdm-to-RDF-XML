@@ -66,19 +66,6 @@
         <xsl:apply-templates select="Acquisition"/>
     </xsl:template>
 
-    <!-- WEB RESOURCE TEMPLATE -->
-    <xsl:template match="record" mode="wr">
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm{cdmnumber}">
-            <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
-            <xsl:apply-templates select="Title" mode="wr"/>
-            <!-- <dc:format></dc:format> -->
-            <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.4#digital"/>
-            <xsl:apply-templates select="DigitalReproductionInformation"/>
-            <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.5"/>
-            <dct:source rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{cdmnumber}"/>
-        </rdf:Description>
-    </xsl:template>
-
     <!-- AGGREGATION TEMPLATE -->
     <xsl:template match="record" mode="ag">
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{cdmnumber}">
@@ -91,6 +78,19 @@
         </rdf:Description>
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{cdmnumber}">
             <edm:aggregatedCHO rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{cdmnumber}"/>
+        </rdf:Description>
+    </xsl:template>
+    
+    <!-- WEB RESOURCE TEMPLATE -->
+    <xsl:template match="record" mode="wr">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm{cdmnumber}">
+            <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
+            <xsl:apply-templates select="Title" mode="wr"/>
+            <!-- <dc:format></dc:format> -->
+            <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.4#digital"/>
+            <xsl:apply-templates select="DigitalReproductionInformation"/>
+            <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.5"/>
+            <dct:source rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{cdmnumber}"/>
         </rdf:Description>
     </xsl:template>
 
