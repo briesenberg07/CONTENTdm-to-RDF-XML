@@ -93,6 +93,13 @@
             <dct:source rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{cdmnumber}"/>
         </rdf:Description>
     </xsl:template>
+    
+    <!-- COLLECTION TEMPLATE -->
+    <xsl:template match="record" mode="col">
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.4#physical{}">
+            <dct:title><xsl:value-of select="RepositoryCollection"/></dct:title>
+        </rdf:Description>
+    </xsl:template>
 
     <!-- AGENT TEMPLATE -->
     <xsl:template match="record" mode="agt">
