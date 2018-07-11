@@ -84,7 +84,7 @@
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{cdmnumber}">
             <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
         </rdf:Description>
-        <xsl:apply-templates select="Contributor" mode="ag"/>
+        <xsl:apply-templates select="Repository" mode="ag"/>
         <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.5"/>
         <!-- TO DO
             <edm:isShownAt
@@ -97,7 +97,6 @@
     <xsl:template match="record" mode="agt">
         <xsl:apply-templates select="Photographer" mode="agt"/>
         <xsl:apply-templates select="Repository" mode="agt"/>
-        <xsl:apply-templates select="Contributor" mode="agt"/>
     </xsl:template>
 
     <!-- ELEMENT TEMPLATES -->
