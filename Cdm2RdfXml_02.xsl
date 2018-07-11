@@ -173,7 +173,6 @@
             </xsl:choose>
         </xsl:if>
     </xsl:template>
-    <!-- SubjectsLcsh needs more work. PROBABLY need to create blank nodes to express skos:inScheme, etc. -->
     <xsl:template match="SubjectsLcsh">
         <xsl:if test="text()">
             <xsl:choose>
@@ -201,6 +200,13 @@
                 <dct:rightsHolder
                     resource="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Repository, ', ', '')}"
                 />
+            </rdf:Description>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="Repository" mode="ag">
+        <xsl:if test="text()">
+            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{../cdmnumber}">
+                <edm:dataProvider rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., '., ', '')}"/>
             </rdf:Description>
         </xsl:if>
     </xsl:template>
@@ -242,25 +248,6 @@
                 </bf:note>
             </rdf:Description>
         </xsl:if>
-    </xsl:template>
-    <xsl:template match="Contributor" mode="ag">
-        <xsl:if test="text()">
-            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{../cdmnumber}">
-                <edm:dataProvider rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., '., ', '')}"/>
-            </rdf:Description>
-        </xsl:if>
-    </xsl:template>
-    <xsl:template match="Contributor" mode="agt">
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., '., ', '')}">
-            <rdf:type resource="http://www.europeana.eu/schemas/edm/Agent"/>
-        </rdf:Description>
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., '., ', '')}">
-            <dpla:providedLabel><xsl:value-of select="."/></dpla:providedLabel>
-        </rdf:Description>
-        <!-- If we hard-code skos:exactMatch here it follows that we would go ahead and hard-code a shorter DOI suffix for this Agent as well.
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., '., ', '')}">
-            <skos:exactMatch rdf:resource="http://id.loc.gov/authorities/names/n79056337"/>
-        </rdf:Description> -->
     </xsl:template>
 
     <!-- NAMED TEMPLATES -->
