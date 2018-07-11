@@ -86,11 +86,12 @@
         </rdf:Description>
         <xsl:apply-templates select="Repository" mode="ag"/>
         <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.5"/>
-        <!-- TO DO
-            <edm:isShownAt
-                rdf:resource="http://digitalcollections.lib.washington.edu/cdm/ref/collection/childrens/id/{cdmnumber}"/>
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{cdmnumber}">
+            <edm:isShownAt rdf:resource="http://digitalcollections.lib.washington.edu/cdm/singleitem/collection/ayp/id/{cdmnumber}/rec/1"/>
+        </rdf:Description>
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{cdmnumber}">
             <edm:aggregatedCHO rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{cdmnumber}"/>
-            -->
+        </rdf:Description>
     </xsl:template>
 
     <!-- AGENT TEMPLATE -->
