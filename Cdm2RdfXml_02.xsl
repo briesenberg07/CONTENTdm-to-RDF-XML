@@ -54,9 +54,11 @@
         <xsl:apply-templates select="Notes"/>
         <xsl:apply-templates select="SubjectsLcsh"/>
         <xsl:apply-templates select="Repository" mode="sr"/>
+        <!-- See RegexTesting.xsl for dct:isPartOf physical description -->
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{cdmnumber}">
             <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.4#physical"/>
         </rdf:Description>
+        <!-- Okay to hard-code StillImage (and only StillImage) here? Any other types in collection? -->
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{cdmnumber}">
             <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
         </rdf:Description>
@@ -72,7 +74,9 @@
             <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
         </rdf:Description>
         <xsl:apply-templates select="Repository" mode="ag"/>
-        <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.5"/>
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{cdmnumber}">
+            <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.5"/>
+        </rdf:Description>
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{cdmnumber}">
             <edm:isShownAt
                 rdf:resource="http://digitalcollections.lib.washington.edu/cdm/singleitem/collection/ayp/id/{cdmnumber}/rec/1"
@@ -105,6 +109,7 @@
 
     <!-- COLLECTION TEMPLATE -->
     <xsl:template match="record" mode="col">
+        
         <!-- ToDo (below) -->
         <xsl:apply-templates select="RepositoryCollection" mode="col"/>
         <xsl:apply-templates select="DigitalCollection" mode="col"/>
