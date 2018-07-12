@@ -74,31 +74,40 @@
         <xsl:apply-templates select="Repository" mode="ag"/>
         <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.5"/>
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{cdmnumber}">
-            <edm:isShownAt rdf:resource="http://digitalcollections.lib.washington.edu/cdm/singleitem/collection/ayp/id/{cdmnumber}/rec/1"/>
+            <edm:isShownAt
+                rdf:resource="http://digitalcollections.lib.washington.edu/cdm/singleitem/collection/ayp/id/{cdmnumber}/rec/1"
+            />
         </rdf:Description>
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{cdmnumber}">
-            <edm:aggregatedCHO rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{cdmnumber}"/>
+            <edm:aggregatedCHO rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{cdmnumber}"
+            />
         </rdf:Description>
     </xsl:template>
-    
+
     <!-- WEB RESOURCE TEMPLATE -->
     <xsl:template match="record" mode="wr">
         <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm{cdmnumber}">
             <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
-            <xsl:apply-templates select="Title" mode="wr"/>
-            <!-- <dc:format></dc:format> -->
+        </rdf:Description>
+        <xsl:apply-templates select="Title" mode="wr"/>
+        <!-- <dc:format></dc:format> -->
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm{cdmnumber}">
             <dct:isPartOf rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.4#digital"/>
-            <xsl:apply-templates select="DigitalReproductionInformation"/>
+        </rdf:Description>
+        <xsl:apply-templates select="DigitalReproductionInformation"/>
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm{cdmnumber}">
             <edm:rights rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.5"/>
+        </rdf:Description>
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm{cdmnumber}">
             <dct:source rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{cdmnumber}"/>
         </rdf:Description>
     </xsl:template>
-    
+
     <!-- COLLECTION TEMPLATE -->
     <xsl:template match="record" mode="col">
-        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.4#physical{}">
-            <dct:title><xsl:value-of select="RepositoryCollection"/></dct:title>
-        </rdf:Description>
+        <!-- ToDo (below) -->
+        <xsl:apply-templates select="RepositoryCollection" mode="col"/>
+        <xsl:apply-templates select="DigitalCollection" mode="col"/>
     </xsl:template>
 
     <!-- AGENT TEMPLATE -->
@@ -201,6 +210,7 @@
             </xsl:choose>
         </xsl:if>
     </xsl:template>
+    <xsl:template match="DigitalCollection" mode="col"> </xsl:template>
     <xsl:template match="Repository" mode="sr">
         <xsl:if test="text()">
             <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{../cdmnumber}">
@@ -213,26 +223,40 @@
     <xsl:template match="Repository" mode="ag">
         <xsl:if test="text()">
             <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.2#cdm{../cdmnumber}">
-                <edm:dataProvider rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., '., ', '')}"/>
+                <edm:dataProvider
+                    rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(., '., ', '')}"
+                />
             </rdf:Description>
         </xsl:if>
     </xsl:template>
     <xsl:template match="Repository" mode="agt">
         <xsl:if test="text()">
-            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Repository, ', ', '')}">
+            <rdf:Description
+                rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Repository, ', ', '')}">
                 <rdf:type resource="http://www.europeana.eu/schemas/edm/Agent"/>
             </rdf:Description>
-            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Repository, ', ', '')}">
+            <rdf:Description
+                rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Repository, ', ', '')}">
                 <dpla:providedLabel>
                     <xsl:value-of select="."/>
                 </dpla:providedLabel>
             </rdf:Description>
-            <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Repository, ', ', '')}">
+            <rdf:Description
+                rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#{translate(../Repository, ', ', '')}">
                 <skos:note>
                     <xsl:value-of select="name()"/>
                 </skos:note>
             </rdf:Description>
         </xsl:if>
+    </xsl:template>
+    <xsl:template match="RepositoryCollection" mode="col">
+        <!-- See RegexTesting.xsl 
+        ToDo: Additional properties for physical and digital collections -->
+        <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.4#physical{}">
+            <dct:title>
+                <xsl:value-of select="."/>
+            </dct:title>
+        </rdf:Description>
     </xsl:template>
     <xsl:template match="Acquisition">
         <xsl:if test="text()">
