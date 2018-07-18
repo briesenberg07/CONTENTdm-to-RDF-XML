@@ -323,7 +323,7 @@
                 <xsl:call-template name="SubjectsLcsh">
                     <xsl:with-param name="Tokens" select="tokenize(., '; ')"/>
                     <xsl:with-param name="CdmNumber" select="../cdmnumber"/>
-                    <xsl:with-param name="lcshID2" select="concat('S2', generate-id())"/>
+                    <xsl:with-param name="lcshID" select="concat('S2', generate-id())"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
@@ -448,18 +448,18 @@
     <xsl:template name="SubjectsLcsh">
         <xsl:param name="Tokens"/>
         <xsl:param name="CdmNumber"/>
-        <xsl:param name="lcshID2"/>
+        <xsl:param name="lcshID"/>
         <xsl:for-each select="$Tokens">
             <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm{$CdmNumber}">
-                <dct:subject rdf:nodeID="{$lcshID2}"/>
+                <dct:subject rdf:nodeID="{$lcshID}"/>
             </rdf:Description>
-            <rdf:Description rdf:nodeID="{$lcshID2}">
+            <rdf:Description rdf:nodeID="{$lcshID}">
                 <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             </rdf:Description>
-            <rdf:Description rdf:nodeID="{$lcshID2}">
+            <rdf:Description rdf:nodeID="{$lcshID}">
                 <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
             </rdf:Description>
-            <rdf:Description rdf:nodeID="{$lcshID2}">
+            <rdf:Description rdf:nodeID="{$lcshID}">
                 <dpla:providedLabel>
                     <xsl:value-of select="."/>
                 </dpla:providedLabel>
