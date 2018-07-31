@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:dpla="http://dp.la/about/map/"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:rel="http://id.loc.gov/vocabulary/relators/"
+         xmlns:edm="http://www.europeana.eu/schemas/edm/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.4#AlaskaYukonPacificExpositionPostcardCollection.PHColl777">
+      <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.4#AlaskaYukonPacificExpositionPostcardCollection.PHColl777">
+      <dct:title>Alaska Yukon Pacific Exposition Postcard Collection. PH Coll 777</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727">
+      <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727">
+      <dct:title>Frank H. Nowell Alaska Yukon Pacific Exposition Photographs. PH Coll 727</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.4#OrvilleJ.RognonAlaska-Yukon-Pacific-ExpositionPhotographs.PHColl779">
+      <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.4#OrvilleJ.RognonAlaska-Yukon-Pacific-ExpositionPhotographs.PHColl779">
+      <dct:title>Orville J. Rognon Alaska-Yukon-Pacific-Exposition Photographs. PH Coll 779</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.4#Alaska-Yukon-PacificExpositionCollection">
+      <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.4#Alaska-Yukon-PacificExpositionCollection">
+      <dct:title>Alaska-Yukon-Pacific Exposition Collection</dct:title>
+   </rdf:Description>
+</rdf:RDF>

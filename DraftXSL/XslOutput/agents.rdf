@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:dpla="http://dp.la/about/map/"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:rel="http://id.loc.gov/vocabulary/relators/"
+         xmlns:edm="http://www.europeana.eu/schemas/edm/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#CurtisAsahel1874-1941">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#CurtisAsahel1874-1941">
+      <dpla:providedLabel>Curtis, Asahel, 1874-1941</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950">
+      <dpla:providedLabel>Nowell, Frank H., 1864-1950</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#RognonOrvilleJ">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#RognonOrvilleJ">
+      <dpla:providedLabel>Rognon, Orville J.</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections">
+      <dpla:providedLabel>University of Washington Libraries, Special Collections</dpla:providedLabel>
+   </rdf:Description>
+</rdf:RDF>

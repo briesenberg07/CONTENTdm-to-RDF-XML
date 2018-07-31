@@ -1,0 +1,1600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:dpla="http://dp.la/about/map/"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:rel="http://id.loc.gov/vocabulary/relators/"
+         xmlns:edm="http://www.europeana.eu/schemas/edm/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:title>Saw at the Simonds Manufacturing Co. exhibit, Manufactures Building, Alaska Yukon Pacific Exposiition, Seattle, Washington, 1909</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:description>PH Coll 777.x.Advert.11</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:identifier>UW28425z</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dc:type>Postcard</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#AlaskaYukonPacificExpositionPostcardCollection.PHColl777"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm0">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:date rdf:nodeID="Dd1e3"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e3">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e3">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e3">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:subject rdf:nodeID="S2d1e251"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e251">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e251">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e251">
+      <dpla:providedLabel>Simonds Manufacturing Company--Exhibits &amp; displays</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:subject rdf:nodeID="S2d1e252"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e252">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e252">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e252">
+      <dpla:providedLabel> Advertising--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:subject rdf:nodeID="S2d1e253"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e253">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e253">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e253">
+      <dpla:providedLabel> Saws</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:subject rdf:nodeID="S2d1e254"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e254">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e254">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e254">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:subject rdf:nodeID="S2d1e255"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e255">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e255">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e255">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm0">
+      <dct:spatial rdf:nodeID="Ld1e3"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e3">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e3">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dct:title>Agriculture Building  showing the Canadian Pacific Railway exhibit with emplyees, Alaska-Yukon-Pacific Exposition, Seattle, Washington, 1909</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dct:description>PH Coll 727.184</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dct:identifier>Nowell x2066</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x2066</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm1">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dct:date rdf:nodeID="Dd1e114"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e114">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e114">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e114">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dct:subject rdf:nodeID="S2d1e1371"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1371">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1371">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1371">
+      <dpla:providedLabel>Canadian Pacific Railway Company</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dct:subject rdf:nodeID="S2d1e1372"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1372">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1372">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1372">
+      <dpla:providedLabel> Agriculture Building (Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dct:subject rdf:nodeID="S2d1e1373"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1373">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1373">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1373">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dct:subject rdf:nodeID="S2d1e1374"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1374">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1374">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e1374">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm1">
+      <dct:spatial rdf:nodeID="Ld1e114"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e114">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e114">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:title>Edmond Meany addressing exposition stockholders, president of the Alaska-Yukon-Pacific Exposition, Seattle, Washington, September 19, 1908</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:description>On verso of image: Prof. Meany, Stockholders Day. 9/19/08</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:description>PH Coll 727.14</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:identifier>UW3364</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm2">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:date rdf:nodeID="Dd1e228"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e228">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e228">
+      <skos:prefLabel>1908</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e228">
+      <dpla:providedLabel>1908</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:subject rdf:nodeID="S2d1e2511"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2511">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2511">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2511">
+      <dpla:providedLabel>Meany, Edmond S. (Edmond Stephen), 1862-1935</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:subject rdf:nodeID="S2d1e2512"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2512">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2512">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2512">
+      <dpla:providedLabel> Public speaking--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:subject rdf:nodeID="S2d1e2513"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2513">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2513">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2513">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:subject rdf:nodeID="S2d1e2514"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2514">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2514">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e2514">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm2">
+      <dct:spatial rdf:nodeID="Ld1e228"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e228">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e228">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:title>Members of the Benevolent and Protective Order of Elks in front of the Official Photographers Building, Alaska Yukon Pacific Exposition, Seattle, 1909.</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:description>On verso of image: Elks in front of Official Photographer</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x3064</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm3">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:date rdf:nodeID="Dd1e341"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e341">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e341">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e341">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:subject rdf:nodeID="S2d1e3641"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3641">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3641">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3641">
+      <dpla:providedLabel>Elks (Fraternal order)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:subject rdf:nodeID="S2d1e3642"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3642">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3642">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3642">
+      <dpla:providedLabel> Fraternal organizations--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:subject rdf:nodeID="S2d1e3643"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3643">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3643">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3643">
+      <dpla:providedLabel> Portraits, Group--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:subject rdf:nodeID="S2d1e3644"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3644">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3644">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3644">
+      <dpla:providedLabel> Automobiles--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:subject rdf:nodeID="S2d1e3645"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3645">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3645">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3645">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:subject rdf:nodeID="S2d1e3646"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3646">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3646">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e3646">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm3">
+      <dct:spatial rdf:nodeID="Ld1e341"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e341">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e341">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:title>Ancient Order of United Workmen members, Alaska-Yukon-Pacific Exposition, Seattle, Washington, 1909</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:description>On verso of image: Degree of Honor A.O.U.W. Auxillary</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:description>PH Coll 727.839</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x2952</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#CurtisAsahel1874-1941"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm4">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:date rdf:nodeID="Dd1e454"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e454">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e454">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e454">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:subject rdf:nodeID="S2d1e4771"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4771">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4771">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4771">
+      <dpla:providedLabel>Ancient Order of United Workmen. Columbia Lodge</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:subject rdf:nodeID="S2d1e4772"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4772">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4772">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4772">
+      <dpla:providedLabel> Drill teams</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:subject rdf:nodeID="S2d1e4773"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4773">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4773">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4773">
+      <dpla:providedLabel> Women--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:subject rdf:nodeID="S2d1e4774"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4774">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4774">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4774">
+      <dpla:providedLabel> Portraits, Group--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:subject rdf:nodeID="S2d1e4775"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4775">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4775">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4775">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:subject rdf:nodeID="S2d1e4776"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4776">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4776">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e4776">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm4">
+      <dct:spatial rdf:nodeID="Ld1e454"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e454">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e454">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dct:title>Mastodon tusk and buffalo skull on display, Alaska Building, Alaska Yukon Pacific Exposition, Seattle, 1909.</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dct:description>PH Coll 727.206</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dct:identifier>Nowell x2320</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x2320</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm5">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dct:date rdf:nodeID="Dd1e568"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e568">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e568">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e568">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dct:subject rdf:nodeID="S2d1e5911"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5911">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5911">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5911">
+      <dpla:providedLabel>Indian arts--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dct:subject rdf:nodeID="S2d1e5912"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5912">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5912">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5912">
+      <dpla:providedLabel> Alaska Building (Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dct:subject rdf:nodeID="S2d1e5913"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5913">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5913">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5913">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dct:subject rdf:nodeID="S2d1e5914"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5914">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5914">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e5914">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm5">
+      <dct:spatial rdf:nodeID="Ld1e568"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e568">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e568">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:title>King County Building and grounds under construction, Alaska Yukon Pacific Exposiition, Seattle, Washington, 1909</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:description>Caption on image: x883</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:description>PH Coll 727.422</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x883</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm6">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:date rdf:nodeID="Dd1e682"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e682">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e682">
+      <skos:prefLabel>1904/1914</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e682">
+      <dpla:providedLabel>ca. 1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:subject rdf:nodeID="S2d1e7051"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7051">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7051">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7051">
+      <dpla:providedLabel>King County Building (Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:subject rdf:nodeID="S2d1e7052"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7052">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7052">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7052">
+      <dpla:providedLabel> Exhibition buildings--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:subject rdf:nodeID="S2d1e7053"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7053">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7053">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7053">
+      <dpla:providedLabel> Grounds maintenance--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:subject rdf:nodeID="S2d1e7054"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7054">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7054">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7054">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:subject rdf:nodeID="S2d1e7055"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7055">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7055">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e7055">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm6">
+      <dct:spatial rdf:nodeID="Ld1e682"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e682">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e682">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:title>Baby Day, Alaska Yukon Pacific Exposition, Seattle, 1909.</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:description>On verso of image: Baby Show</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:description>PH Coll 727.782</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:identifier>UW28061</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x2893</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm7">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:date rdf:nodeID="Dd1e795"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e795">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e795">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e795">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:subject rdf:nodeID="S2d1e8181"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8181">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8181">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8181">
+      <dpla:providedLabel>Contests--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:subject rdf:nodeID="S2d1e8182"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8182">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8182">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8182">
+      <dpla:providedLabel> Women--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:subject rdf:nodeID="S2d1e8183"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8183">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8183">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8183">
+      <dpla:providedLabel> Infants--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:subject rdf:nodeID="S2d1e8184"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8184">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8184">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8184">
+      <dpla:providedLabel> Portraits, Group--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:subject rdf:nodeID="S2d1e8185"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8185">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8185">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8185">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:subject rdf:nodeID="S2d1e8186"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8186">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8186">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e8186">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm7">
+      <dct:spatial rdf:nodeID="Ld1e795"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e795">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e795">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:title>General view of grounds looking toward the Court of Honor and the Alaska Monument, Alaska Yukon Pacific Exposition, Seattle, June 1909.</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:description>Alaska Monument visible in background.</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:description>Caption on image: x1324</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:description>PH Coll 727.72</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x1324</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm8">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:date rdf:nodeID="Dd1e910"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e910">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e910">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e910">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:subject rdf:nodeID="S2d1e9331"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9331">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9331">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9331">
+      <dpla:providedLabel>Alaska Monument (Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:subject rdf:nodeID="S2d1e9332"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9332">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9332">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9332">
+      <dpla:providedLabel> Exhibition buildings--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:subject rdf:nodeID="S2d1e9333"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9333">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9333">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9333">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:subject rdf:nodeID="S2d1e9334"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9334">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9334">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e9334">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm8">
+      <dct:spatial rdf:nodeID="Ld1e910"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e910">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e910">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm9">
+      <dct:title>T.D. Dunham, Alaska Yukon Pacific Exposition, Seattle, 1909.</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm9">
+      <dct:description>On verso of image: T.D. Dunham</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm9">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm9">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x1116</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm9">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm9">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm9">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm9">
+      <dct:date rdf:nodeID="Dd1e1023"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1023">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1023">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1023">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm9">
+      <dct:subject rdf:nodeID="S2d1e10461"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e10461">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e10461">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e10461">
+      <dpla:providedLabel>Dunham, T.D.</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm9">
+      <dct:subject rdf:nodeID="S2d1e10462"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e10462">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e10462">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e10462">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm9">
+      <dct:subject rdf:nodeID="S2d1e10463"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e10463">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e10463">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e10463">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm9">
+      <dct:spatial rdf:nodeID="Ld1e1023"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1023">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1023">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:title>University President's Luncheon, held in the Education Building dining room, Alaska Yukon Pacific Exposition, Seattle, 1909.</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:description>Guests include W.E. Wilson, Leonard Ayers, P.L. Campbell, Edwin Hughes, Cyrus Bradley, A. Ross Hill, Henry Dewey, W.J. Kerr, and Edward Sisson</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:description>On verso of image: 7/15/09 University Pres. Luncheon</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:description>PH Coll 727.307</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:identifier>Nowell x2775</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x2775</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm10">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:date rdf:nodeID="Dd1e1136"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1136">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1136">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1136">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:subject rdf:nodeID="S2d1e11591"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11591">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11591">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11591">
+      <dpla:providedLabel>Luncheons--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:subject rdf:nodeID="S2d1e11592"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11592">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11592">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11592">
+      <dpla:providedLabel> Portraits, Group--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:subject rdf:nodeID="S2d1e11593"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11593">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11593">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11593">
+      <dpla:providedLabel> Delegates--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:subject rdf:nodeID="S2d1e11594"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11594">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11594">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11594">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:subject rdf:nodeID="S2d1e11595"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11595">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11595">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11595">
+      <dpla:providedLabel> Education Building (Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:subject rdf:nodeID="S2d1e11596"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11596">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11596">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e11596">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm10">
+      <dct:spatial rdf:nodeID="Ld1e1136"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1136">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1136">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:title>Side view of european Building with ornamental plantings, Alaska Yukon Pacific Exposition, Seattle, 1909.</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:description>Detail of flower beds.</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:description>Caption on image: x2392</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:description>PH Coll 727.325</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x2393</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm11">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:date rdf:nodeID="Dd1e1251"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1251">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1251">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1251">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:subject rdf:nodeID="S2d1e12741"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12741">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12741">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12741">
+      <dpla:providedLabel>Flowers--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:subject rdf:nodeID="S2d1e12742"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12742">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12742">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12742">
+      <dpla:providedLabel> Exhibition buildings--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:subject rdf:nodeID="S2d1e12743"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12743">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12743">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12743">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:subject rdf:nodeID="S2d1e12744"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12744">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12744">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e12744">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm11">
+      <dct:spatial rdf:nodeID="Ld1e1251"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1251">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1251">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dct:title>Formal Gardens with the Young Women's Christian Association Building in the background, Alaska Yukon Pacific Exposition, Seattle, Washington, 1909</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dct:description>Caption on image: x2282</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dct:description>PH Coll 727.130</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dct:identifier>Nowell x2282</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x2282</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm12">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dct:date rdf:nodeID="Dd1e1364"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1364">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1364">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1364">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dct:subject rdf:nodeID="S2d1e13871"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e13871">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e13871">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e13871">
+      <dpla:providedLabel>Gardens--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dct:subject rdf:nodeID="S2d1e13872"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e13872">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e13872">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e13872">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dct:subject rdf:nodeID="S2d1e13873"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e13873">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e13873">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e13873">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm12">
+      <dct:spatial rdf:nodeID="Ld1e1364"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1364">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1364">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:title>Alaska Building, Alaska Yukon Pacific Exposition, Seattle, 1909</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:description>Exterior view and grounds.</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:description>PH Coll 727.196</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:identifier>Nowell x1355</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <dct:identifier>x1355</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH1864-1950"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#FrankH.NowellAlaskaYukonPacificExpositionPhotographs.PHColl727"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm13">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:date rdf:nodeID="Dd1e1478"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1478">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1478">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1478">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:subject rdf:nodeID="S2d1e15011"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15011">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15011">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15011">
+      <dpla:providedLabel>Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:subject rdf:nodeID="S2d1e15012"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15012">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15012">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15012">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:subject rdf:nodeID="S2d1e15013"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15013">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15013">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15013">
+      <dpla:providedLabel> Alaska Building (Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:subject rdf:nodeID="S2d1e15014"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15014">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15014">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e15014">
+      <dpla:providedLabel> Exhibition buildings--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm13">
+      <dct:spatial rdf:nodeID="Ld1e1478"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1478">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1478">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:title>Exhibition artillery drill, military athletic tournament, Alaska Yukon Pacific Exposition, Seattle, June 1909.</dct:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:description>On verso of image: Fourth Field Artillery, Mountain Battery, ready for action.</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:description>PH Coll 779.9</dct:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:identifier>UW28082</dct:identifier>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dc:type>Photograph</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dc:type>Image</dc:type>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm">
+      <rel:pht rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#RognonOrvilleJ"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:rightsHolder rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibrariesSpecialCollections"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:isPartOf rdf:resource="https:/doi.org/10.6069/uwlib.55.A.3.4#OrvilleJ.RognonAlaska-Yukon-Pacific-ExpositionPhotographs.PHColl779"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.3#cdm14">
+      <dct:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:date rdf:nodeID="Dd1e1592"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1592">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1592">
+      <skos:prefLabel>1909</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Dd1e1592">
+      <dpla:providedLabel>1909</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:subject rdf:nodeID="S2d1e16151"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16151">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16151">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16151">
+      <dpla:providedLabel>United States. Army. Artillery--Drill and tactics</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:subject rdf:nodeID="S2d1e16152"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16152">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16152">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16152">
+      <dpla:providedLabel> United States. Army. Artillery, 4th</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:subject rdf:nodeID="S2d1e16153"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16153">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16153">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16153">
+      <dpla:providedLabel> Alaska-Yukon-Pacific Exposition (1909 : Seattle, Wash.)</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:subject rdf:nodeID="S2d1e16154"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16154">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16154">
+      <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="S2d1e16154">
+      <dpla:providedLabel> Exhibitions--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.1#cdm14">
+      <dct:spatial rdf:nodeID="Ld1e1592"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1592">
+      <rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/Place"/>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="Ld1e1592">
+      <dpla:providedLabel>United States--Washington (State)--Seattle</dpla:providedLabel>
+   </rdf:Description>
+</rdf:RDF>
