@@ -3,32 +3,30 @@
 @prefix cdmc: <http://doiTbdForThisDocument/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix edm: <http://www.europeana.eu/schemas/edm/> .
-@prefix dpla: <http://dp.la/about/map/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 
 # Classes:
 # cdmc:OrderNumber
 # cdmc:NegativeNumber
 # cdmc:PhotographersReferenceNumber
 
+# TO-DO:
+# Add additional value for comment explaining rationale for creating new classes?
+
 cdmc:OrderNumber a rdfs:Class ;
   rdfs:isDefinedBy <http://doiTbdForThisDocument/> ;
-  rdfs:subClassOf rdfs:Literal ;
+  rdfs:subClassOf  bf:Identifier ;
   rdfs:label "Order Number" ;
-  dct:description "An order number for the item to be used when contacting the University of Washington Libraries Special Collections Reproduction Services." ;
-  rdfs:seeAlso <https://github.com/UniverityOfWashingtonLibrariesSchemas/schemasProject/blob/master/dataDictionaries/html/ayp-horizontal-staff.html> .
+  rdfs:comment "An order number for the item to be used when contacting the University of Washington Libraries Special Collections Reproduction Services." .
 
 cdmc:NegativeNumber a rdfs:Class ;
   rdfs:isDefinedBy <http://doiTbdForThisDocument/> ;
-  rdfs:subClassOf rdfs:Literal ;
+  rdfs:subClassOf  bf:Identifier ;
   rdfs:label "Negative Number" ;
-  dct:description "An identifier used by the University of Washington Libraries Special Collections to track a photographic negative or negatives associated with an image." ;
-  rdfs:seeAlso <https://github.com/UniverityOfWashingtonLibrariesSchemas/schemasProject/blob/master/dataDictionaries/html/ayp-horizontal-staff.html> .
+  rdfs:comment "An identifier used by the University of Washington Libraries Special Collections to track a photographic negative or negatives associated with an image." .
 
 cdmc:PhotographersReferenceNumber a rdfs:Class ;
   rdfs:isDefinedBy <http://doiTbdForThisDocument/> ;
-  rdfs:subClassOf rdfs:Literal ;
+  rdfs:subClassOf  bf:Identifier ;
   rdfs:label "Photographers Reference Number" ;
-  dct:description "An identifier used by the University of Washington Libraries to track a photographer or photographers associated with an image." ;
-  rdfs:seeAlso <https://github.com/UniverityOfWashingtonLibrariesSchemas/schemasProject/blob/master/dataDictionaries/html/ayp-horizontal-staff.html> .
+  rdfs:comment "An identifier used by the University of Washington Libraries to track a photographer or photographers associated with an image." .
