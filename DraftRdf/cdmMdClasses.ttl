@@ -16,17 +16,17 @@
 cdmc:OrderNumber a rdfs:Class ;
   rdfs:isDefinedBy <http://doiTbdForThisDocument/> ;
   rdfs:subClassOf  bf:Identifier ;
-  rdfs:label "Order Number" ;
-  rdfs:comment "An order number for the item to be used when contacting the University of Washington Libraries Special Collections Reproduction Services." .
+  rdfs:label "Order Number"@en ;
+  rdfs:comment "An order number for the item to be used when contacting the University of Washington Libraries Special Collections Reproduction Services."@en .
 
 cdmc:NegativeNumber a rdfs:Class ;
   rdfs:isDefinedBy <http://doiTbdForThisDocument/> ;
   rdfs:subClassOf  bf:Identifier ;
-  rdfs:label "Negative Number" ;
-  rdfs:comment "An identifier used by the University of Washington Libraries Special Collections to track a photographic negative or negatives associated with an image." .
+  rdfs:label "Negative Number"@en ;
+  rdfs:comment "An identifier used by the University of Washington Libraries Special Collections to track a photographic negative or negatives associated with an image."@en .
 
 cdmc:PhotographersReferenceNumber a rdfs:Class ;
   rdfs:isDefinedBy <http://doiTbdForThisDocument/> ;
   rdfs:subClassOf  bf:Identifier ;
-  rdfs:label "Photographers Reference Number" ;
-  rdfs:comment "An identifier used by the University of Washington Libraries to track a photographer or photographers associated with an image." .
+  rdfs:label "Photographers Reference Number"@en ;
+  rdfs:comment "An identifier used by the University of Washington Libraries to track a photographer or photographers associated with an image."@en .
