@@ -4,31 +4,29 @@
 
     <xsl:output indent="yes"/>
 
-    <!-- Haven't got any counting to work yet -->
-
     <xsl:template match="/">
-        <GroupingCollections>
+        <GroupAndCountCollections>
             <xsl:apply-templates select="metadata"/>
-        </GroupingCollections>
+        </GroupAndCountCollections>
     </xsl:template>
 
     <xsl:template match="metadata">
 
         <DigitalCollections>
-            <!-- This variable use does not work! -->
-            <xsl:variable name="dcCount">
+            <DigiCollCount>
+                <xsl:value-of select="count(distinct-values(record/DigitalCollection))"/>
+            </DigiCollCount>
             <xsl:for-each-group select="record" group-by="DigitalCollection">
                 <DigitalCollection>
                     <xsl:value-of select="DigitalCollection"/>
                 </DigitalCollection>
             </xsl:for-each-group>
-            </xsl:variable>
-            <DigiCollCount>
-                <xsl:value-of select="count($dcCount)"/>
-            </DigiCollCount>
         </DigitalCollections>
 
         <PhysicalCollections>
+            <PhysicalCollCount>
+                <xsl:value-of select="count(distinct-values(record/RepositoryCollection))"/>
+            </PhysicalCollCount>
             <xsl:for-each-group select="record" group-by="RepositoryCollection">
                 <RepositoryCollection>
                     <xsl:value-of select="RepositoryCollection"/>
