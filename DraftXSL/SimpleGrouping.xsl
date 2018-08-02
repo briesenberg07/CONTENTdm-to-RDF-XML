@@ -8,13 +8,12 @@
     for some ? reason I could not output an XML document with a root element by using xsl:result-document -->
 
     <xsl:template match="/">
-        <RootElement>
+        <GroupingCollections>
             <xsl:apply-templates select="metadata"/>
-        </RootElement>
+        </GroupingCollections>
     </xsl:template>
 
     <xsl:template match="metadata">
-        <GroupingAndSortingCollections>
             <DigitalCollections>
                 <xsl:for-each-group select="record" group-by="DigitalCollection">
                     <DigitalCollection>
@@ -29,7 +28,6 @@
                     </RepositoryCollection>
                 </xsl:for-each-group>
             </PhysicalCollections>
-        </GroupingAndSortingCollections>
     </xsl:template>
 
 </xsl:stylesheet>
