@@ -5,9 +5,9 @@
     <xsl:output indent="yes"/>
 
     <xsl:template match="/">
-        <GroupAndCountCollections>
+        <GroupAndCount>
             <xsl:apply-templates select="metadata"/>
-        </GroupAndCountCollections>
+        </GroupAndCount>
     </xsl:template>
 
     <xsl:template match="metadata">
@@ -33,6 +33,18 @@
                 </RepositoryCollection>
             </xsl:for-each-group>
         </PhysicalCollections>
+
+        <Photographers>
+            <PhotogCount>
+                <xsl:value-of select="count(distinct-values(record/Photographer[text() and . != 'Unidentified' and . != 'unidentified']))"/>
+            </PhotogCount>
+            <xsl:for-each-group select="record" group-by="Photographer[text() and . != 'Unidentified' and . != 'unidentified']">
+                <Photographer>
+                    <xsl:value-of select="Photographer"/>
+                </Photographer>
+            </xsl:for-each-group>
+        </Photographers>
+
     </xsl:template>
 
 </xsl:stylesheet>
