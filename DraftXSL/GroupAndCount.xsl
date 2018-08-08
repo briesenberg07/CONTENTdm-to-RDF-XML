@@ -12,38 +12,67 @@
 
     <xsl:template match="metadata">
 
-        <DigitalCollections>
-            <DigiCollCount>
-                <xsl:value-of select="count(distinct-values(record/DigitalCollection))"/>
-            </DigiCollCount>
-            <xsl:for-each-group select="record" group-by="DigitalCollection">
-                <DigitalCollection>
-                    <xsl:value-of select="DigitalCollection"/>
-                </DigitalCollection>
-            </xsl:for-each-group>
-        </DigitalCollections>
+        <Locations>
+            <LocationsDepicted>
+                <LocDepCount>
+                    <xsl:value-of select="count(distinct-values(record/LocationDepicted))"/>
+                </LocDepCount>
+                <xsl:for-each-group select="record" group-by="LocationDepicted">
+                    <LocationDepicted>
+                        <xsl:value-of select="LocationDepicted"/>
+                    </LocationDepicted>
+                </xsl:for-each-group>
+            </LocationsDepicted>
+            <StudioLocations>
+                <StuLocCount>
+                    <xsl:value-of select="count(distinct-values(record/StudioLocation))"/>
+                </StuLocCount>
+                <xsl:for-each-group select="record" group-by="StudioLocation">
+                    <StudioLocation>
+                        <xsl:value-of select="StudioLocation"/>
+                    </StudioLocation>
+                </xsl:for-each-group>
+            </StudioLocations>
+        </Locations>
 
-        <PhysicalCollections>
-            <PhysicalCollCount>
-                <xsl:value-of select="count(distinct-values(record/RepositoryCollection))"/>
-            </PhysicalCollCount>
-            <xsl:for-each-group select="record" group-by="RepositoryCollection">
-                <RepositoryCollection>
-                    <xsl:value-of select="RepositoryCollection"/>
-                </RepositoryCollection>
-            </xsl:for-each-group>
-        </PhysicalCollections>
+        <Collections>
+            <DigitalCollections>
+                <DigiCollCount>
+                    <xsl:value-of select="count(distinct-values(record/DigitalCollection))"/>
+                </DigiCollCount>
+                <xsl:for-each-group select="record" group-by="DigitalCollection">
+                    <DigitalCollection>
+                        <xsl:value-of select="DigitalCollection"/>
+                    </DigitalCollection>
+                </xsl:for-each-group>
+            </DigitalCollections>
+            <PhysicalCollections>
+                <PhysicalCollCount>
+                    <xsl:value-of select="count(distinct-values(record/RepositoryCollection))"/>
+                </PhysicalCollCount>
+                <xsl:for-each-group select="record" group-by="RepositoryCollection">
+                    <RepositoryCollection>
+                        <xsl:value-of select="RepositoryCollection"/>
+                    </RepositoryCollection>
+                </xsl:for-each-group>
+            </PhysicalCollections>
+        </Collections>
 
-        <Photographers>
-            <PhotogCount>
-                <xsl:value-of select="count(distinct-values(record/Photographer[text() and . != 'Unidentified' and . != 'unidentified']))"/>
-            </PhotogCount>
-            <xsl:for-each-group select="record" group-by="Photographer[text() and . != 'Unidentified' and . != 'unidentified']">
-                <Photographer>
-                    <xsl:value-of select="Photographer"/>
-                </Photographer>
-            </xsl:for-each-group>
-        </Photographers>
+        <Agents>
+            <Photographers>
+                <PhotogCount>
+                    <xsl:value-of
+                        select="count(distinct-values(record/Photographer[text() and . != 'Unidentified' and . != 'unidentified']))"
+                    />
+                </PhotogCount>
+                <xsl:for-each-group select="record"
+                    group-by="Photographer[text() and . != 'Unidentified' and . != 'unidentified']">
+                    <Photographer>
+                        <xsl:value-of select="Photographer"/>
+                    </Photographer>
+                </xsl:for-each-group>
+            </Photographers>
+        </Agents>
 
     </xsl:template>
 
