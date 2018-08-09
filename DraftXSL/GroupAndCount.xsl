@@ -12,6 +12,17 @@
 
     <xsl:template match="metadata">
 
+        <ObjectTypes>
+            <ObjectTypeCount>
+                <xsl:value-of select="count(distinct-values(record/ObjectType))"/>
+            </ObjectTypeCount>
+            <xsl:for-each-group select="record" group-by="ObjectType">
+                <ObjectType>
+                    <xsl:value-of select="ObjectType"/>
+                </ObjectType>
+            </xsl:for-each-group>
+        </ObjectTypes>
+
         <Locations>
             <LocationsDepicted>
                 <LocDepCount>
