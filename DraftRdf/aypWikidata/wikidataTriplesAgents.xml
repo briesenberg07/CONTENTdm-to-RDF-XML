@@ -12,5 +12,8 @@
     <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#NowellFrankH18641950">
         <skos:exactMatch rdf:resource="https://www.wikidata.org/entity/Q26202833"/>
     </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#CurtisAsahel18741941">
+        <skos:exactMatch rdf:resource="https://www.wikidata.org/entity/Q4803332"/>
+    </rdf:Description>
     
 </rdf:RDF>
