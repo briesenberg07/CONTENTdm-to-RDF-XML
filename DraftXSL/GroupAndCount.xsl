@@ -12,6 +12,8 @@
 
     <xsl:template match="metadata">
 
+
+
         <ObjectTypes>
             <ObjectTypeCount>
                 <xsl:value-of select="count(distinct-values(record/ObjectType))"/>
