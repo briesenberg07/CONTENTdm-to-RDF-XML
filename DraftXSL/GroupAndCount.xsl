@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="3.0">
 
     <xsl:output indent="yes"/>
 
@@ -12,7 +12,27 @@
 
     <xsl:template match="metadata">
 
+        <RepositoryCollectionGuides>
+            <GuideCount>
+                <xsl:value-of select="count(distinct-values(record/repositoryCollectionGuide))"/>
+            </GuideCount>
+            <xsl:for-each-group select="record" group-by="repositoryCollectionGuide">
+                <CollectionGuideURL>
+                    <xsl:value-of select="repositoryCollectionGuide"/>
+                </CollectionGuideURL>
+            </xsl:for-each-group>
+        </RepositoryCollectionGuides>
 
+        <originalCreators>
+            <creatorCount>
+                <xsl:value-of select="count(distinct-values(record/OriginalCreator))"/>
+            </creatorCount>
+            <xsl:for-each-group select="record" group-by="OriginalCreator">
+                <OriginalCreator>
+                    <xsl:value-of select="OriginalCreator"/>
+                </OriginalCreator>
+            </xsl:for-each-group>
+        </originalCreators>
 
         <ObjectTypes>
             <ObjectTypeCount>
