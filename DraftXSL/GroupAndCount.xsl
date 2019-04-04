@@ -12,6 +12,17 @@
 
     <xsl:template match="metadata">
 
+        <CitationInformation>
+            <stringCount>
+                <xsl:value-of select="count(distinct-values(record/CitationInformation))"/>
+            </stringCount>
+            <xsl:for-each-group select="record" group-by="CitationInformation">
+                <strings>
+                    <xsl:value-of select="CitationInformation"/>
+                </strings>
+            </xsl:for-each-group>
+        </CitationInformation>
+
         <RepositoryCollectionGuides>
             <GuideCount>
                 <xsl:value-of select="count(distinct-values(record/repositoryCollectionGuide))"/>
@@ -35,6 +46,9 @@
         </originalCreators>
 
         <ObjectTypes>
+            <!-- Tokenize and break apart multiple values? 
+            How do these values work? "Photograph image", two different things or one thing
+            (photograph) modified by (image)? -->
             <ObjectTypeCount>
                 <xsl:value-of select="count(distinct-values(record/ObjectType))"/>
             </ObjectTypeCount>
@@ -52,6 +66,8 @@
                 </LocDepCount>
                 <xsl:for-each-group select="record" group-by="LocationDepicted">
                     <LocationDepicted>
+                        <!-- Would be good to add a count after each string? 
+                        (Here and elsewhere) -->
                         <xsl:value-of select="LocationDepicted"/>
                     </LocationDepicted>
                 </xsl:for-each-group>
@@ -68,28 +84,36 @@
             </StudioLocations>
         </Locations>
 
-        <Collections>
-            <DigitalCollections>
-                <DigiCollCount>
+        <collections>
+            <digitalCollections>
+                <digiCollVariants>
                     <xsl:value-of select="count(distinct-values(record/DigitalCollection))"/>
-                </DigiCollCount>
+                </digiCollVariants>
                 <xsl:for-each-group select="record" group-by="DigitalCollection">
-                    <DigitalCollection>
+                    <digiCollStrings>
                         <xsl:value-of select="DigitalCollection"/>
-                    </DigitalCollection>
+                    </digiCollStrings>
                 </xsl:for-each-group>
-            </DigitalCollections>
-            <PhysicalCollections>
-                <PhysicalCollCount>
+            </digitalCollections>
+            <physicalCollections>
+                <!-- Use regex, etc. to count only distinct 'PH COLL' numeric values.
+                For hupy, LOTS of variant text strings for identical PH COLLs
+                See below -->
+                <phCollVariants>
                     <xsl:value-of select="count(distinct-values(record/RepositoryCollection))"/>
-                </PhysicalCollCount>
+                </phCollVariants>
                 <xsl:for-each-group select="record" group-by="RepositoryCollection">
-                    <RepositoryCollection>
+                    <repositoryCollectionStrings>
                         <xsl:value-of select="RepositoryCollection"/>
-                    </RepositoryCollection>
+                    </repositoryCollectionStrings>
                 </xsl:for-each-group>
-            </PhysicalCollections>
-        </Collections>
+                <!-- This does not work 
+                <phCollNumbers>
+                    <xsl:value-of select="count(distinct-values(contains(record/RepositoryCollection, 'PH COLL')))"/>
+                </phCollNumbers>
+                -->
+            </physicalCollections>
+        </collections>
 
         <Agents>
             <Photographers>
