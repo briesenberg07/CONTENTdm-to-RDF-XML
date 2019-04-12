@@ -7,6 +7,7 @@
     <xsl:template match="/">
         <GroupAndCount>
             <xsl:apply-templates select="metadata"/>
+            <xsl:apply-templates select="metadata/record/RepositoryCollection"/>
         </GroupAndCount>
     </xsl:template>
 
@@ -14,9 +15,9 @@
 
         <CitationInformation>
             <stringCount>
-                <xsl:value-of select="count(distinct-values(record/CitationInformation))"/>
+                <xsl:value-of select="count(distinct-values(record/CitationInformation[text()]))"/>
             </stringCount>
-            <xsl:for-each-group select="record" group-by="CitationInformation">
+            <xsl:for-each-group select="record" group-by="CitationInformation[text()]">
                 <strings>
                     <xsl:value-of select="CitationInformation"/>
                 </strings>
@@ -34,11 +35,27 @@
             </xsl:for-each-group>
         </RepositoryCollectionGuides>
 
+        <Agents>
+            <Photographers>
+                <PhotogCount>
+                    <xsl:value-of
+                        select="count(distinct-values(record/Photographer[text() and . != 'Unidentified' and . != 'unidentified']))"
+                    />
+                </PhotogCount>
+                <xsl:for-each-group select="record"
+                    group-by="Photographer[text() and . != 'Unidentified' and . != 'unidentified']">
+                    <Photographer>
+                        <xsl:value-of select="Photographer"/>
+                    </Photographer>
+                </xsl:for-each-group>
+            </Photographers>
+        </Agents>
+
         <originalCreators>
             <creatorCount>
-                <xsl:value-of select="count(distinct-values(record/OriginalCreator))"/>
+                <xsl:value-of select="count(distinct-values(record/OriginalCreator[text()]))"/>
             </creatorCount>
-            <xsl:for-each-group select="record" group-by="OriginalCreator">
+            <xsl:for-each-group select="record" group-by="OriginalCreator[text()]">
                 <OriginalCreator>
                     <xsl:value-of select="OriginalCreator"/>
                 </OriginalCreator>
@@ -95,10 +112,8 @@
                     </digiCollStrings>
                 </xsl:for-each-group>
             </digitalCollections>
+
             <physicalCollections>
-                <!-- Use regex, etc. to count only distinct 'PH COLL' numeric values.
-                For hupy, LOTS of variant text strings for identical PH COLLs
-                See below -->
                 <phCollVariants>
                     <xsl:value-of select="count(distinct-values(record/RepositoryCollection))"/>
                 </phCollVariants>
@@ -107,30 +122,29 @@
                         <xsl:value-of select="RepositoryCollection"/>
                     </repositoryCollectionStrings>
                 </xsl:for-each-group>
-                <!-- This does not work 
-                <phCollNumbers>
-                    <xsl:value-of select="count(distinct-values(contains(record/RepositoryCollection, 'PH COLL')))"/>
-                </phCollNumbers>
-                -->
             </physicalCollections>
+
         </collections>
 
-        <Agents>
-            <Photographers>
-                <PhotogCount>
-                    <xsl:value-of
-                        select="count(distinct-values(record/Photographer[text() and . != 'Unidentified' and . != 'unidentified']))"
-                    />
-                </PhotogCount>
-                <xsl:for-each-group select="record"
-                    group-by="Photographer[text() and . != 'Unidentified' and . != 'unidentified']">
-                    <Photographer>
-                        <xsl:value-of select="Photographer"/>
-                    </Photographer>
-                </xsl:for-each-group>
-            </Photographers>
-        </Agents>
+    </xsl:template>
 
+
+    <!-- Use regex, something? to count only distinct 'PH COLL' numeric values.
+                Need regex because PH COLL might be PH Coll, etc.
+                For hupy, LOTS of variant text strings for identical PH COLLs -->
+
+    <xsl:template match="metadata/record/RepositoryCollection">
+        <!-- Do I need to use variable as in DuCharme example or can I just specify current node as below with .? -->
+        <xsl:analyze-string select="." regex="\.*[P][H,h]\s+[C,c][O,o][L,l][L,l]\s+(\d+)\s*">
+            <xsl:matching-substring>
+                <xsl:for-each-group select="." group-by="distinct-values(regex-group(1))">
+                    <physicalCollNo>
+                        <xsl:value-of select="regex-group(1)"/>
+                    </physicalCollNo>
+                </xsl:for-each-group>
+            </xsl:matching-substring>
+
+        </xsl:analyze-string>
     </xsl:template>
 
 </xsl:stylesheet>
