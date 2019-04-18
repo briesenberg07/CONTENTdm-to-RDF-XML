@@ -431,9 +431,16 @@
    <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries">
       <owl:sameAs rdf:resource="http://viaf.org/viaf/139541794"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries">
+     <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q7896575"/>
+ </rdf:Description>
    <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries">
       <dpla:providedLabel>University of Washington Libraries</dpla:providedLabel>
   </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries">
+    <!-- Should URL be rdf:resource or text content? -->
+     <schema:url rdf:resource="https://www.lib.washington.edu"/>
+ </rdf:Description>
    <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries">
       <uwprop:inDigiColl rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.4#AlaskaYukonPacificExpositionCollection"/>
    </rdf:Description>
