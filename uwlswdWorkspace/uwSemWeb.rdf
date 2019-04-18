@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcmi="http://purl.org/dc/dcmitype/" xmlns:dct="http://purl.org/dc/terms/" xmlns:dpla="http://dp.la/about/map/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ldproc="https://doi.org/10.6069/uwlib.55.b.2#" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:plat="https://doi.org/10.6069/uwlib.55.d.2#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rel="http://id.loc.gov/vocabulary/relators/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:void="http://rdfs.org/ns/void#">
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#DatasetDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <dct:title xml:lang="en">VoID Description of the dataset 'University of Washington Libraries' Semantic Web Data</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <dct:creator rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <dct:publisher rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <dct:issued>2018</dct:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <dct:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <dct:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/RDFa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/N-Triples"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/RDF_XML"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
+    <foaf:primaryTopic rdf:resource="https://doi.org/10.6069/uwlib.55.a#uwSemWeb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <dct:title xml:lang="en">University of Washington Libraries' Semantic Web Data</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <dct:description xml:lang="en">Linked data describing resources associated with digital collections hosted at the University of Washington</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <dct:creator rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <dct:publisher rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <dct:issued>2018</dct:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <dct:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWeb.nt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWeb.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWeb.ttl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/RDFa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/N-Triples"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/RDF_XML"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <void:classPartition rdf:resource="https://doi.org/10.6069/uwlib.55.a.3.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <void:classPartition rdf:resource="https://doi.org/10.6069/uwlib.55.a.3.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <void:classPartition rdf:resource="https://doi.org/10.6069/uwlib.55.a.3.3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <void:classPartition rdf:resource="https://doi.org/10.6069/uwlib.55.a.3.4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <void:classPartition rdf:resource="https://doi.org/10.6069/uwlib.55.a.3.5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <void:classPartition rdf:resource="https://doi.org/10.6069/uwlib.55.a.3.6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <ldproc:dataHarvestSource rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.4#AlaskaYukonPacificExpositionCollection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a#uwSemWeb">
+    <ldproc:dataHarvestSource rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.4#WilliamBrumfieldRussianArchitectureDigitalCollection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.1">
+    <void:Class rdf:resource="http://dp.la/about/map/SourceResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.1">
+    <dct:title xml:lang="en">Instances of the SourceResource Class</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.1">
+    <dct:description xml:lang="en">Instances of the class http://dp.la/about/map/SourceResource represented in the University of Washington digital collections; the class is taken from the Digital Public Library of America Metadata Application Profile 5.0</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.1">
+    <owl:version>1-0-0</owl:version>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.1">
+    <dct:issued>2018</dct:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.1">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/sourceResource-1-0-0.nt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.1">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/sourceResource-1-0-0.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.1">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/sourceResource-1-0-0.ttl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.2">
+    <void:Class rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.2">
+    <dct:title xml:lang="en">Instances of the Aggregation Class</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.2">
+    <dct:description xml:lang="en">Instances of the class http://www.openarchives.org/ore/terms/Aggregation represented in the University of Washington digital collections; the class is taken from the Digital Public Library of America Metadata Application Profile 5.0</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.2">
+    <owl:version>1-0-0</owl:version>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.2">
+    <dct:issued>2018</dct:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.2">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/aggregation-1-0-0.nt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.2">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/aggregation-1-0-0.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.2">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/aggregation-1-0-0.ttl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.3">
+    <void:Class rdf:resource="http://dp.la/about/map/WebResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.3">
+    <dct:title xml:lang="en">Instances of the WebResource Class</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.3">
+    <dct:description xml:lang="en">Instances of the class http://www.europeana.eu/schemas/edm/WebResource represented in the University of Washington digital collections; the class is taken from the Digital Public Library Metadata of America Application Profile 5.0</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.3">
+    <owl:version>1-0-0</owl:version>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.3">
+    <dct:issued>2018</dct:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.3">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/webResource-1-0-0.nt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.3">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/webResource-1-0-0.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.3">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/webResource-1-0-0.ttl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.4">
+    <void:Class rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.4">
+    <dct:title xml:lang="en">Instances of the Collection Class</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.4">
+    <dct:description xml:lang="en">Instances of the class http://purl.org/dc/dcmitype/Collection represented in the University of Washington digital collections; the class is taken from the Digital Public Library of America Metadata Application Profile 5.0</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.4">
+    <owl:version>1-0-0</owl:version>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.4">
+    <dct:issued>2018</dct:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.4">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/collection-1-0-0.nt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.4">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/collection-1-0-0.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.4">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/collection-1-0-0.ttl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.4">
+    <ldproc:deduped>1-0-0</ldproc:deduped>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.4">
+    <ldproc:platform rdf:resource="https://doi.org/10.6069/uwlib.55.d.2#platform001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.4">
+    <ldproc:platform rdf:resource="https://doi.org/10.6069/uwlib.55.d.2#platform002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.5">
+    <void:Class rdf:resource="http://purl.org/dc/dcmitype/RightsStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.5">
+    <dct:title xml:lang="en">Instances of the RightsStatement Class</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.5">
+    <dct:description xml:lang="en">Instances of the class http://purl.org/dc/terms/RightsStatement represented in the University of Washington digital collections; the class is taken from the Digital Public Library of America Metadata Application Profile 5.0</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.5">
+    <owl:version>1-0-0</owl:version>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.5">
+    <dct:issued>2018</dct:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.5">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/rightsStatement-1-0-0.nt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.5">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/rightsStatement-1-0-0.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.5">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/rightsStatement-1-0-0.ttl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <void:class rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <dct:title xml:lang="en">Instances of the Agent Class</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <dct:description xml:lang="en">Instances of the class http://www.europeana.eu/schemas/edm/Agent represented in the University of Washington digital collections; the class is taken from the Digital Public Library of America Metadata Application Profile 5.0</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <owl:version>1-0-1</owl:version>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <dct:issued>2018</dct:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/agent-1-0-1.nt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/agent-1-0-1.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <dct:hasFormat rdf:resource="https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/agent-1-0-1.ttl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:deduped>1-0-1</ldproc:deduped>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:targetVocabSecondary rdf:resource="http://www.wikidata.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:targetVocabSecondary rdf:resource="https://ru.wikipedia.org/wiki/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:targetVocabSecondary rdf:resource="http://vocab.getty.edu/ulan/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:targetVocabSecondary rdf:resource="http://dbpedia.org/resource/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:targetVocabSecondary rdf:resource="http://viaf.org/viaf/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:targetVocabSecondary rdf:resource="https://www.wikidata.org/wiki/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:linkPredicate rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:linkPredicate rdf:resource="http://purl.org/dc/terms/isReferencedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:platform rdf:resource="https://doi.org/10.6069/uwlib.55.d.2#platform001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:platform rdf:resource="https://doi.org/10.6069/uwlib.55.d.2#platform002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:platform rdf:resource="https://doi.org/10.6069/uwlib.55.d.2#platform003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:platform rdf:resource="https://doi.org/10.6069/uwlib.55.d.2#platform004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:containsEntity rdf:resource="http://www.europeana.eu/schemas/edm/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:containsEntity rdf:resource="http://purl.org/vra/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:containsEntity rdf:resource="http://purl.org/vra/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:containsEntity rdf:resource="http://purl.org/vra/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a.3.6">
+    <ldproc:processingNote>All entities derived from the collection https://doi.org/10.6069/uwlib.55.A.3.4#AlaskaYukonPacificExpositionCollection were searched manually in Wikidata; when appropriate, new Wikidata items were created; when Wikidata entities matching local entities existed, the Wikidata entity data was edited.</ldproc:processingNote>
+  </rdf:Description>
+</rdf:RDF>
