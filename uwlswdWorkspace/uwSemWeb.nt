@@ -1,0 +1,103 @@
+<https://doi.org/10.6069/uwlib.55.a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> .
+<https://doi.org/10.6069/uwlib.55.a> <http://purl.org/dc/terms/title> "VoID Description of the dataset 'University of Washington Libraries' Semantic Web Data"@en .
+<https://doi.org/10.6069/uwlib.55.a> <http://purl.org/dc/terms/creator> <https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries> .
+<https://doi.org/10.6069/uwlib.55.a> <http://purl.org/dc/terms/publisher> <https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries> .
+<https://doi.org/10.6069/uwlib.55.a> <http://purl.org/dc/terms/issued> "2018" .
+<https://doi.org/10.6069/uwlib.55.a> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/languages/eng> .
+<https://doi.org/10.6069/uwlib.55.a> <http://purl.org/dc/terms/license> <http://creativecommons.org/publicdomain/zero/1.0/> .
+<https://doi.org/10.6069/uwlib.55.a> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/RDFa> .
+<https://doi.org/10.6069/uwlib.55.a> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/N-Triples> .
+<https://doi.org/10.6069/uwlib.55.a> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/RDF_XML> .
+<https://doi.org/10.6069/uwlib.55.a> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/Turtle> .
+<https://doi.org/10.6069/uwlib.55.a> <http://xmlns.com/foaf/0.1/primaryTopic> <https://doi.org/10.6069/uwlib.55.a#uwSemWeb> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://purl.org/dc/terms/title> "University of Washington Libraries' Semantic Web Data"@en .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://purl.org/dc/terms/description> "Linked data describing resources associated with digital collections hosted at the University of Washington"@en .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://purl.org/dc/terms/creator> <https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://purl.org/dc/terms/publisher> <https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://purl.org/dc/terms/issued> "2018" .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://purl.org/dc/terms/license> <http://creativecommons.org/publicdomain/zero/1.0/> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWeb.nt> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWeb.rdf> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWeb.ttl> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/RDFa> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/N-Triples> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/RDF_XML> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/Turtle> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://rdfs.org/ns/void#classPartition> <https://doi.org/10.6069/uwlib.55.a.3.1> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://rdfs.org/ns/void#classPartition> <https://doi.org/10.6069/uwlib.55.a.3.2> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://rdfs.org/ns/void#classPartition> <https://doi.org/10.6069/uwlib.55.a.3.3> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://rdfs.org/ns/void#classPartition> <https://doi.org/10.6069/uwlib.55.a.3.4> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://rdfs.org/ns/void#classPartition> <https://doi.org/10.6069/uwlib.55.a.3.5> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <http://rdfs.org/ns/void#classPartition> <https://doi.org/10.6069/uwlib.55.a.3.6> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <https://doi.org/10.6069/uwlib.55.b.2#dataHarvestSource> <https://doi.org/10.6069/uwlib.55.A.3.4#AlaskaYukonPacificExpositionCollection> .
+<https://doi.org/10.6069/uwlib.55.a#uwSemWeb> <https://doi.org/10.6069/uwlib.55.b.2#dataHarvestSource> <https://doi.org/10.6069/uwlib.55.A.3.4#WilliamBrumfieldRussianArchitectureDigitalCollection> .
+<https://doi.org/10.6069/uwlib.55.a.3.1> <http://rdfs.org/ns/void#Class> <http://dp.la/about/map/SourceResource> .
+<https://doi.org/10.6069/uwlib.55.a.3.1> <http://purl.org/dc/terms/title> "Instances of the SourceResource Class"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.1> <http://purl.org/dc/terms/description> "Instances of the class http://dp.la/about/map/SourceResource represented in the University of Washington digital collections; the class is taken from the Digital Public Library of America Metadata Application Profile 5.0"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.1> <http://www.w3.org/2002/07/owl#version> "1-0-0" .
+<https://doi.org/10.6069/uwlib.55.a.3.1> <http://purl.org/dc/terms/issued> "2018" .
+<https://doi.org/10.6069/uwlib.55.a.3.1> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/sourceResource-1-0-0.nt> .
+<https://doi.org/10.6069/uwlib.55.a.3.1> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/sourceResource-1-0-0.rdf> .
+<https://doi.org/10.6069/uwlib.55.a.3.1> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/sourceResource-1-0-0.ttl> .
+<https://doi.org/10.6069/uwlib.55.a.3.2> <http://rdfs.org/ns/void#Class> <http://www.openarchives.org/ore/terms/Aggregation> .
+<https://doi.org/10.6069/uwlib.55.a.3.2> <http://purl.org/dc/terms/title> "Instances of the Aggregation Class"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.2> <http://purl.org/dc/terms/description> "Instances of the class http://www.openarchives.org/ore/terms/Aggregation represented in the University of Washington digital collections; the class is taken from the Digital Public Library of America Metadata Application Profile 5.0"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.2> <http://www.w3.org/2002/07/owl#version> "1-0-0" .
+<https://doi.org/10.6069/uwlib.55.a.3.2> <http://purl.org/dc/terms/issued> "2018" .
+<https://doi.org/10.6069/uwlib.55.a.3.2> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/aggregation-1-0-0.nt> .
+<https://doi.org/10.6069/uwlib.55.a.3.2> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/aggregation-1-0-0.rdf> .
+<https://doi.org/10.6069/uwlib.55.a.3.2> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/aggregation-1-0-0.ttl> .
+<https://doi.org/10.6069/uwlib.55.a.3.3> <http://rdfs.org/ns/void#Class> <http://dp.la/about/map/WebResource> .
+<https://doi.org/10.6069/uwlib.55.a.3.3> <http://purl.org/dc/terms/title> "Instances of the WebResource Class"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.3> <http://purl.org/dc/terms/description> "Instances of the class http://www.europeana.eu/schemas/edm/WebResource represented in the University of Washington digital collections; the class is taken from the Digital Public Library Metadata of America Application Profile 5.0"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.3> <http://www.w3.org/2002/07/owl#version> "1-0-0" .
+<https://doi.org/10.6069/uwlib.55.a.3.3> <http://purl.org/dc/terms/issued> "2018" .
+<https://doi.org/10.6069/uwlib.55.a.3.3> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/webResource-1-0-0.nt> .
+<https://doi.org/10.6069/uwlib.55.a.3.3> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/webResource-1-0-0.rdf> .
+<https://doi.org/10.6069/uwlib.55.a.3.3> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/webResource-1-0-0.ttl> .
+<https://doi.org/10.6069/uwlib.55.a.3.4> <http://rdfs.org/ns/void#Class> <http://purl.org/dc/dcmitype/Collection> .
+<https://doi.org/10.6069/uwlib.55.a.3.4> <http://purl.org/dc/terms/title> "Instances of the Collection Class"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.4> <http://purl.org/dc/terms/description> "Instances of the class http://purl.org/dc/dcmitype/Collection represented in the University of Washington digital collections; the class is taken from the Digital Public Library of America Metadata Application Profile 5.0"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.4> <http://www.w3.org/2002/07/owl#version> "1-0-0" .
+<https://doi.org/10.6069/uwlib.55.a.3.4> <http://purl.org/dc/terms/issued> "2018" .
+<https://doi.org/10.6069/uwlib.55.a.3.4> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/collection-1-0-0.nt> .
+<https://doi.org/10.6069/uwlib.55.a.3.4> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/collection-1-0-0.rdf> .
+<https://doi.org/10.6069/uwlib.55.a.3.4> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/collection-1-0-0.ttl> .
+<https://doi.org/10.6069/uwlib.55.a.3.4> <https://doi.org/10.6069/uwlib.55.b.2#deduped> "1-0-0" .
+<https://doi.org/10.6069/uwlib.55.a.3.4> <https://doi.org/10.6069/uwlib.55.b.2#platform> <https://doi.org/10.6069/uwlib.55.d.2#platform001> .
+<https://doi.org/10.6069/uwlib.55.a.3.4> <https://doi.org/10.6069/uwlib.55.b.2#platform> <https://doi.org/10.6069/uwlib.55.d.2#platform002> .
+<https://doi.org/10.6069/uwlib.55.a.3.5> <http://rdfs.org/ns/void#Class> <http://purl.org/dc/dcmitype/RightsStatement> .
+<https://doi.org/10.6069/uwlib.55.a.3.5> <http://purl.org/dc/terms/title> "Instances of the RightsStatement Class"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.5> <http://purl.org/dc/terms/description> "Instances of the class http://purl.org/dc/terms/RightsStatement represented in the University of Washington digital collections; the class is taken from the Digital Public Library of America Metadata Application Profile 5.0"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.5> <http://www.w3.org/2002/07/owl#version> "1-0-0" .
+<https://doi.org/10.6069/uwlib.55.a.3.5> <http://purl.org/dc/terms/issued> "2018" .
+<https://doi.org/10.6069/uwlib.55.a.3.5> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/rightsStatement-1-0-0.nt> .
+<https://doi.org/10.6069/uwlib.55.a.3.5> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/rightsStatement-1-0-0.rdf> .
+<https://doi.org/10.6069/uwlib.55.a.3.5> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/rightsStatement-1-0-0.ttl> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <http://rdfs.org/ns/void#class> <http://www.europeana.eu/schemas/edm/Agent> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <http://purl.org/dc/terms/title> "Instances of the Agent Class"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <http://purl.org/dc/terms/description> "Instances of the class http://www.europeana.eu/schemas/edm/Agent represented in the University of Washington digital collections; the class is taken from the Digital Public Library of America Metadata Application Profile 5.0"@en .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <http://www.w3.org/2002/07/owl#version> "1-0-2" .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <http://purl.org/dc/terms/issued> "2019" .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/agent-1-0-2.nt> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/agent-1-0-2.rdf> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <http://purl.org/dc/terms/hasFormat> <https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/agent-1-0-2.ttl> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#deduped> "1-0-1" .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#targetVocabSecondary> <http://www.wikidata.org/> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#targetVocabSecondary> <https://ru.wikipedia.org/wiki/> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#targetVocabSecondary> <http://vocab.getty.edu/ulan/> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#targetVocabSecondary> <http://dbpedia.org/resource/> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#targetVocabSecondary> <http://viaf.org/viaf/> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#targetVocabSecondary> <https://www.wikidata.org/wiki/> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#linkPredicate> <http://www.w3.org/2002/07/owl#sameAs> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#linkPredicate> <http://purl.org/dc/terms/isReferencedBy> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#platform> <https://doi.org/10.6069/uwlib.55.d.2#platform001> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#platform> <https://doi.org/10.6069/uwlib.55.d.2#platform002> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#platform> <https://doi.org/10.6069/uwlib.55.d.2#platform003> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#platform> <https://doi.org/10.6069/uwlib.55.d.2#platform004> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#containsEntity> <http://www.europeana.eu/schemas/edm/Agent> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#containsEntity> <http://purl.org/vra/Agent> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#containsEntity> <http://purl.org/vra/Organization> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#containsEntity> <http://purl.org/vra/Person> .
+<https://doi.org/10.6069/uwlib.55.a.3.6> <https://doi.org/10.6069/uwlib.55.b.2#processingNote> "All entities derived from the collection https://doi.org/10.6069/uwlib.55.A.3.4#AlaskaYukonPacificExpositionCollection were searched manually in Wikidata; when appropriate, new Wikidata items were created; when Wikidata entities matching local entities existed, the Wikidata entity data was edited." .
