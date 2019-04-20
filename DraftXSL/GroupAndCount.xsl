@@ -132,18 +132,26 @@
     <!-- Use regex, something? to count only distinct 'PH COLL' numeric values.
                 Need regex because PH COLL might be PH Coll, etc.
                 For hupy, LOTS of variant text strings for identical PH COLLs -->
+    <!-- Do I need to put the matching-substring and non-matching-substring into variables, that may then be processed by group-by, for-each, etc.? -->
 
     <xsl:template match="metadata/record/RepositoryCollection">
-        <!-- Do I need to use variable as in DuCharme example or can I just specify current node as below with .? -->
-        <xsl:analyze-string select="." regex="\.*[P][H,h]\s+[C,c][O,o][L,l][L,l]\s+(\d+)\s*">
+        <xsl:analyze-string select="." regex="\.*[p][h]\s+[c][o][l][l]\s+(\d+)\s*" flags="i">
             <xsl:matching-substring>
-                <xsl:for-each-group select="." group-by="distinct-values(regex-group(1))">
-                    <physicalCollNo>
-                        <xsl:value-of select="regex-group(1)"/>
-                    </physicalCollNo>
+                <xsl:for-each-group select="." group-by="(regex-group(1))">
+                    <xsl:for-each select="distinct-values(regex-group(1))">
+                        <numberedColl>
+                            <xsl:value-of select="."/>
+                        </numberedColl>
+                    </xsl:for-each>
                 </xsl:for-each-group>
             </xsl:matching-substring>
-
+            <xsl:non-matching-substring>
+                <xsl:for-each-group select="." group-by=".">
+                    <otherColl>
+                        <xsl:value-of select="distinct-values(.)"/>
+                    </otherColl>
+                </xsl:for-each-group>
+            </xsl:non-matching-substring>
         </xsl:analyze-string>
     </xsl:template>
 
