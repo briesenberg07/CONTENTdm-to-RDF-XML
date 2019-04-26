@@ -20,7 +20,7 @@
     dct:language <http://id.loc.gov/vocabulary/languages/eng> ;
     dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
     dct:publisher <https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries> ;
-    dct:title "VoID Description of the dataset 'University of Washington Libraries' Semantic Web Data"@en ;
+    dct:title "VoID Description of the dataset 'University of Washington Libraries' Semantic Web Data'"@en ;
     void:feature <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
     a void:DatasetDescription ;
     foaf:primaryTopic <https://doi.org/10.6069/uwlib.55.a#uwSemWeb> .

@@ -1,5 +1,5 @@
 <https://doi.org/10.6069/uwlib.55.a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> .
-<https://doi.org/10.6069/uwlib.55.a> <http://purl.org/dc/terms/title> "VoID Description of the dataset 'University of Washington Libraries' Semantic Web Data"@en .
+<https://doi.org/10.6069/uwlib.55.a> <http://purl.org/dc/terms/title> "VoID Description of the dataset 'University of Washington Libraries' Semantic Web Data'"@en .
 <https://doi.org/10.6069/uwlib.55.a> <http://purl.org/dc/terms/creator> <https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries> .
 <https://doi.org/10.6069/uwlib.55.a> <http://purl.org/dc/terms/publisher> <https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries> .
 <https://doi.org/10.6069/uwlib.55.a> <http://purl.org/dc/terms/issued> "2018" .
