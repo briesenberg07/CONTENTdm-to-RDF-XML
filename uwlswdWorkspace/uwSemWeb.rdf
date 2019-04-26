@@ -4,7 +4,7 @@
     <rdf:type rdf:resource="http://rdfs.org/ns/void#DatasetDescription"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
-    <dct:title xml:lang="en">VoID Description of the dataset 'University of Washington Libraries' Semantic Web Data</dct:title>
+    <dct:title xml:lang="en">VoID Description of the dataset 'University of Washington Libraries' Semantic Web Data'</dct:title>
   </rdf:Description>
   <rdf:Description rdf:about="https://doi.org/10.6069/uwlib.55.a">
     <dct:creator rdf:resource="https://doi.org/10.6069/uwlib.55.A.3.6#UniversityofWashingtonLibraries"/>
