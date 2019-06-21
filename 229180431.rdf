@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+    xmlns:bflc="http://id.loc.gov/ontologies/bflc/" 
+    xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/work/99119264310001452">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:generationProcess>
+               <bf:GenerationProcess>
+                  <rdfs:label>DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2018-12-12T19:31:30+00:00</rdfs:label>
+               </bf:GenerationProcess>
+            </bf:generationProcess>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>aacr</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>9993408270001451</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-11T07:46:27</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-05-28</bf:creationDate>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>metadata entry convention</bf:noteType>
+                  <rdfs:label>0 - successive</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>WAU</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>WAU</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>WAU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCQ</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCA</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCF</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>OCLCQ</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>ORU</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionAuthentication>
+               <bf:DescriptionAuthentication rdf:about="http://id.loc.gov/vocabulary/marcauthen/pcc"/>
+            </bf:descriptionAuthentication>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-us-or"/>
+      </bf:geographicCoverage>
+      <bf:geographicCoverage>
+         <bf:GeographicCoverage rdf:about="http://id.loc.gov/vocabulary/geographicAreas/n-us-wa"/>
+      </bf:geographicCoverage>
+      <bf:classification>
+         <bf:ClassificationLcc>
+            <bf:classificationPortion>HD9750.1</bf:classificationPortion>
+            <bf:itemPortion>.T65</bf:itemPortion>
+         </bf:ClassificationLcc>
+      </bf:classification>
+      <rdfs:label>The Columbia River and Oregon timberman.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>The Columbia River and Oregon timberman.</rdfs:label>
+            <bflc:titleSortKey>Columbia River and Oregon timberman.</bflc:titleSortKey>
+            <bf:mainTitle>The Columbia River and Oregon timberman</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentTypes/txt">
+            <rdfs:label>text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/instance/99119264310001452">
+            <bf:instanceOf rdf:resource="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/work/99119264310001452"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>The Columbia River and Oregon timberman.</rdfs:label>
+                  <bflc:titleSortKey>Columbia River and Oregon timberman.</bflc:titleSortKey>
+                  <bf:mainTitle>The Columbia River and Oregon timberman</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:reproductionOf rdf:resource="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/instance/99119264310001452"/>
+            <bf:carrier>
+               <bf:Carrier>
+                  <rdfs:label>Microfilm</rdfs:label>
+               </bf:Carrier>
+            </bf:carrier>
+            <bf:provisionActivity>
+               <bf:ProvisionActivity>
+                  <bf:place>
+                     <bf:Place>
+                        <rdfs:label>Lacey, WA</rdfs:label>
+                     </bf:Place>
+                  </bf:place>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>OCLC Preservation Service Center on behalf of University of Washington Libraries</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:date>2008</bf:date>
+               </bf:ProvisionActivity>
+            </bf:provisionActivity>
+            <bf:extent>
+               <bf:Extent>
+                  <rdfs:label>3 microfilm reels ; 35 mm</rdfs:label>
+               </bf:Extent>
+            </bf:extent>
+            <bf:seriesStatement>USAIN state and local literature preservation project. Washington</bf:seriesStatement>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Some pages are missing or damaged.</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bflc:appliesTo>
+               <bflc:AppliesTo>
+                  <rdfs:label>v.1-6 (1899-1904)</rdfs:label>
+               </bflc:AppliesTo>
+            </bflc:appliesTo>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:subject>
+         <bf:Topic rdf:about="http://id.loc.gov/authorities/subjects/sh85078814">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Lumber trade--Oregon--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Lumber trade--Oregon--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Lumber trade</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Oregon</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="http://id.loc.gov/authorities/subjects/sh85078814">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <rdfs:label>Lumber trade--Washington (State)--Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Lumber trade--Washington (State)--Periodicals.</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberofMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <madsrdf:authoritativeLabel>Lumber trade</madsrdf:authoritativeLabel>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <madsrdf:authoritativeLabel>Washington (State)</madsrdf:authoritativeLabel>
+               </madsrdf:Geographic>
+               <madsrdf:GenreForm>
+                  <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+               </madsrdf:GenreForm>
+            </madsrdf:componentList>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>lcsh</bf:code>
+               </bf:Source>
+            </bf:source>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Topic rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/99119264310001452#Topic650-29">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+            <rdfs:label>Lumber trade.</rdfs:label>
+            <madsrdf:authoritativeLabel>Lumber trade.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>fast</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>fst01003543</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+         </bf:Topic>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/99119264310001452#Topic651-30">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Geographic"/>
+            <rdfs:label>Oregon.</rdfs:label>
+            <madsrdf:authoritativeLabel>Oregon.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>fast</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>fst01204579</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+         </bf:Place>
+      </bf:subject>
+      <bf:subject>
+         <bf:Place rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/99119264310001452#Topic651-31">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Geographic"/>
+            <rdfs:label>Washington (State)</rdfs:label>
+            <madsrdf:authoritativeLabel>Washington (State)</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>fast</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>fst01204703</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+         </bf:Place>
+      </bf:subject>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/99119264310001452#GenreForm655-32">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GenreForm"/>
+            <rdfs:label>Periodicals.</rdfs:label>
+            <madsrdf:authoritativeLabel>Periodicals.</madsrdf:authoritativeLabel>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>fast</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>fst01411641</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/instance/99119264310001452">
+            <bf:title>
+               <bf:Title>
+                  <bf:qualifier>Original</bf:qualifier>
+               </bf:Title>
+            </bf:title>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>  2004252301</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>DLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>52733475</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>OCoLC</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:instanceOf rdf:resource="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/work/99119264310001452"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:continuedBy>
+         <bf:Work rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/work/99119264310001452785-34">
+            <bf:hasInstance>
+               <bf:Instance rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/instance/99119264310001452">
+                  <bf:title>
+                     <bf:Title>
+                        <rdfs:label>Timberman</rdfs:label>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Issn>
+                        <rdf:value>0097-3092</rdf:value>
+                     </bf:Issn>
+                  </bf:identifiedBy>
+                  <bf:instanceOf rdf:resource="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/work/99119264310001452785-34"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:continuedBy>
+      <bf:hasInstance rdf:resource="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/instance/99119264310001452"/>
+   </bf:Work> 
+   <bf:Instance rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/instance/99119264310001452">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:polarity>
+         <bf:Polarity rdf:about="http://id.loc.gov/vocabulary/mpolarity/pos">
+            <rdfs:label>positive</rdfs:label>
+         </bf:Polarity>
+      </bf:polarity>
+      <bf:dimensions>35 mm.</bf:dimensions>
+      <bf:reductionRatio>
+         <bf:ReductionRatio>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>low reduction range</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <rdfs:label>015</rdfs:label>
+         </bf:ReductionRatio>
+      </bf:reductionRatio>
+      <bf:emulsion>
+         <bf:Emulsion rdf:about="http://id.loc.gov/vocabulary/mmaterial/slh">
+            <rdfs:label>silver halide</rdfs:label>
+         </bf:Emulsion>
+      </bf:emulsion>
+      <bf:generation>
+         <bf:Generation>
+            <rdfs:label>service copy</rdfs:label>
+         </bf:Generation>
+      </bf:generation>
+      <bf:baseMaterial>
+         <bf:BaseMaterial rdf:about="http://id.loc.gov/vocabulary/mmaterial/pol">
+            <rdfs:label>polyester</rdfs:label>
+         </bf:BaseMaterial>
+      </bf:baseMaterial>
+      <bf:polarity>
+         <bf:Polarity rdf:about="http://id.loc.gov/vocabulary/mpolarity/neg">
+            <rdfs:label>negative</rdfs:label>
+         </bf:Polarity>
+      </bf:polarity>
+      <bf:dimensions>35 mm.</bf:dimensions>
+      <bf:reductionRatio>
+         <bf:ReductionRatio>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>low reduction range</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <rdfs:label>015</rdfs:label>
+         </bf:ReductionRatio>
+      </bf:reductionRatio>
+      <bf:emulsion>
+         <bf:Emulsion rdf:about="http://id.loc.gov/vocabulary/mmaterial/slh">
+            <rdfs:label>silver halide</rdfs:label>
+         </bf:Emulsion>
+      </bf:emulsion>
+      <bf:generation>
+         <bf:Generation>
+            <rdfs:label>first generation (master)</rdfs:label>
+         </bf:Generation>
+      </bf:generation>
+      <bf:baseMaterial>
+         <bf:BaseMaterial rdf:about="http://id.loc.gov/vocabulary/mmaterial/pol">
+            <rdfs:label>polyester</rdfs:label>
+         </bf:BaseMaterial>
+      </bf:baseMaterial>
+      <bf:polarity>
+         <bf:Polarity rdf:about="http://id.loc.gov/vocabulary/mpolarity/neg">
+            <rdfs:label>negative</rdfs:label>
+         </bf:Polarity>
+      </bf:polarity>
+      <bf:dimensions>35 mm.</bf:dimensions>
+      <bf:reductionRatio>
+         <bf:ReductionRatio>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>low reduction range</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <rdfs:label>015</rdfs:label>
+         </bf:ReductionRatio>
+      </bf:reductionRatio>
+      <bf:emulsion>
+         <bf:Emulsion rdf:about="http://id.loc.gov/vocabulary/mmaterial/slh">
+            <rdfs:label>silver halide</rdfs:label>
+         </bf:Emulsion>
+      </bf:emulsion>
+      <bf:generation>
+         <bf:Generation>
+            <rdfs:label>printing master</rdfs:label>
+         </bf:Generation>
+      </bf:generation>
+      <bf:baseMaterial>
+         <bf:BaseMaterial rdf:about="http://id.loc.gov/vocabulary/mmaterial/pol">
+            <rdfs:label>polyester</rdfs:label>
+         </bf:BaseMaterial>
+      </bf:baseMaterial>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1899/1904</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/oru"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Ceased publication</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:frequency>
+         <bf:Frequency rdf:about="http://id.loc.gov/vocabulary/frequencies/mon">
+            <rdfs:label>monthly</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/per">
+            <rdfs:label>periodical</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/mediaTypes/h">
+            <rdfs:label>microfilm</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>regular</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:identifiedBy>
+         <bf:Lccn>
+            <rdf:value> 2008252770</rdf:value>
+         </bf:Lccn>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn229180431</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>229180431</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>OCoLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ocn229180431</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>OCoLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>The Columbia River and Oregon timberman.</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>The Columbia River and Oregon timberman.</rdfs:label>
+            <bflc:titleSortKey>Columbia River and Oregon timberman.</bflc:titleSortKey>
+            <bf:mainTitle>The Columbia River and Oregon timberman</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Portland, Or.</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>G.M. Cornwall</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1899-1904</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Portland, Or. : G.M. Cornwall,
+         [1899-1904]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>6 volumes</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>34 cm</bf:dimensions>
+      <bf:frequency>
+         <bf:Frequency>
+            <rdfs:label>Monthly</rdfs:label>
+         </bf:Frequency>
+      </bf:frequency>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaTypes/h">
+            <rdfs:label>microform</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/hd">
+            <rdfs:label>microfilm reel</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:firstIssue>Vol. 1, no. 1 (Nov. 1899)</bf:firstIssue>
+      <bf:lastIssue>v. 6, no. 2 (Dec. 1904).</bf:lastIssue>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Title from caption.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:hasReproduction
+         rdf:resource="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/instance/99119264310001452"/>
+      <bf:otherPhysicalFormat
+         rdf:resource="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/instance/99119264310001452"/>
+      <bf:hasSeries>
+         <bf:Instance>
+            <rdfs:label>USAIN state and local literature preservation project.
+               Washington.</rdfs:label>
+            <bf:seriesStatement>USAIN state and local literature preservation project.
+               Washington.</bf:seriesStatement>
+            <bf:instanceOf>
+               <bf:Work rdf:about="http://id.loc.gov/authorities/names/no2008063580">
+                  <rdfs:label>USAIN state and local literature preservation project.
+                     Washington.</rdfs:label>
+                  <bf:title>
+                     <bf:Title>
+                        <bflc:title30MatchKey>USAIN state and local literature preservation project.
+                           Washington.</bflc:title30MatchKey>
+                        <bflc:title30MarcKey>830 0$aUSAIN state and local literature preservation
+                           project.$pWashington.$0http://id.loc.gov/authorities/names/no2008063580$0http://viaf.org/viaf/sourceID/LC|no2008063580</bflc:title30MarcKey>
+                        <rdfs:label>USAIN state and local literature preservation project.
+                           Washington.</rdfs:label>
+                        <bflc:titleSortKey>USAIN state and local literature preservation project.
+                           Washington.</bflc:titleSortKey>
+                        <bf:mainTitle>USAIN state and local literature preservation
+                           project</bf:mainTitle>
+                        <bf:partName>Washington</bf:partName>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value rdf:resource="http://viaf.org/viaf/sourceID/LC|no2008063580"/>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+               </bf:Work>
+            </bf:instanceOf>
+         </bf:Instance>
+      </bf:hasSeries>
+      <bf:instanceOf
+         rdf:resource="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/work/99119264310001452"/>
+      <bf:hasItem>
+         <bf:Item
+            rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/99119264310001452#Item050-16">
+            <bf:shelfMark>
+               <bf:ShelfMarkLcc>
+                  <rdfs:label>HD9750.1.T65</rdfs:label>
+               </bf:ShelfMarkLcc>
+            </bf:shelfMark>
+            <bf:itemOf
+               rdf:resource="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/instance/99119264310001452"
+            />
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item
+            rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/99119264310001452#Item850-36-1">
+            <bf:heldBy>
+               <bf:Agent rdf:about="http://id.loc.gov/vocabulary/organizations/WaU"/>
+            </bf:heldBy>
+            <bf:itemOf
+               rdf:resource="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/instance/99119264310001452"
+            />
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item
+            rdf:about="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/99119264310001452#Item850-36-2">
+            <bf:heldBy>
+               <bf:Agent>
+                  <rdfs:label>WaU (master)</rdfs:label>
+               </bf:Agent>
+            </bf:heldBy>
+            <bf:itemOf
+               rdf:resource="https://open-na.hosted.exlibrisgroup.com/alma/01ALLIANCE_UW/bf/entity/instance/99119264310001452"
+            />
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>
