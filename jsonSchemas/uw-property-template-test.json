@@ -4,6 +4,10 @@
     "description": "Property template for property associated with the entity described by a resource template.",
     "version": "0.0.9",
     "type": "object",
+    "oneOf": [
+        {"$ref": "#/definitions/ptsToDo"},
+        {"$ref": "#/definitions/fullConstraints"}
+    ],
     "definitions": {
         "ptsToDo": {
             "required": [
@@ -324,9 +328,5 @@
                 }
             }
         }
-    },
-    "oneOf": [
-        {"$ref": "#/definitions/ptsToDo"},
-        {"$ref": "#/definitions/fullConstraints"}
-    ]
+    }
 }
