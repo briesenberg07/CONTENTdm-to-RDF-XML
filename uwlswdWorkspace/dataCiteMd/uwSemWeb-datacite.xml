@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-4"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://datacite.org/schema/kernel-4 https://schema.datacite.org/meta/kernel-4.0/metadata.xsd">
+    <identifier identifierType="DOI">10.6069/uwlib.55.a</identifier>
+    <creators>
+        <creator>
+            <creatorName>University of Washington Libraries</creatorName>
+        </creator>
+    </creators>
+    <titles>
+        <title xml:lang="en-US">University of Washington Libraries' Semantic Web Data</title>
+        <title titleType="AlternativeTitle" xml:lang="en-US">VoID Description of the Dataset 'University of Washington Libraries' Semantic Web Data'</title>
+    </titles>
+    <publisher>University of Washington Libraries</publisher>
+    <publicationYear>2018</publicationYear>
+    <resourceType resourceTypeGeneral="Dataset">LibraryData</resourceType>
+    <sizes>
+        <size>49 KB</size>
+    </sizes>
+    <formats>
+        <format>XHTML+RDFa 1.1</format>
+    </formats>
+    <rightsList>
+        <rights rightsURI="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</rights>
+    </rightsList>
+    <descriptions>
+        <description descriptionType="Abstract" xml:lang="en-US">Landing page for linked data describing resources associated with digital collections hosted at the University of Washington Libraries. The landing page contains a VoID description of the dataset as well as the dataset, which itself is a description of the dataset's partitions. The core data can be found in the partitions.</description>
+    </descriptions>
+</resource>

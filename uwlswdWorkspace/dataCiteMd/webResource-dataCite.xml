@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-4"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://datacite.org/schema/kernel-4 https://schema.datacite.org/meta/kernel-4.0/metadata.xsd">
+   <identifier identifierType="DOI">10.6069/uwlib.55.a.3.3</identifier>
+   <creators>
+      <creator>
+         <creatorName>University of Washington Libraries</creatorName>
+      </creator>
+   </creators>
+   <titles>
+      <title xml:lang="en-US">Instances of the WebResource Class</title>
+   </titles>
+   <publisher>University of Washington Libraries</publisher>
+   <publicationYear>2018</publicationYear>
+   <resourceType resourceTypeGeneral="Dataset">LibraryData</resourceType>
+   <sizes>
+      <size>6.4 MB</size>
+   </sizes>
+   <formats>
+      <format>XHTML+RDFa 1.1</format>
+   </formats>
+   <version>1-0-0</version>
+   <rightsList>
+      <rights rightsURI="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</rights>
+   </rightsList>
+   <descriptions>
+      <description descriptionType="Abstract" xml:lang="en-US">Instances of the class &lt;http://dp.la/about/map/WebResource&gt; represented in the University of Washington digital collections; the class is taken from the Digital Public Library Metadata of America Application Profile 5.0</description>
+   </descriptions>
+</resource>
