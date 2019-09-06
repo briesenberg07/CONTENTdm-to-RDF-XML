@@ -14,7 +14,7 @@ From [Understanding JSON Schema 7.0 > object](https://json-schema.org/understand
 
 The Sinopia schema *seems* to be taking this further by not simply using an array to indicate the required property, but by giving the value of the property an object for a value, which in turn contains another object, this whole structure combining to indicate a property that *must not* be present when the first is ~~(?**Q1**?)~~. *I haven't seen an explanation of this usage in any JSON Schema documentation so far.* This pattern (`{ "not" { "required": ["X"] } }`) shows up in other places as well.
 
-If `valueConstraint` includes the `valueTemplateRefs` property, it \[must not ~~?/need not?~~ \] contain the `useValuesFrom` property. If it contains `useValuesFrom`, it \[must not ~~?/need not?~~ \] contain the `valueTemplateRefs` property.
+If `valueConstraint` includes the `valueTemplateRefs` property, it must not ~~?/need not?~~ contain the `useValuesFrom` property. If it contains `useValuesFrom`, it must not ~~?/need not?~~ contain the `valueTemplateRefs` property.
 
 ### `allOf` keyword and definitions for property-template.json [starts LINE 178](https://github.com/LD4P/sinopia/blob/c6b65051e4a041537ede07c7b732ebdd6c8adaca/schemas/0.2.1/property-template.json#L178)
 
