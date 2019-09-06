@@ -12,9 +12,9 @@ From [Understanding JSON Schema 7.0 > object](https://json-schema.org/understand
 > We represent this dependency of one property on another using the dependencies keyword.
 > The value of the dependencies keyword is an object. Each entry in the object maps from the name of a property, p, to an array of strings listing properties that are required whenever p is present.
 
-The Sinopia schema *seems* to be taking this further by not simply using an array to indicate the required property, but by giving the value of the property an object for a value, which in turn contains another object, this whole structure combining to indicate a property that *must not* be present when the first is (?**Q1**?). *I haven't seen an explanation of this usage in any JSON Schema documentation so far.* This pattern (`{ "not" { "required": ["X"] } }`) shows up in other places as well.
+The Sinopia schema *seems* to be taking this further by not simply using an array to indicate the required property, but by giving the value of the property an object for a value, which in turn contains another object, this whole structure combining to indicate a property that *must not* be present when the first is ~~(?**Q1**?)~~. *I haven't seen an explanation of this usage in any JSON Schema documentation so far.* This pattern (`{ "not" { "required": ["X"] } }`) shows up in other places as well.
 
-If `valueConstraint` includes the `valueTemplateRefs` property, it \[must not?/need not?\] contain the `useValuesFrom` property. If it contains `useValuesFrom`, it \[must not?/need not?\] contain the `valueTemplateRefs` property.
+If `valueConstraint` includes the `valueTemplateRefs` property, it \[must not~~?/need not?~~\] contain the `useValuesFrom` property. If it contains `useValuesFrom`, it \[must not~~?/need not?~~\] contain the `valueTemplateRefs` property.
 
 ### `allOf` keyword and definitions for property-template.json [starts LINE 178](https://github.com/LD4P/sinopia/blob/c6b65051e4a041537ede07c7b732ebdd6c8adaca/schemas/0.2.1/property-template.json#L178)
 
@@ -38,7 +38,7 @@ So this applies to *everything in this schema module (a.k.a. this document)* (?)
   }
 },
 ```
-If a property is a lookup (is `"type": "lookup"`) then it *may not* include a `resourceTemplates` property (or it simply *isn't required?* **Q2**?). Also, per the referenced definition...
+If a property is a lookup (is `"type": "lookup"`) then it *may not* include a `resourceTemplates` property ~~(or it simply *isn't required?* **Q2**?)~~. Also, per the referenced definition...
 ```
 "requires-valueConstraint-useValuesFrom": {
   "required": ["valueConstraint"],
@@ -82,7 +82,7 @@ If a property will have a resource value (is `"type": "resource"`), then per the
   }
 },
 ```
-...`valueConstraint` is required, and it in turn requires `valueTemplateRefs` and must not have defaults. (Or defaults are simply *not required*?**Q3**?)
+...`valueConstraint` is required, and it in turn requires `valueTemplateRefs` and must not have defaults. ~~(Or defaults are simply *not required*?**Q3**?)~~
 
 #### Properties with literal values
 
@@ -115,4 +115,4 @@ If a property will have a literal value (is `"type": "literal"`), then per the r
   }
 }
 ```
-...its `valueConstraint` may not include `useValuesFrom` or `valueTemplateRefs`. (Or these are simply *not required*?**Q4**?)
+...its `valueConstraint` may not include `useValuesFrom` or `valueTemplateRefs`. ~~(Or these are simply *not required*?**Q4**?)~~
