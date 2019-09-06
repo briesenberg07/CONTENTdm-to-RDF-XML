@@ -40,7 +40,7 @@ So this applies to *everything in this schema module (a.k.a. this document)* (?)
   }
 },
 ```
-If a property is a lookup (is `"type": "lookup"`) then it *may not* include a `resourceTemplates` property (?**Q2**?). Also, per the referenced definition...
+If a property is a lookup (is `"type": "lookup"`) then it *may not* include a `resourceTemplates` property (or it simply *isn't required?* **Q2**?). Also, per the referenced definition...
 ```
 "requires-valueConstraint-useValuesFrom": {
   "required": ["valueConstraint"],
