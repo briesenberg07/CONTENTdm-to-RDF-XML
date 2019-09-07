@@ -1,0 +1,12 @@
+### 9 July 2018:- XSL for Alaska Yukon Pacific
+- How to generate blank node ids?
+- How to accurately refer to previously generated blank node ids?
+   - Creating agent file, so this is put off for now
+- Data cleaning:
+   - Look at XML exports with controlled vocabulary off--any different?
+   - Begin work cleaning entire AYP export
+   - Document actions
+- Follow up on JSON for HTML head
+- Follow up on edits to landing-page text
+   - Putting off until later
+![20180709_001.jpg](https://)
