@@ -12,13 +12,22 @@
     <!-- Fix default array in RDA profile -->
     <xsl:template match="j:array[@key = 'defaults']">
         <xsl:choose>
-            <!-- Not sure if this is the best way to test for 2 
-                string nodes inside the map but it *seems* to work -->
             <xsl:when test="j:map/j:string[2]">
                 <xsl:copy-of select="."/>
             </xsl:when>
             <xsl:otherwise>
-                <!-- MORE XSL HERE -->
+                <array key="defaults">
+                    <map>
+                        <xsl:for-each select="j:map">
+                            <xsl:for-each select="j:string[@key = 'defaultURI']">
+                                <xsl:copy-of select="."/>
+                            </xsl:for-each>
+                            <xsl:for-each select="j:string[@key = 'defaultLiteral']">
+                                <xsl:copy-of select="."/>
+                            </xsl:for-each>
+                        </xsl:for-each>
+                    </map>
+                </array>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
