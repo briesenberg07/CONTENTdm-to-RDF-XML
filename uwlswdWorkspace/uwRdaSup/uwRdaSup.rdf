@@ -1,0 +1,101 @@
+<rdf:RDF
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdaclass="http://rdaregistry.info/Elements/c/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" >
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasSuDocClassificationNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+    <dct:description xml:lang="en">A relationship between a government document and a corresponding U.S. Superintendent of Documents Classification number.</dct:description>
+    <rdfs:label xml:lang="en">hasSuDocClassificationNumber</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasBarcode">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
+    <dct:description xml:lang="en">A relationship between an RDA Item and its barcode.</dct:description>
+    <rdfs:label xml:lang="en">hasBarcode</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasPhysicalLocation">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dct:description xml:lang="en">A relationship between an item and a physical location for that item.</dct:description>
+    <rdfs:label xml:lang="en">hasPhysicalLocation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasCreatorCharacteristic">
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+    <dct:description xml:lang="en">A relationship between an RDA Work and a term identifying a characteristic of the Work’s creator.</dct:description>
+    <rdfs:label xml:lang="en">hasCreatorCharacteristic</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasRightsInformation">
+    <dct:description xml:lang="en">A relationship between a resource and information about rights held in and over that resource, such as terms governing use or reproduction, copyright statements, etc.</dct:description>
+    <rdfs:label xml:lang="en">hasRightsInformation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasNlmClassificationPartB">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#literal"/>
+    <dct:description xml:lang="en">A relationship between an entity and the second portion of its National Library of Medicine Classification number.</dct:description>
+    <rdfs:label xml:lang="en">hasNlmClassificationPartB</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#heldBy">
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+    <dct:description xml:lang="en">A relationship between an RDA Manifestation or Item and an organization that holds it.</dct:description>
+    <rdfs:label xml:lang="en">heldBy</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasNlmClassificationPartA">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#literal"/>
+    <dct:description xml:lang="en">A relationship between an entity and the first portion of its National Library of Medicine Classification number.</dct:description>
+    <rdfs:label xml:lang="en">hasNlmClassificationPartA</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasUniversityOfWashingtonNote">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dct:description xml:lang="en">A relationship between an entity other than an item and a note that applies to the University of Washington Libraries.</dct:description>
+    <rdfs:label xml:lang="en">hasUniversityOfWashingtonNote.</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasPhysicalSubLocation">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dct:description xml:lang="en">A relationship between an item and a physical sub-location for that item.</dct:description>
+    <rdfs:label xml:lang="en">hasPhysicalSubLocation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasLcGeographicClassification">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+    <dct:description xml:lang="en">A relationship between an RDA Manifestation or BIBFRAME Instance and a Library of Congress Geographic Classification number corresponding to a geographic area represented on a cartographic resource.</dct:description>
+    <rdfs:label xml:lang="en">hasLcGeographicClassification</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasLcClassificationPartB">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#literal"/>
+    <dct:description xml:lang="en">A relationship between an entity and the second portion of its Library of Congress Classification number.</dct:description>
+    <rdfs:label xml:lang="en">hasLcClassificationPartB</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasContributorAgent">
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+    <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+    <dct:description xml:lang="en">A relationship between an RDA Work, Expression, Manifestation, or Item and an agent who has made some contribution to its realization.</dct:description>
+    <rdfs:label xml:lang="en">hasContributorAgent</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://uw.doi.goes.here#hasLcClassificationPartA">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#literal"/>
+    <dct:description xml:lang="en">A relationship between an entity and the first portion of its Library of Congress Classification number.</dct:description>
+    <rdfs:label xml:lang="en">hasLcClassificationPartA</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,113 @@
+# University of Washington Libraries Supplement to RDA RDF Ontology
+# Human-readable documentation draft at <http://bit.ly/uwRdaSupDoc>
+
+@base <http://uw.doi.goes.here> .
+# @gerontakos I am not 100% confident about my use of @base
+  # Should it only be used in cases where the base URI is different from the URI of the document? I'm using it here basically to make my data entry easier.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdaclass: <http://rdaregistry.info/Elements/c/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+
+<#hasCreatorCharacteristic>
+  a rdf:Property ;
+  rdfs:label "hasCreatorCharacteristic"@en ;
+  # If these are language-tagged strings, why not make them fully human-readable? Like for example, here, "Has Creator Characteristic"
+  # See <http://bit.ly/uwlrsc2>
+  dct:description "A relationship between an RDA Work and a term identifying a characteristic of the Work’s creator."@en ;
+  rdfs:domain rdaclass:C10001 .
+
+<#hasContributorAgent>
+  a rdf:Property ;
+  rdfs:label "hasContributorAgent"@en ;
+  dct:description "A relationship between an RDA Work, Expression, Manifestation, or Item and an agent who has made some contribution to its realization."@en ;
+  rdfs:domain rdaclass:C10001 , rdaclass:C10006 , rdaclass:C10007 , rdaclass:C10003 .
+
+<#hasUniversityOfWashingtonNote>
+# LOOK OUT! SUGGESTING DIFFERENT IRI (semantically meaningful--oops), LABEL, AND DESCRIPTION
+  a rdf:Property ;
+  rdfs:label  "hasUniversityOfWashingtonNote."@en ;
+  # See LOOK OUT! above
+  dct:description "A relationship between an entity other than an item and a note that applies to the University of Washington Libraries."@en ;
+  # See LOOK OUT! above
+  # Also, what about usage of "entity" vs. "resource" here? See <#hasLcGeographicClassification> below
+  rdfs:range rdfs:Literal .
+  # Potential use of OWL was suggested here; see <http://bit.ly/uwlrsc3>
+
+<#heldBy>
+  a rdf:Property ;
+  rdfs:label "heldBy"@en ;
+  dct:description "A relationship between an RDA Manifestation or Item and an organization that holds it."@en ;
+  rdfs:domain rdaclass:C10007 , rdaclass:C10003 .
+  # Is rdfs:range needed here? Or is it inadvisable to try and limit values to IRIs (small institutions, etc.)? (Can rdfs:range be used to limit values to IRIs, even?)
+
+<#hasLcClassificationPartA>
+  a rdf:Property ;
+  rdfs:label "hasLcClassificationPartA"@en ;
+  dct:description "A relationship between an entity and the first portion of its Library of Congress Classification number."@en ;
+  rdfs:range rdfs:literal .
+
+<#hasLcClassificationPartB>
+  a rdf:Property ;
+  rdfs:label "hasLcClassificationPartB"@en ;
+  dct:description "A relationship between an entity and the second portion of its Library of Congress Classification number."@en ;
+  rdfs:range rdfs:literal .
+
+<#hasNlmClassificationPartA>
+  a rdf:Property ;
+  rdfs:label "hasNlmClassificationPartA"@en ;
+  dct:description "A relationship between an entity and the first portion of its National Library of Medicine Classification number."@en ;
+  # Questions about rdfs:domain in <http://bit.ly/uwRdaSupDoc>
+  rdfs:range rdfs:literal .
+
+<#hasNlmClassificationPartB>
+  a rdf:Property ;
+  rdfs:label "hasNlmClassificationPartB"@en ;
+  dct:description "A relationship between an entity and the second portion of its National Library of Medicine Classification number."@en ;
+  rdfs:range rdfs:literal .
+
+<#hasLcGeographicClassification>
+  a rdf:Property ;
+  rdfs:label "hasLcGeographicClassification"@en ;
+  dct:description "A relationship between an RDA Manifestation or BIBFRAME Instance and a Library of Congress Geographic Classification number corresponding to a geographic area represented on a cartographic resource."@en ;
+  rdfs:domain rdaclass:C10007 , bf:Instance ;
+  rdfs:range rdfs:Literal .
+
+<#hasSuDocClassificationNumber>
+  a rdf:Property ;
+  rdfs:label "hasSuDocClassificationNumber"@en ;
+  dct:description "A relationship between a government document and a corresponding U.S. Superintendent of Documents Classification number."@en ;
+  # Made changes to description based on comments in <http://bit.ly/uwRdaSupDoc>
+  rdfs:domain rdaclass:C10007 , rdaclass:C10003 , bf:Instance , bf:Item ;
+  rdfs:range rdfs:Literal .
+
+<#hasPhysicalLocation>
+  a rdf:Property ;
+  rdfs:label "hasPhysicalLocation"@en ;
+  dct:description "A relationship between an item and a physical location for that item."@en ;
+  # "item"? Need range? See comment <http://bit.ly/uwlrsc1>
+  rdfs:range rdfs:Literal .
+
+<#hasPhysicalSubLocation>
+# Same questions as <http://bit.ly/itemComment>
+  a rdf:Property ;
+  rdfs:label "hasPhysicalSubLocation"@en ;
+  dct:description "A relationship between an item and a physical sub-location for that item."@en ;
+  # "item"? Need range? See comment <http://bit.ly/uwlrsc1>
+  rdfs:range rdfs:Literal .
+
+<#hasBarcode>
+  a rdf:Property ;
+  rdfs:label "hasBarcode"@en ;
+  dct:description "A relationship between an RDA Item and its barcode."@en ;
+  # This is a suggested change to the description; see <http://bit.ly/uwRdaSupDoc>
+  rdfs:domain rdaclass:C10003 ;
+  rdfs:range rdfs:Literal .
+
+<#hasRightsInformation>
+  a rdf:Property ;
+  rdfs:label "hasRightsInformation"@en ;
+  dct:description "A relationship between a resource and information about rights held in and over that resource, such as terms governing use or reproduction, copyright statements, etc."@en .
+  # See note above about "entity" vs. "resource"
