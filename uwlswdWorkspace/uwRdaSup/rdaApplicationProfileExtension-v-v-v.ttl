@@ -14,20 +14,20 @@
   rdfs:comment "A relationship between an RDA Work and a term identifying a characteristic of the Work’s creator."@en ;
   rdfs:domain rdaclass:C10001 ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "Values for this property should resemble values for the MARC 386 field. The domain and range of the BIBFRAME property created for this purpose was judged too restrictive." .
+  skos:note "Values for this property should resemble values for the MARC 386 field. The domain and range of the BIBFRAME property created for this purpose was judged too restrictive."@en .
 
 <#hasContributorAgent>
   a rdf:Property ;
   rdfs:label "Has Contributor Agent"@en ;
   rdfs:comment "A relationship between an RDA Work, Expression, Manifestation, or Item and an agent who has made some contribution to its realization."@en ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "Although this is a frequently used property relating RDA entities, it is not included in the RDA Resitry. The domain is unspecified, but values should be instances of one of 4 RDA entities: Work, Expression, Manifestation or Item.".
+  skos:note "Although this is a frequently used property relating RDA entities, it is not included in the RDA Resitry. The domain is unspecified, but values should be instances of one of 4 RDA entities: Work, Expression, Manifestation or Item."@en .
 
 <#hasUniversityOfWashingtonNote>
   a rdf:Property ;
   rdfs:label  "Has University Of Washington Note."@en ;
   rdfs:comment "A relationship between an entity other than an RDA Item and a note."@en ;
-  skos:note "Expected to be pertinent only in one local context (the University of Washington Libraries)." ;
+  skos:note "Expected to be pertinent only in one local context (the University of Washington Libraries)."@en ;
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> .
 
@@ -36,7 +36,7 @@
   rdfs:label "Held By"@en ;
   rdfs:comment "A relationship between an RDA Manifestation or Item and an organization that holds it."@en ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "This property is expected to be used to describe RDA Manifestations and Items only. The domain and range of the BIBFRAME property created for this purpose was judged too restrictive.".
+  skos:note "This property is expected to be used to describe RDA Manifestations and Items only. The domain and range of the BIBFRAME property created for this purpose was judged too restrictive."@en .
 
 <#hasLcClassificationPartA>
   a rdf:Property ;
@@ -44,7 +44,7 @@
   rdfs:comment "A relationship between an entity and the first portion of its Library of Congress Classification number."@en ;
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive.".
+  skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive."@en .
 
 <#hasLcClassificationPartB>
   a rdf:Property ;
@@ -52,7 +52,7 @@
   rdfs:comment "A relationship between an entity and the second portion of its Library of Congress Classification number."@en ;
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive.".
+  skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive."@en .
 
 <#hasNlmClassificationPartA>
   a rdf:Property ;
@@ -60,7 +60,7 @@
   rdfs:comment "A relationship between an entity and the first portion of its National Library of Medicine Classification number."@en ;
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive.".
+  skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive."@en .
 
 <#hasNlmClassificationPartB>
   a rdf:Property ;
@@ -68,7 +68,7 @@
   rdfs:comment "A relationship between an entity and the second portion of its National Library of Medicine Classification number."@en ;
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive.".
+  skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive."@en .
 
 <#hasLcGeographicClassification>
   a rdf:Property ;
@@ -76,7 +76,7 @@
   rdfs:comment "A relationship between an RDA Manifestation or BIBFRAME Instance and a Library of Congress Geographic Classification number corresponding to a geographic area represented on a cartographic resource."@en ;
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "Required for describing RDA Manifestations and BIBFRAME Instances of cartographic resources. No equivalent property found in another vocabulary.".
+  skos:note "Required for describing RDA Manifestations and BIBFRAME Instances of cartographic resources. No equivalent property found in another vocabulary."@en .
 
 <#hasSuDocClassificationNumber>
   a rdf:Property ;
@@ -84,7 +84,7 @@
   rdfs:comment "A relationship between a government document and a corresponding U.S. Superintendent of Documents Classification number."@en ;
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "Required for describing RDA Manifestations that are government documents, RDA Items, and BIBFRAME Instances of cartographic resources. No equivalent property found in another vocabulary.".
+  skos:note "Required for describing RDA Manifestations that are government documents, RDA Items, and BIBFRAME Instances of cartographic resources. No equivalent property found in another vocabulary."@en .
 
 <#hasPhysicalLocation>
   a rdf:Property ;
@@ -93,7 +93,7 @@
   rdfs:domain rdaclass:C10003 ;
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "Equivalent BIBFRAME property has rdfs:domain = bf:Item, which is inaccurate in the RDA context.".
+  skos:note "Equivalent BIBFRAME property has rdfs:domain = bf:Item, which is inaccurate in the RDA context."@en .
 
 <#hasPhysicalSubLocation>
 # Same questions as <http://bit.ly/itemComment>
@@ -103,7 +103,7 @@
   rdfs:domain rdaclass:C10003 ;
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "Equivalent BIBFRAME property has rdfs:domain = bf:Item, which is inaccurate in the RDA context.".
+  skos:note "Equivalent BIBFRAME property has rdfs:domain = bf:Item, which is inaccurate in the RDA context."@en .
 
 <#hasBarcode>
   a rdf:Property ;
@@ -112,4 +112,13 @@
   rdfs:domain rdaclass:C10003 ;
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
-  skos:note "Equivalent BIBFRAME property has rdfs:domain = bf:Barcode, which was judged too restrictive.".
+  skos:note "Equivalent BIBFRAME property has rdfs:domain = bf:Barcode, which was judged too restrictive."@en .
+
+<#hasCallNumber>
+  a rdf:Property ;
+  rdfs:label "Has Call Number"@en ;
+  rdfs:comment "A relationship between an item and its call number, regardless of the use of a formal classification scheme."@en ;
+  rdfs:domain rdaclass:C10003 ;
+  rdfs:range rdfs:Literal ;
+  rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
+  skos:note "Need this for cataloging items for which we don’t use traditional call numbers, such as sound recordings and videos. No equivalent property found."@en .
