@@ -7,6 +7,9 @@
 @prefix rdaclass: <http://rdaregistry.info/Elements/c/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix: dct: <http://purl.org/dc/terms/> .
+@prefix: void: <http://rdfs.org/ns/void#> .
+@prefix: owl: <http://www.w3.org/2002/07/owl#>
 
 <#hasCreatorCharacteristic>
   a rdf:Property ;
@@ -122,3 +125,60 @@
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Need this for cataloging items for which we don’t use traditional call numbers, such as sound recordings and videos. No equivalent property found."@en .
+
+<#creator>
+  a rdf:Property ;
+  rdfs:label "Creator"@en ;
+  rdfs:comment "An entity primarily responsible for making the resource."@en ;
+  rdfs:range dct:Agent .
+  
+<#title>
+  a rdf:Property ;
+  rdfs:label "Title"@en ;
+  rdfs:comment "A name given to the resource."@en ;
+  rdfs:range rdfs:Literal .
+  
+<#description>
+  a rdf:Property ;
+  rdfs:label "Description"@en ;
+  rdfs:comment "An account of the resource."@en .
+  
+<#feature>
+  a rdf:Property ;
+  rdfs:label "Feature"@en ;
+  rdfs:domain void:Dataset ;
+  rdfs:range void:TechnicalFeature .
+  
+<#hasFormat>
+  a rdf:Property ;
+  rdfs:label "Has Format"@en ;
+  rdfs:comment "A related resource that is substantially the same as the pre-existing described resource, but in another format."@en .
+  
+<#containsEntity>
+  a rdf:Property ;
+  rdfs:label "Entities in Dataset"@en ;
+  rdfs:comment "Value is a type of entity in the dataset. Repeat the property for each type. Use in conjunction with void:classPartition when applicable. Distinguished from void:classPartition in that it asserts that an entity is present in a dataset even if it is not the basis for a void:classPartition."@en ;
+  rdfs:domain void:Dataset ;
+  rdfs:range rdfs:Class .
+
+<#classPartition>
+  a rdf:Property ;
+  rdfs:label "Class Partition"@en ;
+  rdfs:comment "A subset of a void:Dataset that contains only the entities of a certain rdfs:Class."@en ;
+  rdfs:domain void:Dataset ;
+  rdfs:range void:Dataset .
+  
+<#versionInfo>
+  a owl:AnnotationProperty ;
+  rdfs:label "Version Info"@en ;
+  rdfs:comment "The annotation property that provides version information for an ontology or other OWL cosntruct."@en ;
+  rdfs:domain rdfs:Resource ;
+  rdfs:range rdf:Resource ;
+  rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
+    
+<#class>
+  a rdf:Property ;
+  rdfs:label "Class"@en ;
+  rdfs:comment "The rdfs:Class that is the rdf:type of all entities in a class-based partition."@en ;
+  rdfs:domain void:Dataset ;
+  rdfs:range rdfs:Class .
