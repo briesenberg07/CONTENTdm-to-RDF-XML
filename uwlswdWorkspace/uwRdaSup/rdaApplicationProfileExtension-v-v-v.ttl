@@ -11,8 +11,16 @@
 
 <https://doi.org/10.6069/uwlib.55.d.4#>
   a void:Dataset ;
-  dct:creator <http://viaf.org/viaf/139541794> .
-  # add more VoID triples here
+  dct:creator <http://viaf.org/viaf/139541794> ;
+  dct:description "Properties required beyond those provided by the RDA Registry to describe RDA Entities at University of Washington Libraries."@en ;
+  dct:hasFormat <https://www.lib.washington.edu/static/public/cams/data/localResources/classes_local-1-0-1.nt>, <https://www.lib.washington.edu/static/public/cams/data/localResources/classes_local-1-0-1.rdf>, <https://www.lib.washington.edu/static/public/cams/data/localResources/classes_local-1-0-1.ttl> ;
+  dct:title "RDA Application Profile Extension"@en ;
+  void:classPartition [
+  void:class rdf:Property
+  ] ;
+  void:feature <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
+  owl:versionInfo "1-0-0" ;
+  ldproc:containsEntity rdf:Property .
 
 <#hasCreatorCharacteristic>
   a rdf:Property ;
