@@ -19,7 +19,7 @@
   void:class rdf:Property
   ] ;
   void:feature <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
-  owl:versionInfo "1-0-0" ;
+  owl:versionInfo "1-0-1" ;
   ldproc:containsEntity rdf:Property .
 
 <#hasCreatorCharacteristic>
