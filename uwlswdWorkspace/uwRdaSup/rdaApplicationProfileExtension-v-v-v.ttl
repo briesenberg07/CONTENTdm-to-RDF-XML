@@ -13,7 +13,7 @@
   a void:Dataset ;
   dct:creator <http://viaf.org/viaf/139541794> ;
   dct:description "Properties required beyond those provided by the RDA Registry to describe RDA Entities at University of Washington Libraries."@en ;
-  dct:hasFormat <https://www.lib.washington.edu/static/public/cams/data/localResources/classes_local-1-0-1.nt>, <https://www.lib.washington.edu/static/public/cams/data/localResources/classes_local-1-0-1.rdf>, <https://www.lib.washington.edu/static/public/cams/data/localResources/classes_local-1-0-1.ttl> ;
+  dct:hasFormat <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension.nt>, <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension.rdf>, <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension.ttl> ;
   dct:title "RDA Application Profile Extension"@en ;
   void:classPartition [
   void:class rdf:Property
