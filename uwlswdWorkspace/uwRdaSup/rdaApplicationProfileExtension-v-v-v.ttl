@@ -8,6 +8,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://doi.org/10.6069/uwlib.55.d.4>
   a void:Dataset ;
@@ -15,7 +16,7 @@
   dct:description "RDF dataset describing properties required beyond those provided by the RDA Registry to describe RDA Entities at University of Washington Libraries."@en ;
   dct:creator <http://viaf.org/viaf/139541794> ;
   dct:publisher <http://viaf.org/viaf/139541794> ;
-  dct:issued 2019^^xsd:gyear ;
+  dct:issued "2019"^^xsd:gYear ;
   dct:language <http://id.loc.gov/vocabulary/languages/eng> ;
   dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
   void:feature <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
