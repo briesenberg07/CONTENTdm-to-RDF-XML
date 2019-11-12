@@ -9,6 +9,7 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldproc: <https://doi.org/10.6069/uwlib.55.b.2#> .
 
 <https://doi.org/10.6069/uwlib.55.d.4>
   a void:Dataset ;
@@ -22,7 +23,7 @@
   void:feature <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
   dct:hasFormat <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension.html>, <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension-v-v-v.nt>, <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension-v-v-v.rdf>, <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension-v-v-v.ttl> ;
   void:classPartition [
-  void:class rdf:Property
+    void:class rdf:Property
   ] ;
   ldproc:containsEntity rdf:Property ;
   void:feature <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
