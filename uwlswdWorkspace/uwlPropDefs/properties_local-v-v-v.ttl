@@ -1,0 +1,33 @@
+@prefix uwProp: <https://doi.org/10.6069/uwlib.55.d.3#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ldproc: <https://doi.org/10.6069/uwlib.55.b.2#> .
+@prefix dcType: <http://purl.org/dc/dcmitype/> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+
+#save this in localResources in all serializaions
+#register doi https://doi.org/10.6069/uwlib.55.d.3
+#change filename and version
+<https://doi.org/10.6069/uwlib.55.d.3>
+    a void:Dataset ;
+    dct:creator <http://viaf.org/viaf/139541794> ;
+    dct:description "RDF dataset describing locally-minted properties used in University of Washington Libraries RDF data."@en ;
+    dct:hasFormat <https://www.lib.washington.edu/static/public/cams/data/localResources/properties_local-1-0-0.nt>, <https://www.lib.washington.edu/static/public/cams/data/localResources/properties_local-1-0-0.rdf>, <https://www.lib.washington.edu/static/public/cams/data/localResources/properties_local-1-0-0.ttl> ;
+    dct:title "University of Washington Libraries rdf:Property Definitions"@en ;
+void:classPartition [
+        void:class rdf:Property
+    ] ;
+    void:feature <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
+    owl:versionInfo "1-0-0" ;
+    ldproc:containsEntity rdf:Property .
+
+uwProp:inDigiColl a rdf:Property ;
+    rdfs:comment "Describes a digital collection in which an entity is referenced. The digital collection metadata is the source of the data describing the entity. This property is useful for tracking the digital collections that contributed to the local graph."@en ;
+    rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.3> ;
+    rdfs:label "Is Referenced in Digital Collection" ;
+    rdfs:subPropertyOf dct:isReferencedBy ;
+    rdfs:domain edm:Agent ; #add other classes as needed
+    rdfs:range dcType:Collection .

@@ -9,20 +9,25 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-<https://doi.org/10.6069/uwlib.55.d.4#>
+<https://doi.org/10.6069/uwlib.55.d.4>
   a void:Dataset ;
+  dct:title "University of Washington Libraries RDA Application Profile Extension"@en ;
+  dct:description "RDF dataset describing properties required beyond those provided by the RDA Registry to describe RDA Entities at University of Washington Libraries."@en ;
   dct:creator <http://viaf.org/viaf/139541794> ;
-  dct:description "Properties required beyond those provided by the RDA Registry to describe RDA Entities at University of Washington Libraries."@en ;
-  dct:hasFormat <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension.nt>, <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension.rdf>, <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension.ttl> ;
-  dct:title "RDA Application Profile Extension"@en ;
+  dct:publisher <http://viaf.org/viaf/139541794> ;
+  dct:issued 2019^^xsd:gyear ;
+  dct:language <http://id.loc.gov/vocabulary/languages/eng> ;
+  dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+  void:feature <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
+  dct:hasFormat <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension.html>, <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension-v-v-v.nt>, <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension-v-v-v.rdf>, <https://www.lib.washington.edu/static/public/cams/data/localResources/rdaApplicationProfileExtension-v-v-v.ttl> ;
   void:classPartition [
   void:class rdf:Property
   ] ;
+  ldproc:containsEntity rdf:Property ;
   void:feature <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
-  owl:versionInfo "1-0-1" ;
-  ldproc:containsEntity rdf:Property .
+  owl:versionInfo "1-0-1" .
 
-<#hasCreatorCharacteristic>
+uwrda:hasCreatorCharacteristic
   a rdf:Property ;
   rdfs:label "Has Creator Characteristic"@en ;
   rdfs:comment "A relationship between an RDA Work and a term identifying a characteristic of the Work’s creator."@en ;
@@ -30,14 +35,14 @@
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Values for this property should resemble values for the MARC 386 field. The domain and range of the BIBFRAME property created for this purpose was judged too restrictive."@en .
 
-uwrda:hasContributorAgent>
+uwrda:hasContributorAgent
   a rdf:Property ;
   rdfs:label "Has Contributor Agent"@en ;
   rdfs:comment "A relationship between an RDA Work, Expression, Manifestation, or Item and an agent who has made some contribution to its realization."@en ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Although this is a frequently used property relating RDA entities, it is not included in the RDA Resitry. The domain is unspecified, but values should be instances of one of 4 RDA entities: Work, Expression, Manifestation or Item."@en .
 
-uwrda:hasUniversityOfWashingtonNote>
+uwrda:hasUniversityOfWashingtonNote
   a rdf:Property ;
   rdfs:label  "Has University Of Washington Note."@en ;
   rdfs:comment "A relationship between an entity other than an RDA Item and a note."@en ;
@@ -45,14 +50,14 @@ uwrda:hasUniversityOfWashingtonNote>
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> .
 
-uwrda:heldBy>
+uwrda:heldBy
   a rdf:Property ;
   rdfs:label "Held By"@en ;
   rdfs:comment "A relationship between an RDA Manifestation or Item and an organization that holds it."@en ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "This property is expected to be used to describe RDA Manifestations and Items only. The domain and range of the BIBFRAME property created for this purpose was judged too restrictive."@en .
 
-uwrda:hasLcClassificationPartA>
+uwrda:hasLcClassificationPartA
   a rdf:Property ;
   rdfs:label "Has LC Classification Part A"@en ;
   rdfs:comment "A relationship between an entity and the first portion of its Library of Congress Classification number."@en ;
@@ -60,7 +65,7 @@ uwrda:hasLcClassificationPartA>
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive."@en .
 
-uwrda:hasLcClassificationPartB>
+uwrda:hasLcClassificationPartB
   a rdf:Property ;
   rdfs:label "Has LC Classification Part B"@en ;
   rdfs:comment "A relationship between an entity and the second portion of its Library of Congress Classification number."@en ;
@@ -68,7 +73,7 @@ uwrda:hasLcClassificationPartB>
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive."@en .
 
-uwrda:hasNlmClassificationPartA>
+uwrda:hasNlmClassificationPartA
   a rdf:Property ;
   rdfs:label "Has NLM Classification Part A"@en ;
   rdfs:comment "A relationship between an entity and the first portion of its National Library of Medicine Classification number."@en ;
@@ -76,7 +81,7 @@ uwrda:hasNlmClassificationPartA>
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive."@en .
 
-uwrda:hasNlmClassificationPartB>
+uwrda:hasNlmClassificationPartB
   a rdf:Property ;
   rdfs:label "Has NLM Classification Part B"@en ;
   rdfs:comment "A relationship between an entity and the second portion of its National Library of Medicine Classification number."@en ;
@@ -84,7 +89,7 @@ uwrda:hasNlmClassificationPartB>
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Property to classify a resource. The domain and range of the BIBFRAME property created for a similar purpose was judged too restrictive."@en .
 
-uwrda:hasLcGeographicClassification>
+uwrda:hasLcGeographicClassification
   a rdf:Property ;
   rdfs:label "Has LC Geographic Classification"@en ;
   rdfs:comment "A relationship between an RDA Manifestation or BIBFRAME Instance and a Library of Congress Geographic Classification number corresponding to a geographic area represented on a cartographic resource."@en ;
@@ -92,7 +97,7 @@ uwrda:hasLcGeographicClassification>
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Required for describing RDA Manifestations and BIBFRAME Instances of cartographic resources. No equivalent property found in another vocabulary."@en .
 
-uwrda:hasSuDocClassificationNumber>
+uwrda:hasSuDocClassificationNumber
   a rdf:Property ;
   rdfs:label "Has SuDoc Classification Number"@en ;
   rdfs:comment "A relationship between a government document and a corresponding U.S. Superintendent of Documents Classification number."@en ;
@@ -100,7 +105,7 @@ uwrda:hasSuDocClassificationNumber>
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Required for describing RDA Manifestations that are government documents, RDA Items, and BIBFRAME Instances of cartographic resources. No equivalent property found in another vocabulary."@en .
 
-uwrda:hasPhysicalLocation>
+uwrda:hasPhysicalLocation
   a rdf:Property ;
   rdfs:label "Has Physical Location"@en ;
   rdfs:comment "A relationship between an item and a physical location for that item."@en ;
@@ -109,8 +114,7 @@ uwrda:hasPhysicalLocation>
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Equivalent BIBFRAME property has rdfs:domain = bf:Item, which is inaccurate in the RDA context."@en .
 
-uwrda:hasPhysicalSubLocation>
-# Same questions as <http://bit.ly/itemComment>
+uwrda:hasPhysicalSubLocation
   a rdf:Property ;
   rdfs:label "Has Physical Sub-Location"@en ;
   rdfs:comment "A relationship between an item and a physical sub-location for that item."@en ;
@@ -119,7 +123,7 @@ uwrda:hasPhysicalSubLocation>
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Equivalent BIBFRAME property has rdfs:domain = bf:Item, which is inaccurate in the RDA context."@en .
 
-uwrda:hasBarcode>
+uwrda:hasBarcode
   a rdf:Property ;
   rdfs:label "Has Barcode"@en ;
   rdfs:comment "A relationship between an RDA Item and its barcode."@en ;
@@ -128,7 +132,7 @@ uwrda:hasBarcode>
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Equivalent BIBFRAME property has rdfs:domain = bf:Barcode, which was judged too restrictive."@en .
 
-uwrda:hasCallNumber>
+uwrda:hasCallNumber
   a rdf:Property ;
   rdfs:label "Has Call Number"@en ;
   rdfs:comment "A relationship between an item and its call number, regardless of the use of a formal classification scheme."@en ;
@@ -136,60 +140,3 @@ uwrda:hasCallNumber>
   rdfs:range rdfs:Literal ;
   rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.4> ;
   skos:note "Need this for cataloging items for which we don’t use traditional call numbers, such as sound recordings and videos. No equivalent property found."@en .
-
-# <#creator>
-  # a rdf:Property ;
-  # rdfs:label "Creator"@en ;
-  # rdfs:comment "An entity primarily responsible for making the resource."@en ;
-  # rdfs:range dct:Agent .
-
-# <#title>
-  # a rdf:Property ;
-  # rdfs:label "Title"@en ;
-  # rdfs:comment "A name given to the resource."@en ;
-  # rdfs:range rdfs:Literal .
-
-# <#description>
-  # a rdf:Property ;
-  # rdfs:label "Description"@en ;
-  # rdfs:comment "An account of the resource."@en .
-
-# <#feature>
-  # a rdf:Property ;
-  # rdfs:label "Feature"@en ;
-  # rdfs:domain void:Dataset ;
-  # rdfs:range void:TechnicalFeature .
-
-# <#hasFormat>
-  # a rdf:Property ;
-  # rdfs:label "Has Format"@en ;
-  # rdfs:comment "A related resource that is substantially the same as the pre-existing described resource, but in another format."@en .
-
-# <#containsEntity>
-  # a rdf:Property ;
-  # rdfs:label "Entities in Dataset"@en ;
-  # rdfs:comment "Value is a type of entity in the dataset. Repeat the property for each type. Use in conjunction with void:classPartition when applicable. Distinguished from void:classPartition in that it asserts that an entity is present in a dataset even if it is not the basis for a void:classPartition."@en ;
-  # rdfs:domain void:Dataset ;
-  # rdfs:range rdfs:Class .
-
-# <#classPartition>
-  # a rdf:Property ;
-  # rdfs:label "Class Partition"@en ;
-  # rdfs:comment "A subset of a void:Dataset that contains only the entities of a certain rdfs:Class."@en ;
-  # rdfs:domain void:Dataset ;
-  # rdfs:range void:Dataset .
-
-# <#versionInfo>
-  # a owl:AnnotationProperty ;
-  # rdfs:label "Version Info"@en ;
-  # rdfs:comment "The annotation property that provides version information for an ontology or other OWL cosntruct."@en ;
-  # rdfs:domain rdfs:Resource ;
-  # rdfs:range rdf:Resource ;
-  # rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> .
-
-# <#class>
-  # a rdf:Property ;
-  # rdfs:label "Class"@en ;
-  # rdfs:comment "The rdfs:Class that is the rdf:type of all entities in a class-based partition."@en ;
-  # rdfs:domain void:Dataset ;
-  # rdfs:range rdfs:Class .
