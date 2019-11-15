@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<resource
+<resource xmlns="http://datacite.org/schema/kernel-4"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+    xsi:schemaLocation="http://datacite.org/schema/kernel-4 https://schema.datacite.org/meta/kernel-4.2/metadata.xsd">
     <identifier identifierType="DOI">10.6069/UWLIB.55.D.4</identifier>
     <creators>
         <creator>
-            <creatorName>University Of Washington Libraries</creatorName>
+            <creatorName nameType="Organizational">University Of Washington Libraries</creatorName>
         </creator>
     </creators>
     <titles>
@@ -17,7 +17,7 @@
     <dates>
         <date dateType="Issued">2019</date>
     </dates>
-    <version>1-0-0</version>
+    <version>1-0-1</version>
     <rightsList>
         <rights rightsURI="http://creativecommons.org/publicdomain/zero/1.0">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</rights>
     </rightsList>
