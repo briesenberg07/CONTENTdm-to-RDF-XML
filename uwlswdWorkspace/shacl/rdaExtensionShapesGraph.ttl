@@ -1,0 +1,125 @@
+@prefix uwrda: <https://doi.org/10.6069/uwlib.55.d.4#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdaclass: <http://rdaregistry.info/Elements/c/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldproc: <https://doi.org/10.6069/uwlib.55.b.2#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <http://www.example.org#> .
+
+ex:voidMetadataShape
+    a sh:NodeShape ;
+    sh:targetClass void:Dataset ;
+    sh:property [
+        sh:path dct:title ;
+        sh:nodeKind sh:Literal ;
+        sh:languageIn ( "en" ) ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:description ;
+        sh:nodeKind sh:Literal ;
+        sh:languageIn ( "en" ) ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:creator ;
+        sh:hasValue <http://viaf.org/viaf/139541794> ;
+    ] ;
+    sh:property [
+        sh:path dct:publisher ;
+        sh:hasValue <http://viaf.org/viaf/139541794> ;
+    ] ;
+    sh:property [
+        sh:path dct:issued ;
+        sh:or (
+            [sh:datatype xsd:date]
+            [sh:datatype xsd:gYear]
+        ) ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:language ;
+        sh:hasValue <http://id.loc.gov/vocabulary/languages/eng> ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:license ;
+        sh:hasValue <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    ] ;
+    sh:property [
+        sh:path void:feature ;
+        sh:hasValue <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
+        sh:minCount 4 ;
+        sh:maxCount 4 ;
+    ] ;
+    sh:property [
+        sh:path dct:hasFormat ;
+        sh:nodeKind sh:IRI ;
+# Is there a way to specify that these IRIs should end in .html, .nt, .rdf, and .ttl?
+    ] ;
+    sh:property [
+        sh:path void:classPartition ;
+        sh:nodeKind sh:BlankNode ;
+    ] ;
+    sh:property [
+        sh:path ldproc:containsEntity ;
+        sh:hasValue rdf:Property ;
+    ] ;
+    sh:property [
+        sh:path owl:versionInfo ;
+        sh:minCount 1 ;
+    ] .
+
+ex:classPartitionShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf void:class ;
+    sh:hasValue rdf:Property .
+# Is this the best way to validate blank nodes in the data graph? It works, but wondering if there's a better way. Also might want to make it more flexible to use for datasets that aren't all properties (assuming that's how void:classPartition works, not sure I understand it 100%).
+
+ex:extensionShape
+    a sh:NodeShape ;
+    sh:targetClass rdf:Property ;
+# So using rdf:Property doesn't work for some reason. Rewriting as ex:Property for shape and data graphs does work, so it's something about rdf:Property specifically. Not sure how to rewrite it to accommodate this.
+    sh:property [
+        sh:path rdfs:label ;
+        sh:nodeKind sh:Literal ;
+        sh:languageIn ( "en" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path rdfs:comment ;
+        sh:nodeKind sh:Literal ;
+        sh:languageIn ( "en" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path rdfs:domain ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path rdfs:range ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path rdfs:isDefinedBy ;
+        sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path skos:note ;
+        sh:nodeKind sh:Literal ;
+        sh:languageIn ( "en" ) ;
+        sh:maxCount 1 ;
+    ] .
