@@ -1,0 +1,45 @@
+@prefix ex: <http://example.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dpla: <http://dp.la/about/map/> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix ldproc: <https://doi.org/10.6069/uwlib.55.b.2#> .
+@prefix plat: <https://doi.org/10.6069/uwlib.55.d.2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:SourceResourceShape
+  a sh:NodeShape ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "dct:type values must come from specified namespaces" ;
+    # Not sure if prefix declaration is needed/formed correctly
+    sh:prefixes [
+      sh:declare [
+        sh:prefix "dpla" ;
+        sh:namespace "http://dp.la/about/map/"^^xsd:anyURI ;
+        ] ;
+        [
+        sh:prefix "dct" ;
+        sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+        ]
+      ]
+      # SELECT $this (dct:type AS ?path) ?value copied from SHACL spec 5.1
+      # But why is it neeed if dct prefix is declared dct:path given in WHERE statement?
+      sh:select """
+        SELECT $this ?value
+        WHERE {
+          $this dct:type ?value .
+          FILTER ((!strstarts(str(?value),'http://purl.org/dc/dcmitype/')))
+        }
+        """ ;
+        # Still need additional option in the Filter for http://vocab.getty.edu/aat/
+    ] .
