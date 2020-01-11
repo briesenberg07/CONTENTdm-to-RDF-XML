@@ -1,0 +1,22 @@
+@prefix uwpv: <https://doi.org/10.6069/uwlib.55.b.1#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix voc: <https://www.lib.washington.edu/static/public/cams/data/vocabularies/> .
+@prefix ldproc: <https://doi/org/10.6069/uwlib.55.b.2#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+uwpv:Platform   a   rdfs:Class .
+
+<https://doi.org/10.6069/uwlib.55.b.1>
+	a void:Dataset ;
+	dct:creator <http://viaf.org/viaf/139541794> ;
+	dct:title  "Linked Data Platform Vocabulary";
+	dct:description:  "RDFS vocabulary establishing classes and properties needed to describe platforms used to process RDF datasets. The word platforms represents applications, software, scripts, programs, etc. useful in processing the datasets.";
+	void:feature <http://www.w3.org/ns/formats/RDFa> ;
+    void:feature <http://www.w3.org/ns/formats/N-Triples> ;
+    void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
+    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+	dct:hasFormat voc:platformVocab-1-0-0.ttl, voc:platformVocab-1-0-0.nt, voc:platformVocab-1-0-0.rdf ;
+    ldproc:containsEntity rdfs:Class ;
+    owl:versionInfo "1-0-0" .

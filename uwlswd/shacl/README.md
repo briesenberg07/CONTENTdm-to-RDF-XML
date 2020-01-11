@@ -1,1 +1,0 @@
-# Some SHACL files

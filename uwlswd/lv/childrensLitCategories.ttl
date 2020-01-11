@@ -1,0 +1,168 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix voc: <https://www.lib.washington.edu/static/public/cams/data/vocabularies/> .
+@prefix ldproc: <https://doi/org/10.6069/uwlib.55.b.2#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://doi.org/10.6069/uwlib.55.B.3#activitybooks>
+    a skos:Concept ;
+    skos:preflabel "Activity books" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#alphabetbooks>
+    a skos:Concept ;
+    skos:preflabel "Alphabet books" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#battledores>
+    a skos:Concept ;
+    skos:preflabel "Battledores" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#biblesandreligiousworks>
+    a skos:Concept ;
+    skos:preflabel "Bibles and religious works" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#cautionarytales>
+    a skos:Concept ;
+    skos:preflabel "Cautionary tales" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#chapbooks>
+    a skos:Concept ;
+    skos:preflabel "Chapbooks" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#copybooks>
+    a skos:Concept ;
+    skos:preflabel "Copybooks" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#dictionaries>
+    a skos:Concept ;
+    skos:preflabel "Dictionaries" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#discriminationandbigotry>
+    a skos:Concept ;
+    skos:preflabel "Discrimination and bigotry" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#elocutionandrhetoric>
+    a skos:Concept ;
+    skos:preflabel "Elocution and rhetoric" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#encyclopedias>
+    a skos:Concept ;
+    skos:preflabel "Encyclopedias" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#fables>
+    a skos:Concept ;
+    skos:preflabel "Fables" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#fairytales>
+    a skos:Concept ;
+    skos:preflabel "Fairytales" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#geographyandtravel>
+    a skos:Concept ;
+    skos:preflabel "Geography and travel" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#grammars>
+    a skos:Concept ;
+    skos:preflabel "Grammars" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#healthandhygiene>
+    a skos:Concept ;
+    skos:preflabel "Health and hygiene" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#historicalandgeographicworks>
+    a skos:Concept ;
+    skos:preflabel "Historical and geographic works" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#history>
+    a skos:Concept ;
+    skos:preflabel "History" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#homeeconomicsanddomesticlife>
+    a skos:Concept ;
+    skos:preflabel "Home economics and domestic life" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#hornbooks>
+    a skos:Concept ;
+    skos:preflabel "Hornbooks" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#mannersandsocialetiquette>
+    a skos:Concept ;
+    skos:preflabel "Manners and social etiquette" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#mathematicsandarithmetic>
+    a skos:Concept ;
+    skos:preflabel "Mathematics and arithmetic" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#moneyandaccounting>
+    a skos:Concept ;
+    skos:preflabel "Money and accounting" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#moralinstruction>
+    a skos:Concept ;
+    skos:preflabel "Moral instruction" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#naturalsciences>
+    a skos:Concept ;
+    skos:preflabel "Natural sciences" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#nurseryrhymes>
+    a skos:Concept ;
+    skos:preflabel "Nursery rhymes" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#objectbooks>
+    a skos:Concept ;
+    skos:preflabel "Object books" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#periodicals>
+    a skos:Concept ;
+    skos:preflabel "Periodicals" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#peterparley>
+    a skos:Concept ;
+    skos:preflabel "Peter Parley" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#politicalworks>
+    a skos:Concept ;
+    skos:preflabel "Political works" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#primersinstructionalbooks>
+    a skos:Concept ;
+    skos:preflabel "Primers (Instructional books)" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#readers>
+    a skos:Concept ;
+    skos:preflabel "Readers" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#socialetiquette>
+    a skos:Concept ;
+    skos:preflabel "Social etiquette" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#spellingbooks>
+    a skos:Concept ;
+    skos:preflabel "Spelling books" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#textbooks>
+    a skos:Concept ;
+    skos:preflabel "Textbooks" .
+
+<https://doi.org/10.6069/uwlib.55.B.3#tradesandoccupations>
+    a skos:Concept ;
+    skos:preflabel "Trades and Occupations" .
+
+<https://doi.org/10.6069/uwlib.55.b.3>
+	a void:Dataset ;
+	dct:creator <http://viaf.org/viaf/139541794> ;
+	dct:title  "Linked Data Vocabularies: Children's Literature Categories";
+	dct:alternate "University of Washington Libraries Linked Data Vocabularies: Childrens Literature Categories" ;
+	dct:description  "Categories for describing types of historical children's literature" ;
+	void:feature <http://www.w3.org/ns/formats/RDFa> ;
+    void:feature <http://www.w3.org/ns/formats/N-Triples> ;
+    void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
+    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+	dct:hasFormat voc:childrensLitCategories-1-0-0.ttl, voc:childrensLitCategories-1-0-0.nt, voc:childrensLitCategories-1-0-0.rdf ;
+	void:classPartition [
+            void:class skos:Concept
+                        ] ;
+    ldproc:containsEntity skos:Concept ;
+    owl:versionInfo "1-0-0" .

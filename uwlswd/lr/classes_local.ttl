@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cdmc: <https://doi.org/10.6069/uwlib.55.d.1#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix ldproc: <https://doi.org/10.6069/uwlib.55.b.2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://doi.org/10.6069/uwlib.55.d.1>
+    dct:creator <http://viaf.org/viaf/139541794> ;
+    dct:description "RDF dataset describing classes used in University of Washington Libraries RDF data."@en ;
+    dct:hasFormat <https://www.lib.washington.edu/static/public/cams/data/localResources/classes_local-1-0-1.nt>, <https://www.lib.washington.edu/static/public/cams/data/localResources/classes_local-1-0-1.rdf>, <https://www.lib.washington.edu/static/public/cams/data/localResources/classes_local-1-0-1.ttl> ;
+    dct:title "University of Washington Libraries rdfs:Class Definitions"@en ;
+    void:classPartition [
+        void:class rdfs:Class
+    ] ;
+    void:feature <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
+    a void:Dataset ;
+    owl:versionInfo "1-0-1" ;
+    ldproc:containsEntity rdfs:Class .
+
+cdmc:NegativeNumber
+    a rdfs:Class ;
+    rdfs:comment """Reproduction number assigned to an image for purposes of
+      duplication. It is a unique number in University of Washington Libraries Special
+      Collections."""@en ;
+    rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.1> ;
+    rdfs:label "Negative Number"@en ;
+    rdfs:subClassOf bf:Identifier .
+
+cdmc:OrderNumber
+    a rdfs:Class ;
+    rdfs:comment """Number used to order a copy of a digital resource from the
+      University of Washington Libraries."""@en ;
+    rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.1> ;
+    rdfs:label "Order Number"@en ;
+    rdfs:subClassOf bf:Identifier .
+
+cdmc:PhotographersReferenceNumber
+    a rdfs:Class ;
+    rdfs:comment """University of Washington Libraries' reference number for a
+      photographer."""@en ;
+    rdfs:isDefinedBy <https://doi.org/10.6069/uwlib.55.d.1> ;
+    rdfs:label "Photographers Reference Number"@en ;
+    rdfs:subClassOf bf:Identifier .
+

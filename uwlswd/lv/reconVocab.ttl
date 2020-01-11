@@ -1,0 +1,110 @@
+@prefix uwrecon: <https://doi.org/10.6069/uwlib.55.b.2#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix uwpv: <https://doi.org/10.6069/uwlib.55.b.1#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+# No classes
+# Properties:
+# 1. uwrecon:deDuped
+# 2. uwrecon:containsEntity
+# 3. uwrecon:targetVocab
+# 4. uwrecontargetVocabSecondary
+# 5. uwrecon:linkPredicate
+# 6. uwrecon:platform
+# 7. uwrecon:processingNote
+# 8. uwrecon:linkPredicateNote
+# 9. rdf:type
+# 10. void:classPartition
+# 11. void:class  [use with void:classPartition]
+# 12. void:dataDump
+# 13. void:inDataset
+
+uwrecon:deDuped  rdf:type      rdf:Property ;
+                 rdfs:domain   void:Dataset ;
+                 rdfs:range     rdfs:Literal ;
+                 rdfs:label    "De-dupicated" ;
+                 rdfs:comment  "Value is the version number of dataset after it was de-duped" .
+
+uwrecon:containsEntity   rdf:type      rdfs:Property ;
+                         rdfs:domain   void:Dataset ;
+                         rdfs:range    rdfs:Class ;
+                         rdfs:label    "Entities in Dataset" ;
+                         rdfs:comment  "Value is a type of entity in the dataset. Repeat the property for each type. Use in conjunction with void:classPartition when applicable. Distinguished from void:classPartition in that it asserts that an entity is present in a dataset even if it is not the basis for a void:classPartition."  .
+
+
+uwrecon:targetVocab    rdf:type      rdf:Property ;
+                        rdfs:doman    void:Dataset ;
+                        rdfs:range    rdf:Resource ;
+                        rdfs:label    "Target Datasets (Machine Matching)" ;
+                        rdfs:comment  "Value is an http identifier for a target vocabulary, prefereably an IRI. The target vocabulary is parsed in a systematic and comprehesive matching process to find additional descriptions of entities already described in the source dataset. Note that uwrecon:targetVocab is favored above void:target and its subproperties when the resource being described is not part of a graph that is a void:Linkset. This property helps build a list of all targets used to insert related assertions about matching entities into the source dataset. This is useful when assertions (triples) are inserted into the source graph. Also note that the properties used to bring the source entities in relation to the target entities are described in uwrecon:linkPredicates." .
+
+uwrecon:targetVocabSecondary    rdf:type      rdf:Property ;
+                        rdfs:doman    void:Dataset ;
+                        rdfs:range    rdf:Resource ;
+                        rdfs:label    "Target Datasets (Manual Matching)" ;
+                        rdfs:comment  "Value should be an identifier for a target vocabulary, prefereably an IRI. The IRI is extracted from the target vocabulary to provide an additional description for a single resource already described in the source dataset, therefore not extracted as part of a comprehesive matching process. This property was created in addition to uwrecon:targetVocab in order to distinguish when a comprehensive matching process was or was not executed. Note that uwrecon:targetVocabSecondary is favored above void:target and its subproperties when the resource being described is not part of a graph that is a void:Linkset. This property helps build a list of all targets used to insert related assertions about matching entities into the source dataset. This is useful when assertions (triples) are inserted into the source graph. Also note that the properties used to bring the source entities in relation to the target entities are described in uwrecon:linkPredicate." .
+
+uwrecon:linkPredicate     rdf:type     rdf:Property ;
+                          rdfs:domain  void:Dataset ;
+                          rdfs:range   rdf:Property ;
+                          rdfs:label   "Link Predicates" ;
+                          rdfs:comment "Value must be IRIs for properties used to relate entities in the source dataset to entities in external datasets. Note uwrecon:linkPredicate should be favored over void:linkPredicate only when the predicate is not part of a graph that is a void:Linkset." .
+
+uwrecon:platform    rdf:type     rdf:Property ;
+                     rdfs:domain  void:Dataset ;
+                     rdfs:range   uwpv:Platform ;
+                     rdfs:label   "Platform used for processing tasks" ;
+                     rdfs:comment "Value is the name of any platform used, especially for matchng tasks, to process the dataset." .
+
+uwrecon:processingNote      rdf:type      rdf:Property ;
+                            rdfs:domain   void:Dataset ;
+                            rdfs:range    rdfs:Literal ;
+                            rdfs:label    "Processing Notes" ;
+                            rdfs:comment  "Value is a textual description of data processing, especially during matching tasks, that may be pertinent to use of the dataset." .
+
+uwrecon:linkPredicateNote   rdf:type     rdf:Property ;
+                            rdfs:domain   void:Dataset ;
+                            rdfs:range    rdfs:Literal ;
+                            rdfs:label    "Link Predicate Notes" ;
+                            rdfs:comment  "Value is a textual description of the use of properties relating entities in the source dataset." .
+
+uwrecon:dataHarvestSource   rdf:type        rdf:Property ;
+                            rdf:domain      void:Dataset ;
+                            rdf:range       dctype:Collection ;
+                            rdf:label       "Data Harvest Source" ;
+                            rdfs:comment    "Digital collection that is the source of the RDF data. Used when an RDF dataset is an instance of previously exisiting data; that previously existing data is not RDF data and has been exported or harvested and repurposed as linked data. In addition the source data describes a digital collection -- it is the metadata for that digital collection -- and the RDF data describes all resources associated with that digital collection." .
+
+#    ==>external properties for describing the reconciliation process:
+#    1. rdf:type
+#    2. void:classPartition
+#    3. void:class  [use with void:classPartition]
+#    4. void:dataDump
+#    5. void:inDataset
+
+#    ==>properties not available:
+#         a property pointing to the Linkset from the target dataset (the subjectsTarget dataset).
+
+<https://doi.org/10.6069/uwlib.55.b.2> a void:Dataset ;
+    dct:creator <http://viaf.org/viaf/139541794> ;
+    dct:title "RDF Vocabulary for Linked Data Processes" ;
+    dct:alternate "Reconciliation Vocabulary" ;
+    dct:description "Vocabulary for describing processes run on linked data datasets." ;
+    dct:publisher <http://viaf.org/viaf/139541794> ;
+    dct:issued "2018" ;
+    dct:language "English" ;
+    dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    dct:subject <http://id.loc.gov/authorities/subjects/sh2013002090> ;
+    void:feature <http://www.w3.org/ns/formats/RDFa> ;
+    void:feature <http://www.w3.org/ns/formats/N-Triples> ;
+    void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
+    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+    dct:hasFormat <https://www.lib.washington.edu/static/public/cams/data/vocabularies/reconVocab-1-2-1.nt> ;
+    dct:hasFormat <https://www.lib.washington.edu/static/public/cams/data/vocabularies/reconVocab-1-2-1.ttl> ;
+    dct:hasFormat <https://www.lib.washington.edu/static/public/cams/data/vocabularies/reconVocab-1-2-1.rdf> ;
+    void:classPartition [
+            void:class rdfs:Property
+                        ] ;
+    owl:versionInfo "1-2-1" .
