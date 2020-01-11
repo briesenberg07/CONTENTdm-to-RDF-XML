@@ -62,15 +62,21 @@ ex:voidMetadataShape
     sh:property [
         sh:path dct:hasFormat ;
         sh:nodeKind sh:IRI ;
-# Is there a way to specify that these IRIs should end in .html, .nt, .rdf, and .ttl?
+        # Is there a way to specify that these IRIs should end in .html, .nt, .rdf, and .ttl?
+        # (BR) Good question...I was looking into doing this with SHACL-SPARQL but have not been successful yet.
     ] ;
     sh:property [
         sh:path void:classPartition ;
         sh:nodeKind sh:BlankNode ;
+        # Need to validate that bNode has void:class rdf:Property--I see now that you do this below!
+        # Make this required
+        sh:minCount 1 ;
     ] ;
     sh:property [
         sh:path ldproc:containsEntity ;
         sh:hasValue rdf:Property ;
+        # Make this required
+        sh:minCount 1 ;
     ] ;
     sh:property [
         sh:path owl:versionInfo ;
@@ -82,11 +88,13 @@ ex:classPartitionShape
     sh:targetObjectsOf void:class ;
     sh:hasValue rdf:Property .
 # Is this the best way to validate blank nodes in the data graph? It works, but wondering if there's a better way. Also might want to make it more flexible to use for datasets that aren't all properties (assuming that's how void:classPartition works, not sure I understand it 100%).
+# Yes, I think you understand correctly. So this is a good example of code that would *not* be re-useable for other resources (say one of the class partitions for example), because the value of void:class would be something else, like dpla:SourceResource or rdfs:Class, etc.
 
 ex:extensionShape
     a sh:NodeShape ;
     sh:targetClass rdf:Property ;
 # So using rdf:Property doesn't work for some reason. Rewriting as ex:Property for shape and data graphs does work, so it's something about rdf:Property specifically. Not sure how to rewrite it to accommodate this.
+# (BR) I think you mentioned this in your email to me earlier. But I'm confused because I used your code to validate the RDA Extension successfully, with sh:targetClass = rdf:Property as above.
     sh:property [
         sh:path rdfs:label ;
         sh:nodeKind sh:Literal ;

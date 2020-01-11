@@ -16,6 +16,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+# AS OF 2020-01-10 this does not work. Many many error messages.
+
 ex:SourceResourceShape
   a sh:NodeShape ;
   sh:sparql [
