@@ -1,0 +1,425 @@
+# These are the validation errors I'm getting when I try to validate the RDA extension data against the current version of the validation doc. If I replace every rdf:Property with ex:Property, ALL of these errors go away. Unsure why.
+
+Validation Report
+Conforms: False
+Results (84):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: dct:license
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: dct:issued
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: dct:language
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: dct:creator
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: rdfs:label
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: skos:note
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: void:class
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: owl:versionInfo
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: rdfs:subPropertyOf
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: dct:description
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: rdfs:range
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: rdf:type
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: dct:title
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: void:feature
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: dct:hasFormat
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: void:classPartition
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: rdfs:domain
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: dct:publisher
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: rdfs:isDefinedBy
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: rdfs:comment
+        Result Path: rdfs:label
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:label ]
+        Focus Node: ldproc:containsEntity
+        Result Path: rdfs:label
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:license
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:license
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:issued
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:issued
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:language
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:language
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:creator
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:creator
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:label
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:label
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: skos:note
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: skos:note
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: void:class
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: void:class
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: owl:versionInfo
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: owl:versionInfo
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:subPropertyOf
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:subPropertyOf
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:description
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:description
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:range
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:range
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdf:type
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdf:type
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:title
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:title
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: void:feature
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: void:feature
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:hasFormat
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:hasFormat
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: void:classPartition
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: void:classPartition
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:domain
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:domain
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:publisher
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: dct:publisher
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:isDefinedBy
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:isDefinedBy
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:comment
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: rdfs:comment
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: ldproc:containsEntity
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:hasValue <https://doi.org/10.6069/uwlib.55.d.4> ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rdfs:isDefinedBy ]
+        Focus Node: ldproc:containsEntity
+        Result Path: rdfs:isDefinedBy
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: dct:license
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: dct:issued
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: dct:language
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: dct:creator
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: rdfs:label
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: skos:note
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: void:class
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: owl:versionInfo
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: rdfs:subPropertyOf
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: dct:description
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: rdfs:range
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: rdf:type
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: dct:title
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: void:feature
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: dct:hasFormat
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: void:classPartition
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: rdfs:domain
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: dct:publisher
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: rdfs:isDefinedBy
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: rdfs:comment
+        Result Path: rdfs:comment
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: [ sh:languageIn ( Literal("en") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:Literal ; sh:path rdfs:comment ]
+        Focus Node: ldproc:containsEntity
+        Result Path: rdfs:comment
