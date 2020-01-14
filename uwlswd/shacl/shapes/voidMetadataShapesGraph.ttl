@@ -1,3 +1,7 @@
+# (MCM) NOTE: I've included brief descriptions of several properties as comments for personal reference (they can be kept or deleted when we publish).
+# (MCM) Actual notes/questions that I want feedback on are labeled [!NOTE]
+# (MCM) Current draft is based off specifications provided here: https://www.w3.org/TR/void/
+
 @prefix uwrda: <https://doi.org/10.6069/uwlib.55.d.4#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -110,7 +114,7 @@ ex:generalDatasetMetadataShape
     sh:nodeKind sh:IRI ;
   ] .
 
-# Separating these sections for readability. They can be sectioned off in different ways or not at all, if we prefer.
+# [!NOTE] Separating these sections into distinct shapes for readability. They can be sectioned off in different ways or not at all, if we prefer.
 
 ex:accessMetadataShape
 # Describes how RDA data can be accessed using various protocols.
@@ -166,6 +170,7 @@ sh:property [
 sh:property [
   sh:path void:classPartition ;
   sh:nodeKind sh:BlankNode ;
+  sh:node ex:classPartitionShape ;
 ] ;
 sh:property [
   sh:path void:propertyPartition ;
@@ -175,17 +180,136 @@ sh:property [
 ex:classPartitionShape
   a sh:NodeShape ;
   sh:targetObjectsOf void:class ;
-  sh:nodeKind sh:IRI .
+  sh:nodeKind sh:IRI ;
+  sh:property [
+    sh:path void:triples ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:entities ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:classes ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:properties ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:distinctSubjects ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:distinctObjects ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:documents ;
+    sh:nodeKind sh:Literal ;
+  ] .
+# [!NOTE] I'm not sure if all these different statistical properties are necessary for classPartition/propertyPartition, but I included them all just in case.
 
 ex:propertyPartitionShape
   a sh:NodeShape ;
   sh:targetObjectsOf void:property ;
-  sh:nodeKind sh:IRI .
-
-ex:datasetStatisticsShape
-  a sh:NodeShape ;
-  sh:targetObjectsOf void:Dataset ;
+  sh:nodeKind sh:IRI ;
   sh:property [
     sh:path void:triples ;
     sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:entities ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:classes ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:properties ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:distinctSubjects ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:distinctObjects ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:documents ;
+    sh:nodeKind sh:Literal ;
   ] .
+
+ex:datasetStatisticsShape
+  a sh:NodeShape ;
+  sh:targetClass void:Dataset ;
+  sh:property [
+    sh:path void:triples ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+# The total number of RDF triples contained in the dataset.
+  sh:property [
+    sh:path void:entities ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+# The total number of entities of entities described in the dataset.
+# [!NOTE] Would it be useful to write an entity shape?
+  sh:property [
+    sh:path void:classes ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+# The total number of distinct classes in the dataset.
+  sh:property [
+    sh:path void:properties ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+# The total number of distinct properties in the dataset.
+  sh:property [
+    sh:path void:distinctSubjects ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+# The total number of distinct subjects in the dataset.
+  sh:property [
+    sh:path void:distinctObjects ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+# The total number of distinct objects in the dataset.
+  sh:property [
+    sh:path void:documents ;
+    sh:nodeKind sh:Literal ;
+  ] .
+# The total number of documents. Use if the dataset is published as a set of individual documents. Intended for datasets where the total number of triples or entities is hard to determine. void:triples or void:entities preferred where practical.
+
+ex:linksetShape
+  a sh:NodeShape ;
+  sh:targetClass void:Linkset ;
+  sh:property [
+    sh:path void:target ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 2 ;
+    sh:maxCount 2 ;
+  ] ;
+  sh:property [
+    sh:path void:subjectsTarget ;
+    sh:maxCount 1 ;
+  ] ;
+# Names the subjects of all link triples in the dataset.
+  sh:property [
+    sh:path void:objectsTarget ;
+    sh:maxCount 1 ;
+  ] ;
+# Names the objects of all link triples in the dataset.
+  sh:property [
+    sh:path void:subset ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+# Used to state that a linkset is part of a larger dataset.
+  sh:property [
+    sh:path void:linkPredicate ;
+    sh:nodeKind sh:IRI ;
+  ] .
+# [!NOTE] The linkset section has been a little over my head, might help to see an example of one?
