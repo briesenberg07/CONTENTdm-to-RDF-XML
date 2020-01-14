@@ -1,0 +1,191 @@
+@prefix uwrda: <https://doi.org/10.6069/uwlib.55.d.4#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdaclass: <http://rdaregistry.info/Elements/c/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldproc: <https://doi.org/10.6069/uwlib.55.b.2#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <http://www.example.org#> .
+@prefix wv: <https://vocab.org/waiver/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+ex:generalDatasetMetadataShape
+  a sh:NodeShape ;
+  sh:targetClass void:Dataset ;
+  sh:property [
+    sh:path foaf:homepage ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+# Use for the homepage for the dataset. Do not use for related pages that are not specifically about the dataset.
+  sh:property [
+    sh:path foaf:page ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+# Use for pages related to the dataset.
+  sh:property [
+    sh:path dct:title ;
+    sh:nodeKind sh:Literal ;
+    sh:uniqueLang true ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dct:description ;
+    sh:nodeKind sh:Literal ;
+    sh:uniqueLang true ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dct:creator ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dct:publisher ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dct:contributor ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path dct:source ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+# A related resource from which the dataset is derived.
+  sh:property [
+    sh:path dct:date ;
+    sh:or (
+      [sh:datatype xsd:date]
+      [sh:datatype xsd:gYear]
+    ) ;
+  ] ;
+# A point or period of time associated with an event in the life-cycle of the resource
+  sh:property [
+    sh:path dct:created ;
+    sh:or (
+      [sh:datatype xsd:date]
+      [sh:datatype xsd:gYear]
+    ) ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dct:issued ;
+    sh:or (
+      [sh:datatype xsd:date]
+      [sh:datatype xsd:gYear]
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dct:modified ;
+    sh:or (
+      [sh:datatype xsd:date]
+      [sh:datatype xsd:gYear]
+    ) ;
+  ] ;
+  sh:property [
+    sh:path dct:license ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path wv:norms ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+# Represent the general principles or "code of conduct" adopted by a community for access and use of resources.
+  sh:property [
+    sh:path wv:waiver ;
+    sh:nodeKind sh:IRIOrLiteral ;
+  ] ;
+# Best practice is use the URI of a waiver legal document as the value of this property.
+  sh:property [
+    sh:path dct:subject ;
+    sh:nodeKind sh:IRI ;
+  ] .
+
+# Separating these sections for readability. They can be sectioned off in different ways or not at all, if we prefer.
+
+ex:accessMetadataShape
+# Describes how RDA data can be accessed using various protocols.
+  a sh:NodeShape ;
+  sh:targetClass void:Dataset ;
+  sh:property [
+    sh:path void:sparqlEndpoint ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path void:dataDump ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path void:rootResource ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+# Names particularly important or central resources that make good entry points for navigating the dataset.
+sh:property [
+  sh:path void:uriLookupEndpoint ;
+  sh:nodeKind sh:IRI ;
+] ;
+sh:property [
+  sh:path void:openSearchDescription ;
+  sh:nodeKind sh:IRI ;
+] .
+
+ex:structuralMetadataShape
+# Provides high-level information about the schema and internal structure of a dataset.
+a sh:NodeShape ;
+sh:targetClass void:Dataset ;
+sh:property [
+  sh:path void:exampleResource ;
+  sh:nodeKind sh:IRI ;
+] ;
+# Names particularly representative or typical resources in the dataset.
+sh:property [
+  sh:path void:uriSpace ;
+  sh:nodeKind sh:Literal ;
+] ;
+sh:property [
+  sh:path void:uriRegexPattern ;
+  sh:nodeKind sh:Literal ;
+] ;
+sh:property [
+  sh:path void:vocabulary ;
+  sh:nodeKind sh:IRI ;
+] ;
+sh:property [
+  sh:path void:subset ;
+  sh:nodeKind sh:IRI ;
+] ;
+sh:property [
+  sh:path void:classPartition ;
+  sh:nodeKind sh:BlankNode ;
+] ;
+sh:property [
+  sh:path void:propertyPartition ;
+  sh:nodeKind sh:BlankNode ;
+] .
+
+ex:classPartitionShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf void:class ;
+  sh:nodeKind sh:IRI .
+
+ex:propertyPartitionShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf void:property ;
+  sh:nodeKind sh:IRI .
+
+ex:datasetStatisticsShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf void:Dataset ;
+  sh:property [
+    sh:path void:triples ;
+    sh:nodeKind sh:Literal ;
+  ] .
