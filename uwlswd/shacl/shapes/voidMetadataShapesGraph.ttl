@@ -17,6 +17,39 @@
 @prefix ex: <http://www.example.org#> .
 @prefix wv: <https://vocab.org/waiver/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix format: <http://www.w3.org/ns/formats/> .
+
+ex:voidMetadataDescriptionShape
+  a sh:NodeShape ;
+  sh:targetClass void:DatasetDescription ;
+  sh:property [
+    sh:path dct:title ;
+    sh:nodeKind sh:Literal ;
+    sh:uniqueLang true ;
+    sh:minCount 1 ;
+  ] ;
+# This is the title of the VoID file, not the dataset being described.
+  sh:property [
+    sh:path [ sh:alternativePath (foaf:primaryTopic foaf:topic) ]
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+  ] ;
+# Use foaf:primaryTopic if the VoID file describes a single dataset; use foaf:topic if it describes several datasets of equal importance.
+  sh:property [
+    sh:path dct:creator ;
+    sh:nodeKind sh:IRIOrLiteral ;
+  ] ;
+# This is the creator of the VoID file, not the dataset being described.
+  sh:property [
+    sh:path dct:created ;
+    sh:or (
+      [sh:datatype xsd:date]
+      [sh:datatype xsd:gYear]
+    ) ;
+    sh:maxCount 1 ;
+  ] .
+# This is the creation date of the VoID file, not the dataset being described.
+# [!NOTE] We can also add other properties here, if desired. These are just the examples from W3C.
 
 ex:generalDatasetMetadataShape
   a sh:NodeShape ;
@@ -112,6 +145,16 @@ ex:generalDatasetMetadataShape
   sh:property [
     sh:path dct:subject ;
     sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path void:feature ;
+    sh:in (
+      format:N3
+      format:N-Triples
+      format:RDF_XML
+      format:RDFa
+      format:Turtle
+    ) ;
   ] .
 
 # [!NOTE] Separating these sections into distinct shapes for readability. They can be sectioned off in different ways or not at all, if we prefer.
@@ -144,38 +187,44 @@ sh:property [
 
 ex:structuralMetadataShape
 # Provides high-level information about the schema and internal structure of a dataset.
-a sh:NodeShape ;
-sh:targetClass void:Dataset ;
-sh:property [
-  sh:path void:exampleResource ;
-  sh:nodeKind sh:IRI ;
-] ;
+  a sh:NodeShape ;
+  sh:targetClass void:Dataset ;
+  sh:property [
+    sh:path void:exampleResource ;
+    sh:nodeKind sh:IRI ;
+  ] ;
 # Names particularly representative or typical resources in the dataset.
-sh:property [
-  sh:path void:uriSpace ;
-  sh:nodeKind sh:Literal ;
-] ;
-sh:property [
-  sh:path void:uriRegexPattern ;
-  sh:nodeKind sh:Literal ;
-] ;
-sh:property [
-  sh:path void:vocabulary ;
-  sh:nodeKind sh:IRI ;
-] ;
-sh:property [
-  sh:path void:subset ;
-  sh:nodeKind sh:IRI ;
-] ;
-sh:property [
-  sh:path void:classPartition ;
-  sh:nodeKind sh:BlankNode ;
-  sh:node ex:classPartitionShape ;
-] ;
-sh:property [
-  sh:path void:propertyPartition ;
-  sh:nodeKind sh:BlankNode ;
-] .
+  sh:property [
+    sh:path void:uriSpace ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:uriRegexPattern ;
+    sh:nodeKind sh:Literal ;
+  ] ;
+  sh:property [
+    sh:path void:vocabulary ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path void:subset ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path void:inDataset ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+# [!NOTE] W3C recommends only one void:inDataset, but it is not required -- how should we handle cardinality for these?
+  sh:property [
+    sh:path void:classPartition ;
+    sh:nodeKind sh:BlankNode ;
+    sh:node ex:classPartitionShape ;
+  ] ;
+  sh:property [
+    sh:path void:propertyPartition ;
+    sh:nodeKind sh:BlankNode ;
+  ] .
 
 ex:classPartitionShape
   a sh:NodeShape ;
