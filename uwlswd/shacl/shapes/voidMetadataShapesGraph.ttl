@@ -155,6 +155,7 @@ ex:generalDatasetMetadataShape
       format:RDFa
       format:Turtle
     ) ;
+    sh:class void:TechnicalFeature ;
   ] .
 
 # [!NOTE] Separating these sections into distinct shapes for readability. They can be sectioned off in different ways or not at all, if we prefer.
@@ -170,6 +171,7 @@ ex:accessMetadataShape
   sh:property [
     sh:path void:dataDump ;
     sh:nodeKind sh:IRI ;
+    sh:class rdfs:Resource ;
   ] ;
   sh:property [
     sh:path void:rootResource ;
@@ -183,6 +185,7 @@ sh:property [
 sh:property [
   sh:path void:openSearchDescription ;
   sh:nodeKind sh:IRI ;
+  sh:class foaf:Document ;
 ] .
 
 ex:structuralMetadataShape
@@ -192,6 +195,7 @@ ex:structuralMetadataShape
   sh:property [
     sh:path void:exampleResource ;
     sh:nodeKind sh:IRI ;
+    sh:datatype rdfs:Resource ;
   ] ;
 # Names particularly representative or typical resources in the dataset.
   sh:property [
@@ -209,127 +213,98 @@ ex:structuralMetadataShape
   sh:property [
     sh:path void:subset ;
     sh:nodeKind sh:IRI ;
+    sh:class void:Dataset ;
   ] ;
   sh:property [
     sh:path void:inDataset ;
     sh:nodeKind sh:IRI ;
+    sh:class void:Dataset ;
     sh:maxCount 1 ;
   ] ;
 # [!NOTE] W3C recommends only one void:inDataset, but it is not required -- how should we handle cardinality for these?
   sh:property [
     sh:path void:classPartition ;
-    sh:nodeKind sh:BlankNode ;
-    sh:node ex:classPartitionShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:node ex:subsetShape ;
   ] ;
   sh:property [
     sh:path void:propertyPartition ;
-    sh:nodeKind sh:BlankNode ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:node ex:subsetShape ;
   ] .
 
-ex:classPartitionShape
+ex:subsetShape ;
   a sh:NodeShape ;
-  sh:targetObjectsOf void:class ;
+  sh:targetNode void:subset ;
   sh:nodeKind sh:IRI ;
   sh:property [
     sh:path void:triples ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
   sh:property [
     sh:path void:entities ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
   sh:property [
     sh:path void:classes ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
   sh:property [
     sh:path void:properties ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
   sh:property [
     sh:path void:distinctSubjects ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
   sh:property [
     sh:path void:distinctObjects ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
   sh:property [
     sh:path void:documents ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] .
+# [!NOTE] Not sure how to target both void:class and void:property in the same shape -- is this possible? Right now I have it set to look for void:subset because it's a superproperty of the two, will this work?
 # [!NOTE] I'm not sure if all these different statistical properties are necessary for classPartition/propertyPartition, but I included them all just in case.
-
-ex:propertyPartitionShape
-  a sh:NodeShape ;
-  sh:targetObjectsOf void:property ;
-  sh:nodeKind sh:IRI ;
-  sh:property [
-    sh:path void:triples ;
-    sh:nodeKind sh:Literal ;
-  ] ;
-  sh:property [
-    sh:path void:entities ;
-    sh:nodeKind sh:Literal ;
-  ] ;
-  sh:property [
-    sh:path void:classes ;
-    sh:nodeKind sh:Literal ;
-  ] ;
-  sh:property [
-    sh:path void:properties ;
-    sh:nodeKind sh:Literal ;
-  ] ;
-  sh:property [
-    sh:path void:distinctSubjects ;
-    sh:nodeKind sh:Literal ;
-  ] ;
-  sh:property [
-    sh:path void:distinctObjects ;
-    sh:nodeKind sh:Literal ;
-  ] ;
-  sh:property [
-    sh:path void:documents ;
-    sh:nodeKind sh:Literal ;
-  ] .
 
 ex:datasetStatisticsShape
   a sh:NodeShape ;
   sh:targetClass void:Dataset ;
   sh:property [
     sh:path void:triples ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
 # The total number of RDF triples contained in the dataset.
   sh:property [
     sh:path void:entities ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
 # The total number of entities of entities described in the dataset.
 # [!NOTE] Would it be useful to write an entity shape?
   sh:property [
     sh:path void:classes ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
 # The total number of distinct classes in the dataset.
   sh:property [
     sh:path void:properties ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
 # The total number of distinct properties in the dataset.
   sh:property [
     sh:path void:distinctSubjects ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
 # The total number of distinct subjects in the dataset.
   sh:property [
     sh:path void:distinctObjects ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] ;
 # The total number of distinct objects in the dataset.
   sh:property [
     sh:path void:documents ;
-    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:integer ;
   ] .
 # The total number of documents. Use if the dataset is published as a set of individual documents. Intended for datasets where the total number of triples or entities is hard to determine. void:triples or void:entities preferred where practical.
 
@@ -339,26 +314,44 @@ ex:linksetShape
   sh:property [
     sh:path void:target ;
     sh:nodeKind sh:IRI ;
+    sh:class void:Dataset ;
     sh:minCount 2 ;
     sh:maxCount 2 ;
   ] ;
   sh:property [
     sh:path void:subjectsTarget ;
     sh:maxCount 1 ;
+    sh:class void:Dataset ;
   ] ;
 # Names the subjects of all link triples in the dataset.
   sh:property [
     sh:path void:objectsTarget ;
+    sh:class void:Dataset ;
     sh:maxCount 1 ;
   ] ;
 # Names the objects of all link triples in the dataset.
   sh:property [
     sh:path void:subset ;
     sh:nodeKind sh:IRI ;
+    sh:class void:Dataset ;
   ] ;
 # Used to state that a linkset is part of a larger dataset.
   sh:property [
     sh:path void:linkPredicate ;
     sh:nodeKind sh:IRI ;
+    sh:class rdf:Property ;
   ] .
 # [!NOTE] The linkset section has been a little over my head, might help to see an example of one?
+
+ex:voidPropertiesShape
+# Properties not included in other VoID shapes.
+  a sh:NodeShape ;
+  sh:targetClass void:Dataset ;
+  sh:property [
+    sh:path void:class ;
+    sh:class rdfs:Class ;
+  ] ;
+  sh:property [
+    sh:path void:property ;
+    sh:class rdf:Property ;
+  ] .
