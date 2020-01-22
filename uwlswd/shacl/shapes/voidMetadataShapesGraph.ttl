@@ -30,7 +30,7 @@ ex:voidMetadataDescriptionShape
   ] ;
 # This is the title of the VoID file, not the dataset being described.
   sh:property [
-    sh:path [ sh:alternativePath (foaf:primaryTopic foaf:topic) ]
+    sh:path [ sh:alternativePath (foaf:primaryTopic foaf:topic) ] ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
   ] ;
@@ -155,7 +155,6 @@ ex:generalDatasetMetadataShape
       format:RDFa
       format:Turtle
     ) ;
-    sh:class void:TechnicalFeature ;
   ] .
 
 # [!NOTE] Separating these sections into distinct shapes for readability. They can be sectioned off in different ways or not at all, if we prefer.
@@ -235,8 +234,6 @@ ex:structuralMetadataShape
 
 ex:subsetShape ;
   a sh:NodeShape ;
-  sh:targetNode void:subset ;
-  sh:nodeKind sh:IRI ;
   sh:property [
     sh:path void:triples ;
     sh:datatype xsd:integer ;
@@ -265,7 +262,6 @@ ex:subsetShape ;
     sh:path void:documents ;
     sh:datatype xsd:integer ;
   ] .
-# [!NOTE] Not sure how to target both void:class and void:property in the same shape -- is this possible? Right now I have it set to look for void:subset because it's a superproperty of the two, will this work?
 # [!NOTE] I'm not sure if all these different statistical properties are necessary for classPartition/propertyPartition, but I included them all just in case.
 
 ex:datasetStatisticsShape
