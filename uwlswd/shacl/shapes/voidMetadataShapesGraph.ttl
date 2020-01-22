@@ -85,7 +85,6 @@ ex:generalDatasetMetadataShape
   sh:property [
     sh:path dct:publisher ;
     sh:nodeKind sh:IRI ;
-    sh:minCount 1 ;
   ] ;
   sh:property [
     sh:path dct:contributor ;
@@ -118,7 +117,6 @@ ex:generalDatasetMetadataShape
       [sh:datatype xsd:date]
       [sh:datatype xsd:gYear]
     ) ;
-    sh:minCount 1 ;
     sh:maxCount 1 ;
   ] ;
   sh:property [
