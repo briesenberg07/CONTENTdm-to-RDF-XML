@@ -1,0 +1,89 @@
+@prefix ex: <http://www.example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:hasBarcode_1 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasBarcode> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasBarcode> .
+
+ex:hasCallNumber_2 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasCallNumber> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasCallNumber> .
+
+ex:hasContributorAgent_3 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasContributorAgent> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasContributorAgent> .
+
+ex:hasCreatorCharacteristic_4 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasCreatorCharacteristic> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasCreatorCharacteristic> .
+
+ex:hasLcClassificationPartA_5 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasLcClassificationPartA> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasLcClassificationPartA> .
+
+ex:hasLcClassificationPartB_6 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasLcClassificationPartB> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasLcClassificationPartB> .
+
+ex:hasLcGeographicClassification_7 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasLcGeographicClassification> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasLcGeographicClassification> .
+
+ex:hasNlmClassificationPartA_8 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasNlmClassificationPartA> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasNlmClassificationPartA> .
+
+ex:hasNlmClassificationPartB_9 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasNlmClassificationPartB> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasNlmClassificationPartB> .
+
+ex:hasPhysicalLocation_10 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasPhysicalLocation> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasPhysicalLocation> .
+
+ex:hasPhysicalSubLocation_11 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasPhysicalSubLocation> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasPhysicalSubLocation> .
+
+ex:hasSuDocClassificationNumber_12 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasSuDocClassificationNumber> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasSuDocClassificationNumber> .
+
+ex:hasUniversityOfWashingtonNote_13 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:path <https://doi.org/10.6069/uwlib.55.d.4#hasUniversityOfWashingtonNote> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#hasUniversityOfWashingtonNote> .
+
+ex:heldBy_14 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:path <https://doi.org/10.6069/uwlib.55.d.4#heldBy> ] ;
+    sh:targetSubjectsOf <https://doi.org/10.6069/uwlib.55.d.4#heldBy> .
+
+# Cool that it only made node shapes for the new RDA properties and ignored the VoID metadata!

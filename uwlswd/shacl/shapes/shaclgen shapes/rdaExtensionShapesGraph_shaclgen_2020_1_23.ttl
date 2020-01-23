@@ -1,0 +1,93 @@
+@prefix ex: <http://www.example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# For the VoID metadata
+ex:Dataset_1 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property ex:classPartition_10,
+        ex:containsEntity_19,
+        ex:creator_1,
+        ex:description_2,
+        ex:feature_11,
+        ex:hasFormat_3,
+        ex:issued_4,
+        ex:language_5,
+        ex:license_6,
+        ex:publisher_7,
+        ex:title_8,
+        ex:versionInfo_17 ;
+    sh:targetClass <http://rdfs.org/ns/void#Dataset> .
+# Curious how the program generates these numbers -- I would think it would correspond to the order the property shapes come in, but those are in alphabetical order. Might help readability if the numbers were indicative of something?
+
+# For the new RDA properties
+ex:Property_2 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property ex:comment_12,
+        ex:domain_13,
+        ex:isDefinedBy_14,
+        ex:label_15,
+        ex:note_18,
+        ex:range_16 ;
+    sh:targetClass rdf:Property .
+
+ex:class_9 a sh:PropertyShape ;
+    sh:path <http://rdfs.org/ns/void#class> .
+# Maybe I'm just brain-farting but why did this generate if no node shapes are referencing it?
+
+ex:classPartition_10 a sh:PropertyShape ;
+    sh:path <http://rdfs.org/ns/void#classPartition> .
+
+ex:comment_12 a sh:PropertyShape ;
+    sh:path rdfs:comment .
+
+ex:containsEntity_19 a sh:PropertyShape ;
+    sh:path <https://doi.org/10.6069/uwlib.55.b.2#containsEntity> .
+
+ex:creator_1 a sh:PropertyShape ;
+    sh:path <http://purl.org/dc/terms/creator> .
+
+ex:description_2 a sh:PropertyShape ;
+    sh:path <http://purl.org/dc/terms/description> .
+
+ex:domain_13 a sh:PropertyShape ;
+    sh:path rdfs:domain .
+
+ex:feature_11 a sh:PropertyShape ;
+    sh:path <http://rdfs.org/ns/void#feature> .
+
+ex:hasFormat_3 a sh:PropertyShape ;
+    sh:path <http://purl.org/dc/terms/hasFormat> .
+
+ex:isDefinedBy_14 a sh:PropertyShape ;
+    sh:path rdfs:isDefinedBy .
+
+ex:issued_4 a sh:PropertyShape ;
+    sh:path <http://purl.org/dc/terms/issued> .
+
+ex:label_15 a sh:PropertyShape ;
+    sh:path rdfs:label .
+
+ex:language_5 a sh:PropertyShape ;
+    sh:path <http://purl.org/dc/terms/language> .
+
+ex:license_6 a sh:PropertyShape ;
+    sh:path <http://purl.org/dc/terms/license> .
+
+ex:note_18 a sh:PropertyShape ;
+    sh:path <http://www.w3.org/2004/02/skos/core#note> .
+
+ex:publisher_7 a sh:PropertyShape ;
+    sh:path <http://purl.org/dc/terms/publisher> .
+
+ex:range_16 a sh:PropertyShape ;
+    sh:path rdfs:range .
+
+ex:title_8 a sh:PropertyShape ;
+    sh:path <http://purl.org/dc/terms/title> .
+
+ex:versionInfo_17 a sh:PropertyShape ;
+    sh:path <http://www.w3.org/2002/07/owl#versionInfo> .

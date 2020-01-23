@@ -1,0 +1,54 @@
+@prefix ex: <http://www.example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Dataset_1 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:path <http://purl.org/dc/terms/issued> ],
+        [ sh:path <http://purl.org/dc/terms/language> ],
+        [ sh:path <http://www.w3.org/2002/07/owl#versionInfo> ],
+        [ sh:path <http://purl.org/dc/terms/description> ],
+        [ sh:path <http://rdfs.org/ns/void#feature> ],
+        [ sh:path <http://rdfs.org/ns/void#classPartition> ],
+        [ sh:path <http://purl.org/dc/terms/creator> ],
+        [ sh:path <http://purl.org/dc/terms/publisher> ],
+        [ sh:path <https://doi.org/10.6069/uwlib.55.b.2#containsEntity> ],
+        [ sh:path <http://purl.org/dc/terms/title> ],
+        [ sh:path <http://purl.org/dc/terms/hasFormat> ],
+        [ sh:path <http://purl.org/dc/terms/license> ],
+        ex:classPartition_10,
+        ex:containsEntity_19,
+        ex:creator_1,
+        ex:description_2,
+        ex:feature_11,
+        ex:hasFormat_3,
+        ex:issued_4,
+        ex:language_5,
+        ex:license_6,
+        ex:publisher_7,
+        ex:title_8,
+        ex:versionInfo_17 ;
+    sh:targetClass <http://rdfs.org/ns/void#Dataset> .
+
+ex:Property_2 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:path rdfs:comment ],
+        [ sh:path <http://www.w3.org/2004/02/skos/core#note> ],
+        [ sh:path rdfs:isDefinedBy ],
+        [ sh:path rdfs:range ],
+        [ sh:path rdfs:domain ],
+        [ sh:path rdfs:label ],
+        ex:comment_12,
+        ex:domain_13,
+        ex:isDefinedBy_14,
+        ex:label_15,
+        ex:note_18,
+        ex:range_16 ;
+    sh:targetClass rdf:Property .
+
+ex:class_9 a sh:PropertyShape ;
+    sh:path <http://rdfs.org/ns/void#class> .
+# Not sure why this is here?
