@@ -11,6 +11,7 @@
 @prefix ldproc: <https://doi.org/10.6069/uwlib.55.b.2#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ex: <http://www.example.org#> .
+@prefix format: <http://www.w3.org/ns/formats/> .
 
 ex:voidMetadataShape
     a sh:NodeShape ;
@@ -18,13 +19,13 @@ ex:voidMetadataShape
     sh:property [
         sh:path dct:title ;
         sh:nodeKind sh:Literal ;
-        sh:languageIn ( "en" ) ;
+        sh:datatype rdf:langString ;
         sh:minCount 1 ;
     ] ;
     sh:property [
         sh:path dct:description ;
         sh:nodeKind sh:Literal ;
-        sh:languageIn ( "en" ) ;
+        sh:datatype rdf:langString ;
         sh:minCount 1 ;
     ] ;
     sh:property [
@@ -54,28 +55,31 @@ ex:voidMetadataShape
         sh:hasValue <http://creativecommons.org/publicdomain/zero/1.0/> ;
     ] ;
     sh:property [
-        sh:path void:feature ;
-        sh:hasValue <http://www.w3.org/ns/formats/N-Triples>, <http://www.w3.org/ns/formats/RDF_XML>, <http://www.w3.org/ns/formats/RDFa>, <http://www.w3.org/ns/formats/Turtle> ;
+      sh:path void:feature ;
+      sh:in (
+        format:N-Triples
+        format:RDF_XML
+        format:RDFa
+        format:Turtle
+      ) ;
         sh:minCount 4 ;
         sh:maxCount 4 ;
     ] ;
     sh:property [
         sh:path dct:hasFormat ;
         sh:nodeKind sh:IRI ;
-        # Is there a way to specify that these IRIs should end in .html, .nt, .rdf, and .ttl?
+        # (MCM) Is there a way to specify that these IRIs should end in .html, .nt, .rdf, and .ttl?
         # (BR) Good question...I was looking into doing this with SHACL-SPARQL but have not been successful yet.
     ] ;
     sh:property [
         sh:path void:classPartition ;
-        sh:nodeKind sh:BlankNode ;
-        # Need to validate that bNode has void:class rdf:Property--I see now that you do this below!
-        # Make this required
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:node ex:classPartitionShape ;
         sh:minCount 1 ;
     ] ;
     sh:property [
         sh:path ldproc:containsEntity ;
         sh:hasValue rdf:Property ;
-        # Make this required
         sh:minCount 1 ;
     ] ;
     sh:property [
@@ -85,27 +89,28 @@ ex:voidMetadataShape
 
 ex:classPartitionShape
     a sh:NodeShape ;
-    sh:targetObjectsOf void:class ;
-    sh:hasValue rdf:Property .
-# Is this the best way to validate blank nodes in the data graph? It works, but wondering if there's a better way. Also might want to make it more flexible to use for datasets that aren't all properties (assuming that's how void:classPartition works, not sure I understand it 100%).
-# Yes, I think you understand correctly. So this is a good example of code that would *not* be re-useable for other resources (say one of the class partitions for example), because the value of void:class would be something else, like dpla:SourceResource or rdfs:Class, etc.
+    sh:property [
+      sh:path void:class ;
+      sh:nodeKind sh:IRI ;
+    ] .
 
 ex:extensionShape
     a sh:NodeShape ;
-    sh:targetClass rdf:Property ;
-# So using rdf:Property doesn't work for some reason. Rewriting as ex:Property for shape and data graphs does work, so it's something about rdf:Property specifically. Not sure how to rewrite it to accommodate this.
+    sh:targetNode rdf:Property ;
+# (MCM) So using rdf:Property doesn't work for some reason. Rewriting as ex:Property for shape and data graphs does work, so it's something about rdf:Property specifically. Not sure how to rewrite it to accommodate this.
 # (BR) I think you mentioned this in your email to me earlier. But I'm confused because I used your code to validate the RDA Extension successfully, with sh:targetClass = rdf:Property as above.
+# (MCM) I added the validation report with all the errors I get with rdf:Property. Still having this issue -- is there a way to target rdf:Property in some instances but not others?
     sh:property [
         sh:path rdfs:label ;
         sh:nodeKind sh:Literal ;
-        sh:languageIn ( "en" ) ;
+        sh:datatype rdf:langString ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path rdfs:comment ;
         sh:nodeKind sh:Literal ;
-        sh:languageIn ( "en" ) ;
+        sh:datatype rdf:langString ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
@@ -128,6 +133,6 @@ ex:extensionShape
     sh:property [
         sh:path skos:note ;
         sh:nodeKind sh:Literal ;
-        sh:languageIn ( "en" ) ;
+        sh:datatype rdf:langString ;
         sh:maxCount 1 ;
     ] .
