@@ -97,5 +97,5 @@ sh:select """
 	SELECT $this ?path ?value
 WHERE {
 	$this ?path ?value .
-	FILTER regex(?value, "near", "i") .
+	FILTER regex(?value, "^near", "i") .
 } """ .
