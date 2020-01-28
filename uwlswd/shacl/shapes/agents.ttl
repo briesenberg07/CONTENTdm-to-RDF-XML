@@ -1,0 +1,178 @@
+@prefix ex: <http://www.example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+##########################################
+## Void constraints
+##########################################
+
+
+ex:Dataset a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:path <http://rdfs.org/ns/void#inDataset> ] ;
+    sh:targetClass <http://rdfs.org/ns/void#Dataset> .
+
+
+
+##########################################
+## Node constraints
+##########################################
+
+ex:VRA_Agent a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property ex:creativeActivity,
+        ex:inDigiColl,
+        ex:name,
+        ex:note,
+        ex:providedLabel ;
+    sh:targetClass <http://purl.org/vra/Agent> .
+
+
+ex:Agent_2 a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:path <http://schema.org/url> ;
+    sh:nodeKind sh:IRI],
+        [ sh:path <http://xmlns.com/foaf/0.1/based_near> ],
+        [ sh:path <http://purl.org/dc/terms/description> ],
+        ex:altLabel,
+        ex:creativeActivity,
+        ex:inDigiColl,
+        ex:isIdentifiedByAuthority,
+        ex:isReferencedBy,
+        ex:label,
+        ex:name,
+        ex:note,
+        ex:occupation,
+        ex:prefLabel,
+        [sh:path <http://dp.la/about/map/providedLabel> ;
+        sh:maxCount 1 ;
+        sh:message "edm:Agents can only at most 1 dpla:providedLabel"],
+
+        [sh:path <http://www.w3.org/2004/02/skos/core#note> ;
+        sh:maxCount 1;
+        sh:message "edm:Agents can only at most 1 skos note"],
+        ex:sameAs;
+    sh:targetClass <http://www.europeana.eu/schemas/edm/Agent> .
+
+
+
+
+ex:Event a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+#    sh:property [
+#    sh:datatype xsd:date ;
+#            sh:path <http://purl.org/vra/endDate> ],
+#        [
+#        sh:datatype xsd:date ;
+#            sh:path <http://purl.org/vra/startDate> ],
+#        ex:name ;
+    sh:targetClass <http://purl.org/vra/Event> .
+
+
+ex:Organization a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property ex:inDigiColl,
+    ex:name,
+    ex:providedLabel ;
+    sh:targetClass <http://purl.org/vra/Organization> .
+
+ex:Person_15 a sh:NodeShape ;
+    sh:property [
+#    sh:datatype xsd:date ;
+                 sh:maxCount 1 ;
+            sh:path <http://purl.org/vra/deathDate> ],
+        [
+#        sh:datatype xsd:date ;
+        sh:maxCount 1;
+                       sh:lessThanOrEquals <http://purl.org/vra/deathDate> ;
+
+            sh:path <http://purl.org/vra/birthDate> ],
+        ex:altLabel,
+        ex:creativeActivity,
+        ex:inDigiColl,
+        ex:isIdentifiedByAuthority,
+        ex:isReferencedBy,
+        ex:label,
+        ex:name,
+        ex:providedLabel,
+        ex:occupation,
+        ex:prefLabel,
+        ex:providedLabel ;
+    sh:targetClass <http://purl.org/vra/Person> .
+
+
+##########################################
+## Property constraints
+##########################################
+
+ex:altLabel a sh:PropertyShape ;
+    sh:nodeKind sh:Literal ;
+    sh:path <http://www.w3.org/2004/02/skos/core#altLabel> .
+
+ex:creativeActivity a sh:PropertyShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path <http://purl.org/vra/creativeActivity> .
+
+ex:inDigiColl a sh:PropertyShape ;
+    sh:nodeKind sh:IRI;
+    sh:path <https://doi.org/10.6069/uwlib.55.d.3#inDigiColl> .
+
+ex:isIdentifiedByAuthority a sh:PropertyShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path <http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority> .
+
+ex:isReferencedBy a sh:PropertyShape ;
+    sh:nodeKind sh:IRI;
+    sh:path <http://purl.org/dc/terms/isReferencedBy> .
+
+ex:label a sh:PropertyShape ;
+    sh:nodeKind sh:Literal ;
+    sh:path rdfs:label .
+
+ex:name a sh:PropertyShape ;
+    sh:nodeKind sh:Literal ;
+    sh:path <http://purl.org/vra/name> .
+
+ex:note a sh:PropertyShape ;
+    sh:nodeKind sh:Literal ;
+    sh:path <http://www.w3.org/2004/02/skos/core#note> .
+
+ex:occupation a sh:PropertyShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+#    sh:class <http://www.loc.gov/mads/rdf/v1#Occupation>;
+    sh:path <http://www.loc.gov/mads/rdf/v1#occupation> .
+
+ex:prefLabel a sh:PropertyShape ;
+    sh:nodeKind sh:Literal ;
+    sh:maxCount 1 ;
+#    sh:minCount 1 ;
+    sh:path <http://www.w3.org/2004/02/skos/core#prefLabel> .
+
+ex:providedLabel a sh:PropertyShape ;
+    sh:nodeKind sh:Literal ;
+    sh:path <http://dp.la/about/map/providedLabel> .
+
+ex:sameAs a sh:PropertyShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path <http://www.w3.org/2002/07/owl#sameAs> .
+
+
+##########################################
+## UW specific constraints
+##########################################
+
+ex:Indentifer
+    a sh:NodeShape ;
+    sh:targetObjectsOf owl:sameAs ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+    sh:path [sh:inversePath owl:sameAs] ;
+    sh:maxCount 1;
+    sh:message "Dataset contains duplicate entities"
+
+    ] .

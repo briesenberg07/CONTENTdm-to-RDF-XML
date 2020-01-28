@@ -1,0 +1,101 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+@prefix ex: <http://www.example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:AdministrativeArea a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:nodeKind sh:Literal ;
+                 sh:path <http://faculty.washington.edu/tgis/ld/brumfield/uwDataset/extensions#typeOfAdminArea> ],
+        ex:containedInPlace,
+        ex:geo,
+        ex:isReferencedBy,
+        ex:label,
+        ex:sameAs;
+    sh:targetClass <http://purl.org/vra/AdministrativeArea> .
+
+ex:City a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property ex:containedInPlace,
+        ex:geo,
+        ex:isReferencedBy,
+        ex:label,
+        ex:sameAs ;
+    sh:targetClass <http://purl.org/vra/City> .
+
+ex:GeoCoord a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:path <http://schema.org/latitude> ;
+        sh:nodeKind sh:Literal ;
+        sh:minCount 1 ],
+        [ sh:path <http://schema.org/longitude> ;
+        sh:nodeKind sh:Literal ;
+        sh:minCount 1];
+
+    sh:targetClass <http://schema.org/GeoCoord> .
+
+ex:Place a sh:NodeShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property [ sh:nodeKind sh:Literal ;
+    sh:path <http://faculty.washington.edu/tgis/ld/brumfield/uwDataset/extensions#typeOfPlace> ],
+        ex:label,
+        ex:sameAs;
+    sh:targetClass <http://purl.org/vra/Place> .
+
+
+
+ex:containedInPlace a sh:PropertyShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path <http://schema.org/containedInPlace> .
+
+ex:geo a sh:PropertyShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+#    sh:maxCount 1;
+    sh:path <http://schema.org/geo> .
+
+ex:isReferencedBy a sh:PropertyShape ;
+    sh:nodeKind sh:IRI ;
+    sh:path <http://purl.org/dc/terms/isReferencedBy> .
+
+ex:label a sh:PropertyShape ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1;
+    sh:path rdfs:label .
+
+ex:sameAs a sh:PropertyShape ;
+    sh:nodeKind sh:IRI;
+    sh:path <http://www.w3.org/2002/07/owl#sameAs> .
+
+
+ex:Indentifer
+    a sh:NodeShape ;
+    sh:closed true ;
+    sh:targetObjectsOf owl:sameAs ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+    sh:path [sh:inversePath owl:sameAs] ;
+    sh:maxCount 1;
+    sh:message "Dataset contains duplicate entities"
+
+    ] .
+
+ex:TestShape
+  a sh:NodeShape ;
+  sh:sparql ex:NearShape ;
+  sh:targetClass <http://purl.org/vra/City> ;
+  sh:targetClass <http://purl.org/vra/AdministrativeArea> ;
+.
+
+ex:NearShape a sh:NodeShape;
+sh:message "Cities can't be near themselves, silly goose!" ;
+sh:prefixes <http://datashapes.org/sh/tests/sparql/node/sparql-001.test> ;
+sh:select """
+	SELECT $this ?path ?value
+WHERE {
+	$this ?path ?value .
+	FILTER regex(?value, "^near", "i") .
+} """ .
